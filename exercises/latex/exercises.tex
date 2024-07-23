@@ -9,7 +9,6 @@
 
 \graphicspath{{../../images/}}
 
-\renewcommand{\iff}{\Leftrightarrow}
 
 \begin{document}
 
@@ -38,19 +37,19 @@ for $0\leq t \leq 2\pi$.
     \includegraphics[scale=0.5]{ex_1.png}
 \end{figure}
 
-\subsection{Hint 1}
+\subsection{Hint}
 There is a formula for calculating the length of the curve. You must know this one! The formula is of the form:
 \[
     \int_{\ldots}^{\ldots} |\ldots|\,dt
 \]
 
-\subsection{Hint 2}
+\subsection{Hint}
 The formula for the length is:
 \[
     \int_{0}^{2\pi} |f'(t)|\,dt
 \]
 
-\subsection{Hint 3}
+\subsection{Hint}
 \begin{align*}
     f'(t) & = \frac{d}{dt} (\cos(t) + t\sin(t), \, \sin(t) - t\cos(t))         \\
           & = (-\sin(t) + \sin(t) + t\cos(t), \, \cos(t) - \cos(t) + t\sin(t)) \\
@@ -81,10 +80,10 @@ Consider the curve $C$ given by $f(x,y) = 0$, where
 \]
 Determine the point on $C$ at which $x+y$ is maximal.
 
-\subsection{Hint 1}
+\subsection{Hint}
 We want to maximize $g(x,y) = x+y$ subject to the constraint $f(x,y)=0$. Use Lagrange.
 
-\subsection{Hint 2}
+\subsection{Hint}
 Solve the equation $\nabla g = \lambda\nabla f$.
 
 \subsection{Solution}
@@ -136,23 +135,23 @@ Consider the function
 \]
 Find the point on the unit sphere (i.e. the sphere centered at $(0, 0, 0)$ of radius $1$) at which $f$ is maximal and the point at which it is minimal. Calculate also these maximum and minimum values.
 
-\subsection{Hint 1}
+\subsection{Hint}
 The surface of a sphere centered at $(x_0, y_0, z_0)$ of radius $R$ has the formula
 \[
     (x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 = R^2
 \]
 
-\subsection{Hint 2}
+\subsection{Hint}
 Let
 \[
     g(x,y,z) = x^2 + y^2 + z^2 - 1.
 \]
 We want to maximize $f(x,y,z)$ given the constraint $g(x,y,z) = 0$. Use Lagrange.
 
-\subsection{Hint 3}
+\subsection{Hint}
 Solve the equation $\nabla f = \lambda\nabla g$.
 
-\subsection{Hint 4}
+\subsection{Hint}
 \[
     \nabla f(x,y,z) = \begin{pmatrix}
         -\dfrac{1}{x^2} \\ \\ -\dfrac{1}{8y^2} \\ \\ -\dfrac{1}{27z^2}
@@ -198,7 +197,7 @@ Note that the left-hand side is always non-zero, so $\lambda \neq 0$. Hence:
     \end{cases}
 \]
 
-\subsection{Hint 5}
+\subsection{Hint}
 The points lie on the unit sphere, so $x^2+y^2+z^2=1$ must also hold.
 
 \subsection{Solution}
@@ -256,10 +255,10 @@ defined on the set
 \]
 Determine where $f$ assumes its minimum, and what that minimum value is.
 
-\subsection{Hint 1}
+\subsection{Hint}
 Calculate $\nabla f$.
 
-\subsection{Hint 2}
+\subsection{Hint}
 \begin{align*}
     \frac{\partial f}{\partial x} & = \left(\frac{xy\cdot 2x - (x^2+y^2)\cdot y}{x^2y^2}\right) \\
                                   & = \frac{x^2y - y^3}{x^2y^2}                                 \\
@@ -278,10 +277,10 @@ So
     \end{pmatrix}
 \]
 
-\subsection{Hint 3}
+\subsection{Hint}
 Solve $\nabla f = 0$.
 
-\subsection{Hint 4}
+\subsection{Hint}
 \[
     \begin{pmatrix}
         \dfrac{x^2 - y^2}{x^2y} \\ \\ \dfrac{y^2 - x^2}{xy^2}
@@ -312,39 +311,39 @@ Consider the surface $S$ defined by $f(x,y,z)=0$, where
     \item Give an equation of the form $\alpha x+\beta y+\gamma z=\delta$ describing the tangent plane to $S$ at point $A$.
 \end{enumerate}
 
-\subsection{Hint 1}
+\subsection{Hint}
 1. Substitute $x=1$, $y=1$, $z=3$ in $f$ to get:
 \[
     1^2 + 1^2 + 3^2 + 3\cdot 1\cdot 1 - 3 - 11 = 0.
 \]
 
-\subsection{Hint 2}
+\subsection{Hint}
 2. There are several ways to go about this, but in most (if not all) you need to compute $\nabla f$ at the point $A$.
 
-\subsection{Hint 3}
+\subsection{Hint}
 \[
     \nabla f(x,y,z) = \begin{pmatrix}
-        \dfrac{\partial f}{\partial x} \\ \\ \dfrac{\partial f}{\partial y} \\ \\ \dfrac{\partial f}{\partial z}  
+        \dfrac{\partial f}{\partial x} \\ \\ \dfrac{\partial f}{\partial y} \\ \\ \dfrac{\partial f}{\partial z}
     \end{pmatrix} = \begin{pmatrix}
-        2x+3y \\ 3x+2y \\ 2z-1  
+        2x+3y \\ 3x+2y \\ 2z-1
     \end{pmatrix}
 \]
 So
 \[
     \nabla f(1,1,3) = \begin{pmatrix}
-        2\cdot 1+3\cdot 1 \\ 3\cdot 1+2\cdot 1 \\ 2\cdot 3-1  
+        2\cdot 1+3\cdot 1 \\ 3\cdot 1+2\cdot 1 \\ 2\cdot 3-1
     \end{pmatrix} = \begin{pmatrix}
-        5 \\ 5 \\ 5  
+        5 \\ 5 \\ 5
     \end{pmatrix}
 \]
 
-\subsection{Hint 4}
-The gradient of $f$ at $A$ is a vector orthogonal to the tangent plane to $S$ at point $A$. How do you find an equation of a plane if you know a vector orthogonal to it and a point on it? 
+\subsection{Hint}
+The gradient of $f$ at $A$ is a vector orthogonal to the tangent plane to $S$ at point $A$. How do you find an equation of a plane if you know a vector orthogonal to it and a point on it?
 
 \subsection{Solution}
 The tangent plane is perpendicular to the vector $\nabla f(1, 1, 3) = (5, 5, 5)$ and passes through the point $(1, 1, 3)$, so its equation is:
 \[
-    5\cdot(x-1) + 5\cdot (y-1) + 5 \cdot (z-3) = 0 \iff 5x+5y+5z = 25 
+    5\cdot(x-1) + 5\cdot (y-1) + 5 \cdot (z-3) = 0 \iff 5x+5y+5z = 25
 \]
 
 \emph{\textbf{Remark:} There is also a formula given in the book as the linearization of $f$ at $A = (x_0, y_0, z_0)$:}
@@ -352,5 +351,121 @@ The tangent plane is perpendicular to the vector $\nabla f(1, 1, 3) = (5, 5, 5)$
     L(x,y,z) = f(A) + f_x(A)\cdot (x - x_0) + f_y(A)\cdot (y - y_0) + f_z(A)\cdot (z - z_0)
 \]
 \emph{(this is essentially a first order Taylor expansion). The formula will yield the exact same answer. However, applying formulas without understanding is like eating your food without chewing!}
+
+\clearpage
+
+\section{Exercise 6}
+
+Consider the plane $P$ which contains the points $A = (1, 1, 1)$, $B = (2, 3, 9)$, $C = (3, 5, 4)$. Try to think of as many was as possible to determine the equation $\alpha x + \beta y + \gamma z = \delta$ of this plane.
+
+\subsection{Method 1}
+Just substitute the coordinates of the 3 points in $\alpha x + \beta y + \gamma z = \delta$ and solve for $\alpha$, $\beta$, $\gamma$, $\delta$.
+
+\subsection{Solution 1}
+\begin{align*}
+     & \begin{cases}
+           \alpha + \beta + \gamma = \delta                                        \\
+           2\alpha + 3\beta + 9\gamma = \delta & |\quad R_2 \leftarrow R_2 - 2 R_1 \\
+           3\alpha + 5\beta + 4\gamma = \delta & |\quad R_3 \leftarrow R_3 - 3 R_1
+       \end{cases} \\ \iff &
+    \begin{cases}
+        \alpha + \beta + \gamma = \delta                                        \\
+        \beta + 7\gamma = -\delta                                               \\
+        2\beta + \gamma = -2\delta & |\quad R_3 \leftarrow R_2 - \frac{1}{2}R_3
+    \end{cases} \\ \iff &
+    \begin{cases}
+        \alpha + \beta + \gamma = \delta \\
+        \beta + 7\gamma = -\delta        \\
+        \frac{13}{2}\gamma = 0
+    \end{cases} \\ \iff &
+    \begin{cases}
+        \alpha = 2\delta \\
+        \beta = -\delta  \\
+        \gamma = 0
+    \end{cases}
+\end{align*}
+
+Note that $\delta$ is a free variable here, and 
+\[
+    2\delta \cdot x -\delta \cdot y + 0\cdot z = \delta
+\]
+defines the same plane for any $\delta \neq 0$ (for $\delta=0$ we just get $0=0$ which is satisfied by any $x,y,z$, i.e. we don't get a plane but the entire $\mathbb{R}^3$). So we can choose for example $\delta =1$ to get the following equation for $P$:
+\[
+    2x - y = 1
+\]
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.5]{ex_6.png}
+\end{figure}
+
+\subsection{Method 2} 
+Make the vectors $\overrightarrow{AB}$, $\overrightarrow{AC}$ and compute the vector $\overrightarrow{AB} \times \overrightarrow{AC}$. Then...
+
+\subsection{Solution 2}
+\[
+    \overrightarrow{AB} = \overrightarrow{B} - \overrightarrow{A} = (2, 3, 9) - (1, 1, 1) = (1, 2, 8)
+\]
+\[
+    \overrightarrow{AC} = \overrightarrow{C} - \overrightarrow{A} = (3, 5, 4) - (1, 1, 1) = (2, 4, 3)
+\]
+\begin{align*}
+    \overrightarrow{AB} \times \overrightarrow{AC} & = \begin{vmatrix}
+        1 & 2 & 8 \\ 2 & 4 & 3 \\ e_x & e_y & e_z 
+    \end{vmatrix} \\ & =  \begin{vmatrix}
+        2 & 8 \\ 4 & 3 
+    \end{vmatrix} \cdot e_x - \begin{vmatrix}
+        1 & 8 \\ 2 & 3
+    \end{vmatrix} \cdot e_y + \begin{vmatrix}
+        1 & 2 \\ 2 & 4
+    \end{vmatrix} \cdot e_z \\
+    & = -26 \cdot e_x + 13\cdot e_y + 0\cdot e_z \\
+    & = (-26, 13, 0)
+\end{align*}
+Now $\overrightarrow{AB} \times \overrightarrow{AC}$ is normal to $P$ and $A$ lies on $P$, so we get the following equation for $P$:
+\[
+    -26\cdot(x -1) + 13\cdot (y-1) + 0\cdot (z-1) = 0 \iff -26x + 13y = -13 
+\] 
+
+\subsection{Method 3}
+Find a vector $(\alpha, \beta, \gamma)$ that is orthogonal to $\overrightarrow{AB}$, $\overrightarrow{AC}$ by solving the system 
+\begin{align*}
+\overrightarrow{AB}\cdot (\alpha, \beta, \gamma) & = 0 \\
+\overrightarrow{AC}\cdot (\alpha, \beta, \gamma) & = 0
+\end{align*}
+Then...
+
+\subsection{Solution 3}
+\begin{align*}
+    & \begin{cases}
+        (1, 2, 8) \cdot (\alpha, \beta, \gamma) = 0 \\
+        (2, 4, 3) \cdot (\alpha, \beta, \gamma) = 0        
+    \end{cases} \\ 
+    \iff & \begin{cases}
+        \alpha + 2\beta +8\gamma = 0 \\
+        2\alpha + 4\beta + 3\gamma = 0 & | \quad R_2 \leftarrow R_2 - 2 R_1        
+    \end{cases} \\ 
+    \iff & \begin{cases}
+        \alpha + 2\beta +8\gamma = 0 \\
+        -13\gamma = 0       
+    \end{cases} 
+    \\ \iff & \begin{cases}
+        \alpha = -2\beta \\
+        \gamma = 0       
+    \end{cases}
+\end{align*}
+Choose $\beta = 1$, so $(\alpha, \beta, \gamma) = (-2, 1, 0)$, and the equation for $P$ becomes:
+\[
+    -2\cdot x + 1\cdot y + 0\cdot z = \delta
+\]
+Substitute $(1, 1, 1)$ in the equation to find $\delta$:
+\[
+\delta = -2 + 1 = -1
+\]
+So the equation for $P$ is:
+\[
+    -2x+y=-1
+\]
+
 
 \end{document}
