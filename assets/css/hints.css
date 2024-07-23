@@ -1,0 +1,26 @@
+.plain_container {
+  width: 97.5%;
+  background: #001c3d;
+  margin-top: 2em;
+  padding: 0em;
+  /* important */
+  display: none;
+  /* important */
+  align-items: stretch;
+  justify-content: space-around;
+}
+
+.unsee_hint {
+  display: none;
+}
+
+.unsee_hint_child {
+  display: none;
+  width: 100%;
+  background: white;
+  color: black;
+  margin: 0 0.5em;
+  padding: 0.5em;
+  /* optional */
+  min-height: 100%;
+}

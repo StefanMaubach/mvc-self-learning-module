@@ -1,0 +1,356 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{parskip}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{../../images/}}
+
+\renewcommand{\iff}{\Leftrightarrow}
+
+\begin{document}
+
+% Title
+\begingroup
+\centering
+\LARGE Multivariable Calculus Self-Learning Module\\[1em]
+\large Exercises\par
+\vspace{32pt}
+\endgroup
+
+\tableofcontents
+
+\clearpage
+
+\section{Exercise 1}
+
+Calculate the length of curve $C$, where $C$ is the curve:
+\[
+    t \mapsto (\cos(t) + t\sin(t), \, \sin(t) - t\cos(t))
+\]
+for $0\leq t \leq 2\pi$.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.5]{ex_1.png}
+\end{figure}
+
+\subsection{Hint 1}
+There is a formula for calculating the length of the curve. You must know this one! The formula is of the form:
+\[
+    \int_{\ldots}^{\ldots} |\ldots|\,dt
+\]
+
+\subsection{Hint 2}
+The formula for the length is:
+\[
+    \int_{0}^{2\pi} |f'(t)|\,dt
+\]
+
+\subsection{Hint 3}
+\begin{align*}
+    f'(t) & = \frac{d}{dt} (\cos(t) + t\sin(t), \, \sin(t) - t\cos(t))         \\
+          & = (-\sin(t) + \sin(t) + t\cos(t), \, \cos(t) - \cos(t) + t\sin(t)) \\
+          & = (t\cos(t), \, t\sin(t))
+\end{align*}
+So
+\begin{align*}
+    |f'(t)| & = \sqrt{t^2\cos^2(t) + t^2\sin^2(t)} \\
+            & = \sqrt{t^2}                         \\
+            & = |t|
+\end{align*}
+
+\subsection{Solution}
+Since $t \geq 0$, we have $|t| = t$, so:
+\begin{align*}
+    \int_{0}^{2\pi} |f'(t)|\,dt & = \int_{0}^{2\pi} t \, dt                \\
+                                & = \left[ \frac{t^2}{2}\right]_{0}^{2\pi} \\
+                                & = 2\pi^2
+\end{align*}
+
+\clearpage
+
+\section{Exercise 2}
+
+Consider the curve $C$ given by $f(x,y) = 0$, where
+\[
+    f(x,y) = (x-y)^2 + 4(x+y) - 4
+\]
+Determine the point on $C$ at which $x+y$ is maximal.
+
+\subsection{Hint 1}
+We want to maximize $g(x,y) = x+y$ subject to the constraint $f(x,y)=0$. Use Lagrange.
+
+\subsection{Hint 2}
+Solve the equation $\nabla g = \lambda\nabla f$.
+
+\subsection{Solution}
+\[
+    \nabla g(x,y) = \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+\]
+\[
+    \nabla f(x,y) = \begin{pmatrix} 2(x-y) + 4 \\ -2(x-y) + 4 \end{pmatrix}
+\]
+So
+\[
+    \begin{pmatrix} 1 \\ 1 \end{pmatrix} = \lambda \begin{pmatrix} 2(x-y) + 4 \\ -2(x-y) + 4 \end{pmatrix}
+\]
+Note that $\lambda = 0$ gives
+\[
+    \begin{pmatrix} 1 \\ 1 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}
+\]
+which is a contradiction, so $\lambda \neq 0$ and we get the system:
+\[
+    \begin{cases}
+        2(x-y) + 4 = \dfrac{1}{\lambda} \\ \\
+        -2(x-y) + 4 = \dfrac{1}{\lambda}
+    \end{cases}
+\]
+Subtracting the two equations gives:
+\[
+    2(x-y) + 4 + 2(x-y) - 4 =  \frac{1}{\lambda} - \frac{1}{\lambda} \iff 4(x-y) = 0 \iff x = y
+\]
+Since we are looking for the point that maximizes $x+y$ on $C$, we substitute $y=x$ in $f(x,y)=0$:
+\[
+    (x-x)^2 + 4(x+x) - 4 = 0 \iff 8x = 4 \iff x = \frac{1}{2}
+\]
+So
+\[
+    (x, y) = \left(\frac{1}{2}, \frac{1}{2}\right)
+\]
+and the maximum is
+\[
+    g\left(\frac{1}{2}, \frac{1}{2}\right) = 1.
+\]
+
+\clearpage
+
+\section{Exercise 3}
+
+Consider the function
+\[
+    f(x,y,z) = \frac{1}{x} + \frac{1}{8y} + \frac{1}{27z}.
+\]
+Find the point on the unit sphere (i.e. the sphere centered at $(0, 0, 0)$ of radius $1$) at which $f$ is maximal and the point at which it is minimal. Calculate also these maximum and minimum values.
+
+\subsection{Hint 1}
+The surface of a sphere centered at $(x_0, y_0, z_0)$ of radius $R$ has the formula
+\[
+    (x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 = R^2
+\]
+
+\subsection{Hint 2}
+Let
+\[
+    g(x,y,z) = x^2 + y^2 + z^2 - 1.
+\]
+We want to maximize $f(x,y,z)$ given the constraint $g(x,y,z) = 0$. Use Lagrange.
+
+\subsection{Hint 3}
+Solve the equation $\nabla f = \lambda\nabla g$.
+
+\subsection{Hint 4}
+\[
+    \nabla f(x,y,z) = \begin{pmatrix}
+        -\dfrac{1}{x^2} \\ \\ -\dfrac{1}{8y^2} \\ \\ -\dfrac{1}{27z^2}
+    \end{pmatrix}
+\]
+
+\[
+    \nabla g(x,y,z) = \begin{pmatrix}
+        2x \\ 2y \\ 2z
+    \end{pmatrix}
+\]
+So
+\[
+    \begin{pmatrix}
+        -\dfrac{1}{x^2} \\ \\ -\dfrac{1}{8y^2} \\ \\ -\dfrac{1}{27z^2}
+    \end{pmatrix}
+    = \lambda
+    \begin{pmatrix}
+        2x \\ 2y\\ 2z
+    \end{pmatrix}
+\]
+Note that the left-hand side is always non-zero, so $\lambda \neq 0$. Hence:
+\[
+    \begin{cases}
+        -\dfrac{1}{x^2} = 2\lambda x  \\ \\
+        -\dfrac{1}{8y^2} = 2\lambda y \\ \\
+        -\dfrac{1}{27z^2} = 2\lambda z
+    \end{cases} \iff
+    \begin{cases}
+        x^3 = -\dfrac{1}{2\lambda}       \\ \\
+        y^3 = -\dfrac{1}{8\cdot2\lambda} \\ \\
+        z^3 = -\dfrac{1}{27\cdot 2\lambda}
+    \end{cases} \iff
+    \begin{cases}
+        x = -\sqrt[3]{\dfrac{1}{2\lambda}}             \\ \\
+        y = -\dfrac{1}{2}\sqrt[3]{\dfrac{1}{2\lambda}} \\ \\
+        z = -\dfrac{1}{3}\sqrt[3]{\dfrac{1}{2\lambda}}
+    \end{cases} \iff
+    \begin{cases}
+        x = -\sqrt[3]{\dfrac{1}{2\lambda}} \\ \\
+        y = -\dfrac{1}{2} \cdot x          \\ \\
+        z = -\dfrac{1}{3} \cdot x
+    \end{cases}
+\]
+
+\subsection{Hint 5}
+The points lie on the unit sphere, so $x^2+y^2+z^2=1$ must also hold.
+
+\subsection{Solution}
+\begin{align*}
+    x^2 + \left(-\dfrac{1}{2}\cdot x\right)^2 + \left(-\dfrac{1}{3}\cdot x\right)^2 & = 1                \\
+    \iff x^2\cdot\left(1 + \dfrac{1}{4} + \dfrac{1}{9}\right)                       & = 1                \\
+    \iff x^2\cdot \dfrac{49}{36}                                                    & = 1                \\
+    \iff x^2                                                                        & = \dfrac{36}{49}   \\
+    \iff x                                                                          & = \pm \dfrac{6}{7}
+\end{align*}
+We get two solutions:
+\begin{align*}
+    x & = \dfrac{6}{7}                          \\
+    y & = -\dfrac{1}{2} \cdot x = -\dfrac{3}{7} \\
+    z & = -\dfrac{1}{3} \cdot x = -\dfrac{2}{7}
+\end{align*}
+and
+\begin{align*}
+    x & =  -\dfrac{6}{7}                       \\
+    y & = -\dfrac{1}{2} \cdot x = \dfrac{3}{7} \\
+    z & = -\dfrac{1}{3} \cdot x = \dfrac{2}{7}
+\end{align*}
+In order to determine which one gives the minimum and which one the maximum, we substitute in $f$:
+\begin{align*}
+    f\left(\dfrac{6}{7}, -\dfrac{3}{7}, -\dfrac{2}{7}\right) & = \frac{1}{-6/7} + \frac{1}{8\cdot(-3/7)} + \frac{1}{27\cdot (-2/7)} \\
+                                                             & = -\frac{7}{6} - \frac{7}{24} - \frac{7}{54}                         \\
+                                                             & = -\frac{373}{216}
+\end{align*}
+and
+\begin{align*}
+    f\left(-\dfrac{6}{7}, \dfrac{3}{7}, \dfrac{2}{7}\right) & = \frac{1}{6/7} + \frac{1}{8\cdot 3/7} + \frac{1}{27\cdot 2/7} \\
+                                                            & = \frac{7}{6} + \frac{7}{24} + \frac{7}{54}                    \\
+                                                            & = \frac{373}{216}
+\end{align*}
+So $f$ achieves a maximum value of $373/216$ at
+\[
+    \left(-\dfrac{6}{7}, \dfrac{3}{7}, \dfrac{2}{7}\right)
+\]
+and a minimum value of $-373/216$ at
+\[
+    \left(\dfrac{6}{7}, -\dfrac{3}{7}, -\dfrac{2}{7}\right).
+\]
+
+\clearpage
+
+\section{Exercise 4}
+
+Consider the function
+\[
+    f(x,y) = \frac{x^2 + y^2}{xy}
+\]
+defined on the set
+\[
+    K = \{(x,y): 0 < x \leq 1, 0 < y \leq 1\}.
+\]
+Determine where $f$ assumes its minimum, and what that minimum value is.
+
+\subsection{Hint 1}
+Calculate $\nabla f$.
+
+\subsection{Hint 2}
+\begin{align*}
+    \frac{\partial f}{\partial x} & = \left(\frac{xy\cdot 2x - (x^2+y^2)\cdot y}{x^2y^2}\right) \\
+                                  & = \frac{x^2y - y^3}{x^2y^2}                                 \\
+                                  & = \frac{x^2 - y^2}{x^2y}
+\end{align*}
+By symmetry, we have:
+\[
+    \frac{\partial f}{\partial y} = \frac{y^2 - x^2}{xy^2}
+\]
+So
+\[
+    \nabla f(x,y) = \begin{pmatrix}
+        \dfrac{\partial f}{\partial x} \\ \\ \dfrac{\partial f}{\partial y}
+    \end{pmatrix} = \begin{pmatrix}
+        \dfrac{x^2 - y^2}{x^2y} \\ \\ \dfrac{y^2 - x^2}{xy^2}
+    \end{pmatrix}
+\]
+
+\subsection{Hint 3}
+Solve $\nabla f = 0$.
+
+\subsection{Hint 4}
+\[
+    \begin{pmatrix}
+        \dfrac{x^2 - y^2}{x^2y} \\ \\ \dfrac{y^2 - x^2}{xy^2}
+    \end{pmatrix} = 0 \iff x^2 - y^2 = 0 \iff x = \pm y
+\]
+
+\subsection{Solution}
+Note that since $x, y > 0$ on $K$, we cannot have $x = -y$. Substituting $y=x$ in $f$ we get:
+\[
+    f(x,x) = \frac{x^2 + x^2}{x^2} = 2
+\]
+So $f$ achieves its minimum value 2 on the entire line segment $x=y$, $0 < x \leq 1, 0 < y \leq 1$.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.5]{ex_4.png}
+\end{figure}
+
+\clearpage
+
+\section{Exercise 5}
+Consider the surface $S$ defined by $f(x,y,z)=0$, where
+\[
+    f(x,y,z) = x^2 + y^2 + z^2 + 3xy - z - 11
+\]
+\begin{enumerate}
+    \item Check that $A = (1,1,3)$ lies on $S$.
+    \item Give an equation of the form $\alpha x+\beta y+\gamma z=\delta$ describing the tangent plane to $S$ at point $A$.
+\end{enumerate}
+
+\subsection{Hint 1}
+1. Substitute $x=1$, $y=1$, $z=3$ in $f$ to get:
+\[
+    1^2 + 1^2 + 3^2 + 3\cdot 1\cdot 1 - 3 - 11 = 0.
+\]
+
+\subsection{Hint 2}
+2. There are several ways to go about this, but in most (if not all) you need to compute $\nabla f$ at the point $A$.
+
+\subsection{Hint 3}
+\[
+    \nabla f(x,y,z) = \begin{pmatrix}
+        \dfrac{\partial f}{\partial x} \\ \\ \dfrac{\partial f}{\partial y} \\ \\ \dfrac{\partial f}{\partial z}  
+    \end{pmatrix} = \begin{pmatrix}
+        2x+3y \\ 3x+2y \\ 2z-1  
+    \end{pmatrix}
+\]
+So
+\[
+    \nabla f(1,1,3) = \begin{pmatrix}
+        2\cdot 1+3\cdot 1 \\ 3\cdot 1+2\cdot 1 \\ 2\cdot 3-1  
+    \end{pmatrix} = \begin{pmatrix}
+        5 \\ 5 \\ 5  
+    \end{pmatrix}
+\]
+
+\subsection{Hint 4}
+The gradient of $f$ at $A$ is a vector orthogonal to the tangent plane to $S$ at point $A$. How do you find an equation of a plane if you know a vector orthogonal to it and a point on it? 
+
+\subsection{Solution}
+The tangent plane is perpendicular to the vector $\nabla f(1, 1, 3) = (5, 5, 5)$ and passes through the point $(1, 1, 3)$, so its equation is:
+\[
+    5\cdot(x-1) + 5\cdot (y-1) + 5 \cdot (z-3) = 0 \iff 5x+5y+5z = 25 
+\]
+
+\emph{\textbf{Remark:} There is also a formula given in the book as the linearization of $f$ at $A = (x_0, y_0, z_0)$:}
+\[
+    L(x,y,z) = f(A) + f_x(A)\cdot (x - x_0) + f_y(A)\cdot (y - y_0) + f_z(A)\cdot (z - z_0)
+\]
+\emph{(this is essentially a first order Taylor expansion). The formula will yield the exact same answer. However, applying formulas without understanding is like eating your food without chewing!}
+
+\end{document}

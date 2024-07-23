@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head -->
+  <head>
+    <!-- WRITE EXERCISE NUMBER HERE -->
+    <title>Exercise 5</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+
+    <!-- Main style -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Hints style -->
+    <link rel="stylesheet" href="assets/css/hints.css" />
+  </head>
+
+  <!-- Body -->
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+        <div class="inner">
+          <!-- Header (for the entire page) -->
+          <header id="header">
+            <a href="index.html" class="logo"
+              ><strong>Self-Learning Module: </strong> Multivariable Calculus</a
+            >
+          </header>
+
+          <!-- Container for the exercise -->
+          <section id="banner">
+            <div class="content">
+              <!-- EXERCISE TITLE -->
+              <header>
+                <h1>Exercise 5</h1>
+              </header>
+              <h4>
+                Consider the surface $S$ defined by $f(x,y,z)=0$, where
+                \[
+                    f(x,y,z) = x^2 + y^2 + z^2 + 3xy - z - 11
+                \]
+                <ol>
+                  <li>Check that $A = (1,1,3)$ lies on $S$.</li>
+                  <li>Give an equation of the form $\alpha x+\beta y+\gamma z=\delta$ describing the tangent plane to $S$ at point $A$.</li>
+                </ol>
+              </h4>
+            </div>
+            <!-- ADD PICTURE HERE -->
+            <!-- <span class="image object">
+              <img src="images/ex_1.png" alt="" />
+            </span> -->
+          </section>
+
+          <!-- Button to show/hide all hints -->
+          <section>
+            <button
+              id="but_0_1"
+              class="shbt_top"
+              onclick="HideShow('but_0_1', 'unsee_hint')"
+            >
+            Show Hints
+            </button>          
+          </section>
+
+          <!-- HINT 1 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint title -->
+              <!-- <header class="major">
+                <h2>Solution</h2>
+              </header> -->
+              <!-- Hint button (CHANGE NUMBERS HERE) -->
+              <button id="but_1_1" onclick="hint_show(1)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE NUMBERS HERE) -->
+            <div class="plain_container" id="1">
+              <div id="hint_1" class="unsee_hint_child">
+                <p>
+                  <!-- WRITE HINT HERE -->
+                  <h4>1.</h4> 
+                  Substitute $x=1$, $y=1$, $z=3$ in $f$ to get:
+                  \[
+                      1^2 + 1^2 + 3^2 + 3\cdot 1\cdot 1 - 3 - 11 = 0.
+                  \]
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 1 END -->
+
+          <!-- HINT 2 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint title -->
+              <!-- <header class="major">
+                <h2>Solution</h2>
+              </header> -->
+              <!-- Hint button (CHANGE NUMBERS HERE) -->
+              <button id="but_2_1" onclick="hint_show(2)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE NUMBERS HERE) -->
+            <div class="plain_container" id="2">
+              <div id="hint_2" class="unsee_hint_child">
+                <p>
+                  <!-- WRITE HINT HERE -->
+                  <h4>2.</h4> 
+                  There are several ways to go about this, but in most (if not all) 
+                  you need to compute $\nabla f$ at the point $A$.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 2 END -->
+
+          <!-- HINT 3 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint title -->
+              <!-- <header class="major">
+                <h2>Solution</h2>
+              </header> -->
+              <!-- Hint button (CHANGE NUMBERS HERE) -->
+              <button id="but_3_1" onclick="hint_show(3)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE NUMBERS HERE) -->
+            <div class="plain_container" id="3">
+              <div id="hint_3" class="unsee_hint_child">
+                <p>
+                  <!-- WRITE HINT HERE -->
+                  \[
+                      \nabla f(x,y,z) = \begin{pmatrix}
+                          \dfrac{\partial f}{\partial x} \\ \\ \dfrac{\partial f}{\partial y} \\ \\ \dfrac{\partial f}{\partial z}  
+                      \end{pmatrix} = \begin{pmatrix}
+                          2x+3y \\ 3x+2y \\ 2z-1  
+                      \end{pmatrix}
+                  \]
+                  So
+                  \[
+                      \nabla f(1,1,3) = \begin{pmatrix}
+                          2\cdot 1+3\cdot 1 \\ 3\cdot 1+2\cdot 1 \\ 2\cdot 3-1  
+                      \end{pmatrix} = \begin{pmatrix}
+                          5 \\ 5 \\ 5  
+                      \end{pmatrix}
+                  \]
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 3 END -->
+
+          <!-- HINT 4 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint title -->
+              <!-- <header class="major">
+                <h2>Solution</h2>
+              </header> -->
+              <!-- Hint button (CHANGE NUMBERS HERE) -->
+              <button id="but_4_1" onclick="hint_show(4)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE NUMBERS HERE) -->
+            <div class="plain_container" id="4">
+              <div id="hint_4" class="unsee_hint_child">
+                <p>
+                  <!-- WRITE HINT HERE -->
+                  The gradient of $f$ at $A$ is a vector orthogonal to the tangent plane to $S$ at point $A$. 
+                  How do you find an equation of a plane if you know a vector orthogonal to it and a point on it?
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 4 END -->
+
+          <!-- HINT 5 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint title -->
+              <!-- <header class="major">
+                <h2>Solution</h2>
+              </header> -->
+              <!-- Hint button (CHANGE NUMBERS HERE) -->
+              <button id="but_5_1" onclick="hint_show(5)">Solution</button>
+            </div>
+            <!-- Container for hint (CHANGE NUMBERS HERE) -->
+            <div class="plain_container" id="5">
+              <div id="hint_5" class="unsee_hint_child">
+                <p>
+                  <!-- WRITE HINT HERE -->
+                  The tangent plane is perpendicular to the vector $\nabla f(1, 1, 3) = (5, 5, 5)$ and passes through the point $(1, 1, 3)$, so its equation is:
+                  \[
+                      5\cdot(x-1) + 5\cdot (y-1) + 5 \cdot (z-3) = 0 \iff 5x+5y+5z = 25 
+                  \]
+                </p>
+                <br />
+                <em>
+                  <b>Remark:</b> There is also a formula given in the book as the linearization of $f$ at $A = (x_0, y_0, z_0)$:
+                  \[
+                      L(x,y,z) = f(A) + f_x(A)\cdot (x - x_0) + f_y(A)\cdot (y - y_0) + f_z(A)\cdot (z - z_0)
+                  \]
+                  (this is essentially a first order Taylor expansion). The formula will yield the exact same answer. 
+                  However, applying formulas without understanding is like eating your food without chewing!
+                </em>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 5 END -->
+
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div id="sidebar"><div class="inner" id="sidebar_inner"></div></div>
+
+    <!-- Main scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Relevant scripts -->
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/math.js"></script>
+    <script src="assets/js/hints.js"></script>
+
+    <!-- Math equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </body>
+</html>
