@@ -39,8 +39,10 @@
                 <h1>Exercise 6</h1>
               </header>
               <h4>
-                Consider the plane $P$ which contains the points $A = (1, 1, 1)$, $B = (2, 3, 9)$, $C = (3, 5, 4)$. 
-                Try to think of as many was as possible to determine the equation $\alpha x + \beta y + \gamma z = \delta$ of this plane.
+                Consider the plane $P$ which contains the points $A = (1, 1,
+                1)$, $B = (2, 3, 9)$, $C = (3, 5, 4)$. Try to think of as many
+                was as possible to determine the equation $\alpha x + \beta y +
+                \gamma z = \delta$ of this plane.
               </h4>
             </div>
             <!-- ADD PICTURE HERE -->
@@ -56,8 +58,8 @@
               class="shbt_top"
               onclick="HideShow('but_0_1', 'unsee_hint')"
             >
-            Show Hints
-            </button>          
+              Show Hints
+            </button>
           </section>
 
           <!-- HINT 1 -->
@@ -76,8 +78,9 @@
               <div id="hint_1" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  Just substitute the coordinates of the 3 points in 
-                  $\alpha x + \beta y + \gamma z = \delta$ and solve for $\alpha$, $\beta$, $\gamma$, $\delta$.
+                  Just substitute the coordinates of the 3 points in $\alpha x +
+                  \beta y + \gamma z = \delta$ and solve for $\alpha$, $\beta$,
+                  $\gamma$, $\delta$.
                 </p>
               </div>
             </div>
@@ -100,40 +103,23 @@
               <div id="hint_2" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  \begin{align*}
-                      & \begin{cases}
-                            \alpha + \beta + \gamma = \delta                                        \\
-                            2\alpha + 3\beta + 9\gamma = \delta & |\quad R_2 \leftarrow R_2 - 2 R_1 \\
-                            3\alpha + 5\beta + 4\gamma = \delta & |\quad R_3 \leftarrow R_3 - 3 R_1
-                        \end{cases} \\ \iff &
-                      \begin{cases}
-                          \alpha + \beta + \gamma = \delta                                        \\
-                          \beta + 7\gamma = -\delta                                               \\
-                          2\beta + \gamma = -2\delta & |\quad R_3 \leftarrow R_2 - \frac{1}{2}R_3
-                      \end{cases} \\ \iff &
-                      \begin{cases}
-                          \alpha + \beta + \gamma = \delta \\
-                          \beta + 7\gamma = -\delta        \\
-                          \frac{13}{2}\gamma = 0
-                      \end{cases} \\ \iff &
-                      \begin{cases}
-                          \alpha = 2\delta \\
-                          \beta = -\delta  \\
-                          \gamma = 0
-                      \end{cases}
-                  \end{align*}
-
-                  Note that $\delta$ is a free variable here, and 
-                  \[
-                      2\delta \cdot x -\delta \cdot y + 0\cdot z = \delta
-                  \]
-                  defines the same plane for any $\delta \neq 0$ (for $\delta=0$ we 
-                  just get $0=0$ which is satisfied by any $x,y,z$, 
-                  i.e. we don't get a plane but the entire $\mathbb{R}^3$). 
-                  So we can choose for example $\delta =1$ to get the following equation for $P$:
-                  \[
-                      2x - y = 1
-                  \]
+                  \begin{align*} & \begin{cases} \alpha + \beta + \gamma =
+                  \delta \\ 2\alpha + 3\beta + 9\gamma = \delta & |\quad R_2
+                  \leftarrow R_2 - 2 R_1 \\ 3\alpha + 5\beta + 4\gamma = \delta
+                  & |\quad R_3 \leftarrow R_3 - 3 R_1 \end{cases} \\ \iff &
+                  \begin{cases} \alpha + \beta + \gamma = \delta \\ \beta +
+                  7\gamma = -\delta \\ 2\beta + \gamma = -2\delta & |\quad R_3
+                  \leftarrow R_2 - \frac{1}{2}R_3 \end{cases} \\ \iff &
+                  \begin{cases} \alpha + \beta + \gamma = \delta \\ \beta +
+                  7\gamma = -\delta \\ \frac{13}{2}\gamma = 0 \end{cases} \\
+                  \iff & \begin{cases} \alpha = 2\delta \\ \beta = -\delta \\
+                  \gamma = 0 \end{cases} \end{align*} Note that $\delta$ is a
+                  free variable here, and \[ 2\delta \cdot x -\delta \cdot y +
+                  0\cdot z = \delta \] defines the same plane for any $\delta
+                  \neq 0$ (for $\delta=0$ we just get $0=0$ which is satisfied
+                  by any $x,y,z$, i.e. we don't get a plane but the entire
+                  $\mathbb{R}^3$). So we can choose for example $\delta =1$ to
+                  get the following equation for $P$: \[ 2x - y = 1 \]
                 </p>
                 <div class="image center">
                   <span class="image object">
@@ -161,8 +147,9 @@
               <div id="hint_3" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  Make the vectors $\overrightarrow{AB}$, $\overrightarrow{AC}$ 
-                  and compute the vector $\overrightarrow{AB} \times \overrightarrow{AC}$. Then...
+                  Make the vectors $\overrightarrow{AB}$, $\overrightarrow{AC}$
+                  and compute the vector $\overrightarrow{AB} \times
+                  \overrightarrow{AC}$. Then...
                 </p>
               </div>
             </div>
@@ -185,30 +172,21 @@
               <div id="hint_4" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  \[
-                      \overrightarrow{AB} = \overrightarrow{B} - \overrightarrow{A} = (2, 3, 9) - (1, 1, 1) = (1, 2, 8)
-                  \]
-                  \[
-                      \overrightarrow{AC} = \overrightarrow{C} - \overrightarrow{A} = (3, 5, 4) - (1, 1, 1) = (2, 4, 3)
-                  \]
-                  \begin{align*}
-                      \overrightarrow{AB} \times \overrightarrow{AC} & = \begin{vmatrix}
-                          1 & 2 & 8 \\ 2 & 4 & 3 \\ e_x & e_y & e_z 
-                      \end{vmatrix} \\ & =  \begin{vmatrix}
-                          2 & 8 \\ 4 & 3 
-                      \end{vmatrix} \cdot e_x - \begin{vmatrix}
-                          1 & 8 \\ 2 & 3
-                      \end{vmatrix} \cdot e_y + \begin{vmatrix}
-                          1 & 2 \\ 2 & 4
-                      \end{vmatrix} \cdot e_z \\
-                      & = -26 \cdot e_x + 13\cdot e_y + 0\cdot e_z \\
-                      & = (-26, 13, 0)
-                  \end{align*}
-                  Now $\overrightarrow{AB} \times \overrightarrow{AC}$ is normal to $P$ and $A$ lies on $P$, 
-                  so we get the following equation for $P$:
-                  \[
-                      -26\cdot(x -1) + 13\cdot (y-1) + 0\cdot (z-1) = 0 \iff -26x + 13y = -13 
-                  \] 
+                  \[ \overrightarrow{AB} = \overrightarrow{B} -
+                  \overrightarrow{A} = (2, 3, 9) - (1, 1, 1) = (1, 2, 8) \] \[
+                  \overrightarrow{AC} = \overrightarrow{C} - \overrightarrow{A}
+                  = (3, 5, 4) - (1, 1, 1) = (2, 4, 3) \] \begin{align*}
+                  \overrightarrow{AB} \times \overrightarrow{AC} & =
+                  \begin{vmatrix} 1 & 2 & 8 \\ 2 & 4 & 3 \\ e_x & e_y & e_z
+                  \end{vmatrix} \\ & = \begin{vmatrix} 2 & 8 \\ 4 & 3
+                  \end{vmatrix} \cdot e_x - \begin{vmatrix} 1 & 8 \\ 2 & 3
+                  \end{vmatrix} \cdot e_y + \begin{vmatrix} 1 & 2 \\ 2 & 4
+                  \end{vmatrix} \cdot e_z \\ & = -26 \cdot e_x + 13\cdot e_y +
+                  0\cdot e_z \\ & = (-26, 13, 0) \end{align*} Now
+                  $\overrightarrow{AB} \times \overrightarrow{AC}$ is normal to
+                  $P$ and $A$ lies on $P$, so we get the following equation for
+                  $P$: \[ -26\cdot(x -1) + 13\cdot (y-1) + 0\cdot (z-1) = 0 \iff
+                  -26x + 13y = -13 \]
                 </p>
               </div>
             </div>
@@ -231,13 +209,11 @@
               <div id="hint_5" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  Find a vector $(\alpha, \beta, \gamma)$ that is orthogonal to $\overrightarrow{AB}$, $\overrightarrow{AC}$ 
-                  by solving the system 
-                    \begin{align*}
-                      \overrightarrow{AB}\cdot (\alpha, \beta, \gamma) & = 0 \\
-                      \overrightarrow{AC}\cdot (\alpha, \beta, \gamma) & = 0
-                    \end{align*}
-                  Then...
+                  Find a vector $(\alpha, \beta, \gamma)$ that is orthogonal to
+                  $\overrightarrow{AB}$, $\overrightarrow{AC}$ by solving the
+                  system \begin{align*} \overrightarrow{AB}\cdot (\alpha, \beta,
+                  \gamma) & = 0 \\ \overrightarrow{AC}\cdot (\alpha, \beta,
+                  \gamma) & = 0 \end{align*} Then...
                 </p>
               </div>
             </div>
@@ -260,47 +236,29 @@
               <div id="hint_6" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  \begin{align*}
-                      & \begin{cases}
-                          (1, 2, 8) \cdot (\alpha, \beta, \gamma) = 0 \\
-                          (2, 4, 3) \cdot (\alpha, \beta, \gamma) = 0        
-                      \end{cases} \\ 
-                      \iff & \begin{cases}
-                          \alpha + 2\beta +8\gamma = 0 \\
-                          2\alpha + 4\beta + 3\gamma = 0 & | \quad R_2 \leftarrow R_2 - 2 R_1        
-                      \end{cases} \\ 
-                      \iff & \begin{cases}
-                          \alpha + 2\beta +8\gamma = 0 \\
-                          -13\gamma = 0       
-                      \end{cases} 
-                      \\ \iff & \begin{cases}
-                          \alpha = -2\beta \\
-                          \gamma = 0       
-                      \end{cases}
-                  \end{align*}
-                  Choose $\beta = 1$, so $(\alpha, \beta, \gamma) = (-2, 1, 0)$, and the equation for $P$ becomes:
-                  \[
-                      -2\cdot x + 1\cdot y + 0\cdot z = \delta
-                  \]
-                  Substitute $(1, 1, 1)$ in the equation to find $\delta$:
-                  \[
-                  \delta = -2 + 1 = -1
-                  \]
-                  So the equation for $P$ is:
-                  \[
-                      -2x+y=-1
-                  \]
+                  \begin{align*} & \begin{cases} (1, 2, 8) \cdot (\alpha, \beta,
+                  \gamma) = 0 \\ (2, 4, 3) \cdot (\alpha, \beta, \gamma) = 0
+                  \end{cases} \\ \iff & \begin{cases} \alpha + 2\beta +8\gamma =
+                  0 \\ 2\alpha + 4\beta + 3\gamma = 0 & | \quad R_2 \leftarrow
+                  R_2 - 2 R_1 \end{cases} \\ \iff & \begin{cases} \alpha +
+                  2\beta +8\gamma = 0 \\ -13\gamma = 0 \end{cases} \\ \iff &
+                  \begin{cases} \alpha = -2\beta \\ \gamma = 0 \end{cases}
+                  \end{align*} Choose $\beta = 1$, so $(\alpha, \beta, \gamma) =
+                  (-2, 1, 0)$, and the equation for $P$ becomes: \[ -2\cdot x +
+                  1\cdot y + 0\cdot z = \delta \] Substitute $(1, 1, 1)$ in the
+                  equation to find $\delta$: \[ \delta = -2 + 1 = -1 \] So the
+                  equation for $P$ is: \[ -2x+y=-1 \]
                 </p>
               </div>
             </div>
           </section>
           <!-- HINT 6 END -->
-
         </div>
       </div>
 
       <!-- Sidebar -->
       <div id="sidebar"><div class="inner" id="sidebar_inner"></div></div>
+    </div>
 
     <!-- Main scripts -->
     <script src="assets/js/jquery.min.js"></script>

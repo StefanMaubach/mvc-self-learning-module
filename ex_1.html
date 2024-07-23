@@ -40,11 +40,9 @@
               </header>
               <h4>
                 <!-- WRITE EXERCISE HERE -->
-                Calculate the length of curve $C$, where $C$ is the curve:
-                \[
-                    t \mapsto (\cos(t) + t\sin(t), \, \sin(t) - t\cos(t))
-                \]
-                for $0\leq t \leq 2\pi$.
+                Calculate the length of curve $C$, where $C$ is the curve: \[ t
+                \mapsto (\cos(t) + t\sin(t), \, \sin(t) - t\cos(t)) \] for
+                $0\leq t \leq 2\pi$.
               </h4>
             </div>
             <!-- ADD PICTURE HERE -->
@@ -60,8 +58,8 @@
               class="shbt_top"
               onclick="HideShow('but_0_1', 'unsee_hint')"
             >
-            Show Hints
-            </button>          
+              Show Hints
+            </button>
           </section>
 
           <!-- HINT 1 -->
@@ -80,10 +78,9 @@
               <div id="hint_1" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  There is a formula for calculating the length of the curve. You must know this one! The formula is of the form:
-                  \[
-                      \int_{\ldots}^{\ldots} |\ldots|\,dt
-                  \]
+                  There is a formula for calculating the length of the curve.
+                  You must know this one! The formula is of the form: \[
+                  \int_{\ldots}^{\ldots} |\ldots|\,dt \]
                 </p>
               </div>
             </div>
@@ -106,9 +103,7 @@
               <div id="hint_2" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  The formula for the length is:
-                  \[
-                      \int_{0}^{2\pi} |f'(t)|\,dt
+                  The formula for the length is: \[ \int_{0}^{2\pi} |f'(t)|\,dt
                   \]
                 </p>
               </div>
@@ -132,17 +127,11 @@
               <div id="hint_3" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  \begin{align*}
-                      f'(t) & = \frac{d}{dt} (\cos(t) + t\sin(t), \, \sin(t) - t\cos(t))         \\
-                            & = (-\sin(t) + \sin(t) + t\cos(t), \, \cos(t) - \cos(t) + t\sin(t)) \\
-                            & = (t\cos(t), \, t\sin(t))
-                  \end{align*}
-                  So
-                  \begin{align*}
-                      |f'(t)| & = \sqrt{t^2\cos^2(t) + t^2\sin^2(t)} \\
-                              & = \sqrt{t^2}                         \\
-                              & = |t|
-                  \end{align*}
+                  \begin{align*} f'(t) & = \frac{d}{dt} (\cos(t) + t\sin(t), \,
+                  \sin(t) - t\cos(t)) \\ & = (-\sin(t) + \sin(t) + t\cos(t), \,
+                  \cos(t) - \cos(t) + t\sin(t)) \\ & = (t\cos(t), \, t\sin(t))
+                  \end{align*} So \begin{align*} |f'(t)| & = \sqrt{t^2\cos^2(t)
+                  + t^2\sin^2(t)} \\ & = \sqrt{t^2} \\ & = |t| \end{align*}
                 </p>
               </div>
             </div>
@@ -165,23 +154,21 @@
               <div id="hint_4" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  Since $t \geq 0$, we have $|t| = t$, so:
-                  \begin{align*}
-                      \int_{0}^{2\pi} |f'(t)|\,dt & = \int_{0}^{2\pi} t \, dt                \\
-                                                  & = \left[ \frac{t^2}{2}\right]_{0}^{2\pi} \\
-                                                  & = 2\pi^2
+                  Since $t \geq 0$, we have $|t| = t$, so: \begin{align*}
+                  \int_{0}^{2\pi} |f'(t)|\,dt & = \int_{0}^{2\pi} t \, dt \\ & =
+                  \left[ \frac{t^2}{2}\right]_{0}^{2\pi} \\ & = 2\pi^2
                   \end{align*}
                 </p>
               </div>
             </div>
           </section>
           <!-- HINT 4 END -->
-           
         </div>
       </div>
 
       <!-- Sidebar -->
       <div id="sidebar"><div class="inner" id="sidebar_inner"></div></div>
+    </div>
 
     <!-- Main scripts -->
     <script src="assets/js/jquery.min.js"></script>
