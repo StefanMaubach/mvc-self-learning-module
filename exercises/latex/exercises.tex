@@ -372,12 +372,12 @@ Just substitute the coordinates of the 3 points in $\alpha x + \beta y + \gamma 
         \alpha + \beta + \gamma = \delta                                        \\
         \beta + 7\gamma = -\delta                                               \\
         2\beta + \gamma = -2\delta & |\quad R_3 \leftarrow R_2 - \frac{1}{2}R_3
-    \end{cases} \\ \iff &
+    \end{cases}    \\ \iff &
     \begin{cases}
         \alpha + \beta + \gamma = \delta \\
         \beta + 7\gamma = -\delta        \\
         \frac{13}{2}\gamma = 0
-    \end{cases} \\ \iff &
+    \end{cases}                                           \\ \iff &
     \begin{cases}
         \alpha = 2\delta \\
         \beta = -\delta  \\
@@ -385,7 +385,7 @@ Just substitute the coordinates of the 3 points in $\alpha x + \beta y + \gamma 
     \end{cases}
 \end{align*}
 
-Note that $\delta$ is a free variable here, and 
+Note that $\delta$ is a free variable here, and
 \[
     2\delta \cdot x -\delta \cdot y + 0\cdot z = \delta
 \]
@@ -399,7 +399,7 @@ defines the same plane for any $\delta \neq 0$ (for $\delta=0$ we just get $0=0$
     \includegraphics[scale=0.5]{ex_6.png}
 \end{figure}
 
-\subsection{Method 2} 
+\subsection{Method 2}
 Make the vectors $\overrightarrow{AB}$, $\overrightarrow{AC}$ and compute the vector $\overrightarrow{AB} \times \overrightarrow{AC}$. Then...
 
 \subsection{Solution 2}
@@ -411,47 +411,47 @@ Make the vectors $\overrightarrow{AB}$, $\overrightarrow{AC}$ and compute the ve
 \]
 \begin{align*}
     \overrightarrow{AB} \times \overrightarrow{AC} & = \begin{vmatrix}
-        1 & 2 & 8 \\ 2 & 4 & 3 \\ e_x & e_y & e_z 
-    \end{vmatrix} \\ & =  \begin{vmatrix}
-        2 & 8 \\ 4 & 3 
+                                                           1 & 2 & 8 \\ 2 & 4 & 3 \\ e_x & e_y & e_z
+                                                       \end{vmatrix} \\ & =  \begin{vmatrix}
+        2 & 8 \\ 4 & 3
     \end{vmatrix} \cdot e_x - \begin{vmatrix}
         1 & 8 \\ 2 & 3
     \end{vmatrix} \cdot e_y + \begin{vmatrix}
         1 & 2 \\ 2 & 4
     \end{vmatrix} \cdot e_z \\
-    & = -26 \cdot e_x + 13\cdot e_y + 0\cdot e_z \\
-    & = (-26, 13, 0)
+                                                   & = -26 \cdot e_x + 13\cdot e_y + 0\cdot e_z \\
+                                                   & = (-26, 13, 0)
 \end{align*}
 Now $\overrightarrow{AB} \times \overrightarrow{AC}$ is normal to $P$ and $A$ lies on $P$, so we get the following equation for $P$:
 \[
-    -26\cdot(x -1) + 13\cdot (y-1) + 0\cdot (z-1) = 0 \iff -26x + 13y = -13 
-\] 
+    -26\cdot(x -1) + 13\cdot (y-1) + 0\cdot (z-1) = 0 \iff -26x + 13y = -13
+\]
 
 \subsection{Method 3}
-Find a vector $(\alpha, \beta, \gamma)$ that is orthogonal to $\overrightarrow{AB}$, $\overrightarrow{AC}$ by solving the system 
+Find a vector $(\alpha, \beta, \gamma)$ that is orthogonal to $\overrightarrow{AB}$, $\overrightarrow{AC}$ by solving the system
 \begin{align*}
-\overrightarrow{AB}\cdot (\alpha, \beta, \gamma) & = 0 \\
-\overrightarrow{AC}\cdot (\alpha, \beta, \gamma) & = 0
+    \overrightarrow{AB}\cdot (\alpha, \beta, \gamma) & = 0 \\
+    \overrightarrow{AC}\cdot (\alpha, \beta, \gamma) & = 0
 \end{align*}
 Then...
 
 \subsection{Solution 3}
 \begin{align*}
-    & \begin{cases}
-        (1, 2, 8) \cdot (\alpha, \beta, \gamma) = 0 \\
-        (2, 4, 3) \cdot (\alpha, \beta, \gamma) = 0        
-    \end{cases} \\ 
+         & \begin{cases}
+               (1, 2, 8) \cdot (\alpha, \beta, \gamma) = 0 \\
+               (2, 4, 3) \cdot (\alpha, \beta, \gamma) = 0
+           \end{cases}                         \\
     \iff & \begin{cases}
-        \alpha + 2\beta +8\gamma = 0 \\
-        2\alpha + 4\beta + 3\gamma = 0 & | \quad R_2 \leftarrow R_2 - 2 R_1        
-    \end{cases} \\ 
+               \alpha + 2\beta +8\gamma = 0                                        \\
+               2\alpha + 4\beta + 3\gamma = 0 & | \quad R_2 \leftarrow R_2 - 2 R_1
+           \end{cases} \\
     \iff & \begin{cases}
-        \alpha + 2\beta +8\gamma = 0 \\
-        -13\gamma = 0       
-    \end{cases} 
+               \alpha + 2\beta +8\gamma = 0 \\
+               -13\gamma = 0
+           \end{cases}
     \\ \iff & \begin{cases}
         \alpha = -2\beta \\
-        \gamma = 0       
+        \gamma = 0
     \end{cases}
 \end{align*}
 Choose $\beta = 1$, so $(\alpha, \beta, \gamma) = (-2, 1, 0)$, and the equation for $P$ becomes:
@@ -460,12 +460,105 @@ Choose $\beta = 1$, so $(\alpha, \beta, \gamma) = (-2, 1, 0)$, and the equation 
 \]
 Substitute $(1, 1, 1)$ in the equation to find $\delta$:
 \[
-\delta = -2 + 1 = -1
+    \delta = -2 + 1 = -1
 \]
 So the equation for $P$ is:
 \[
     -2x+y=-1
 \]
 
+\clearpage
+
+\section{Exercise 7}
+
+Find all points that are equidistant to the 3 points $A = (2, 2, 0)$, $B = (0, 3, 3)$, $C = (4, 0, 4)$.
+
+\subsection{Hint}
+Let $P=(x,y,z)$ be such a point. Write down equations for the distances of $P$ from $A,B,C$ to be equal, i.e.:
+\[
+    \left|\overrightarrow{PA}\right|^2 = \left|\overrightarrow{PB}\right|^2 = \left|\overrightarrow{PC}\right|^2
+\]
+
+\subsection{Hint}
+\[
+    \left|\overrightarrow{PA}\right|^2 = (x-2)^2 + (y-2)^2 +(z-0)^2,
+\]
+etc.
+
+\subsection{Hint}
+\begin{align*}
+         & \ (x-2)^2 + (y-2)^2 + (z-0)^2     \\
+    =    & \ (x-0)^2 + (y-3)^2 + (z-3)^2     \\
+    =    & \ (x-4)^2 + (y-0)^2 + (z-4)^2     \\
+    \iff &                                   \\
+         & \ x^2 + y^2 + z^2 - 4x - 4y + 8   \\
+    =    & \ x^2 + y^2 + z^2 - 6y - 6z + 18  \\
+    =    & \ x^2 + y^2 + z^2 - 8x - 8z + 32  \\
+    \iff &                                   \\
+    =    & \ - 4x - 4y                       \\
+    =    & \ - 6y - 6z + 10                  \\
+    =    & \ - 8x - 8z + 24                  \\
+    \iff &                                   \\
+    =    & \ 2x + 2y                         \\
+    =    & \ 3y + 3z - 10                    \\
+    =    & \ 4x + 4z - 12                    \\
+\end{align*}
+
+\subsection{Hint}
+Note that in fact we have 2 equations:
+\[
+    \begin{cases}
+        2x + 2y = 3y + 3z - 10 \\
+        2x + 2y = 4x + 4z - 12        
+    \end{cases} \iff \begin{cases}
+        2x - y - 3z = -10 \\
+        -2x + 2y - 4z = -12 
+    \end{cases}
+\]
+So the solution is the intersection of 2 planes, i.e. a line! How can we find the equation of the line in parametric form?
+
+\subsection{Hint}
+This is now a linear algebra problem.
+\begin{align*}
+    & \left(\!\!
+        \begin{array}{c c c|c}
+            2 & -1 & -3 & -10 \\
+            -2 & 2 & -4 & -12 \\
+        \end{array}
+    \!\!\right) \quad | \quad R_2 \leftarrow R_2 + R_1 \\ \rightarrow
+    & \left(\!\!
+        \begin{array}{c c c|c}
+            2 & -1 & -3 & -10 \\
+            0 & 1 & -7 & -22 \\
+        \end{array}
+    \!\!\right) \quad | \quad R_1 \leftarrow R_1 + R_2 \\ \rightarrow 
+    & \left(\!\!
+        \begin{array}{c c c|c}
+            2 & 0 & -10 & -32 \\
+            0 & 1 & -7 & -22 \\
+        \end{array}
+    \!\!\right) \quad | \quad R_1 \leftarrow \frac{1}{2} R_1 \\ \rightarrow
+    & \left(\!\!
+        \begin{array}{c c c|c}
+            1 & 0 & -5 & -16 \\
+            0 & 1 & -7 & -22 \\
+        \end{array}
+    \!\!\right)
+\end{align*}
+So 
+\[
+    \begin{cases}
+        x - 5z = -16 \\
+        y - 7z = -22   
+    \end{cases} \iff \begin{cases}
+        x = 5z - 16 \\
+        y = 7z - 22   
+    \end{cases},
+\]
+where $z$ is free. So there is a line of points equidistant from $A, B, C$ given by the equation:
+\[
+    (x, y, z) = (5\lambda - 16, 7\lambda - 22, \lambda)
+\]
+for $\lambda\in\mathbb{R}$.
 
 \end{document}
