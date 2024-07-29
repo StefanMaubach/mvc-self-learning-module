@@ -3,7 +3,7 @@
   <!-- Head -->
   <head>
     <!-- WRITE EXERCISE NUMBER HERE -->
-    <title>Exercise 7</title>
+    <title>Exercise 8</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -36,11 +36,13 @@
             <div class="content">
               <!-- EXERCISE TITLE -->
               <header>
-                <h1>Exercise 7</h1>
+                <h1>Exercise 8</h1>
               </header>
               <h4>
-                Find all points that are equidistant to the 3 points $A = (2, 2,
-                0)$, $B = (0, 3, 3)$, $C = (4, 0, 4)$.
+                Consider the following 5 points: \[ A = (0, 0, 0), \quad B = (2,
+                0, 0), \quad C = (4, 4, 0), \quad D = (4, 0, 4), \quad E = (0,
+                0, 4) \] Find all the points that are equidistant from
+                $A,B,C,D,E$.
               </h4>
             </div>
             <!-- ADD PICTURE HERE -->
@@ -80,7 +82,9 @@
                   distances of $P$ from $A,B,C$ to be equal, i.e.: \[
                   \left|\overrightarrow{PA}\right|^2 =
                   \left|\overrightarrow{PB}\right|^2 =
-                  \left|\overrightarrow{PC}\right|^2 \]
+                  \left|\overrightarrow{PC}\right|^2 =
+                  \left|\overrightarrow{PD}\right|^2 =
+                  \left|\overrightarrow{PE}\right|^2 \]
                 </p>
               </div>
             </div>
@@ -103,7 +107,7 @@
               <div id="hint_2" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  \[ \left|\overrightarrow{PA}\right|^2 = (x-2)^2 + (y-2)^2
+                  \[ \left|\overrightarrow{PB}\right|^2 = (x-2)^2 + (y-0)^2
                   +(z-0)^2, \] etc.
                 </p>
               </div>
@@ -127,13 +131,15 @@
               <div id="hint_3" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  \begin{align*} & \ (x-2)^2 + (y-2)^2 + (z-0)^2 \\ = & \
-                  (x-0)^2 + (y-3)^2 + (z-3)^2 \\ = & \ (x-4)^2 + (y-0)^2 +
-                  (z-4)^2 \\ \iff & \\ & \ x^2 + y^2 + z^2 - 4x - 4y + 8 \\ = &
-                  \ x^2 + y^2 + z^2 - 6y - 6z + 18 \\ = & \ x^2 + y^2 + z^2 - 8x
-                  - 8z + 32 \\ \iff & \\ & \ - 4x - 4y \\ = & \ - 6y - 6z + 10
-                  \\ = & \ - 8x - 8z + 24 \\ \iff & \\ & \ 2x + 2y \\ = & \ 3y +
-                  3z - 10 \\ = & \ 4x + 4z - 12 \\ \end{align*}
+                  \begin{align*} & \ (x-0)^2 + (y-0)^2 + (z-0)^2 \\ = & \
+                  (x-2)^2 + (y-0)^2 + (z-0)^2 \\ = & \ (x-4)^2 + (y-4)^2 +
+                  (z-0)^2 \\ = & \ (x-4)^2 + (y-0)^2 + (z-4)^2 \\ = & \ (x-0)^2
+                  + (y-0)^2 + (z-4)^2 \\ \iff & \\ & \ x^2 + y^2 + z^2 \\ = & \
+                  x^2 + y^2 + z^2 - 4x + 4 \\ = & \ x^2 + y^2 + z^2 - 8x - 8y +
+                  32 \\ = & \ x^2 + y^2 + z^2 - 8x - 8z + 32 \\ = & \ x^2 + y^2
+                  + z^2 - 8z + 16 \\ \iff & \\ & \ 0 \\ = & \ - 4x + 4 \\ = & \
+                  - 8x - 8y + 32 \\ = & \ - 8x - 8z + 32 \\ = & \ - 8z + 16 \\
+                  \end{align*}
                 </p>
               </div>
             </div>
@@ -149,62 +155,23 @@
                 <h2>Solution</h2>
               </header> -->
               <!-- Hint button (CHANGE NUMBERS HERE) -->
-              <button id="but_4_1" onclick="hint_show(4)">Hint</button>
+              <button id="but_4_1" onclick="hint_show(4)">Solution</button>
             </div>
             <!-- Container for hint (CHANGE NUMBERS HERE) -->
             <div class="plain_container" id="4">
               <div id="hint_4" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  Note that in fact we have 2 equations: \[ \begin{cases} 2x +
-                  2y = 3y + 3z - 10 \\ 2x + 2y = 4x + 4z - 12 \end{cases} \iff
-                  \begin{cases} 2x - y - 3z = -10 \\ -2x + 2y - 4z = -12
-                  \end{cases} \] So the solution is the intersection of 2
-                  planes, i.e. a line! How can we find the equation of the line
-                  in parametric form?
+                  We have: \[ 0 = -4x + 4 \iff x=1 \] For $x=1$: \[ 0 = - 8x -
+                  8y + 32 = -8y + 24 \iff y = 3 \] For $x=1, y=3$: \[ 0 = - 8x -
+                  8z + 32 \iff z = 3 \] But now for $x=1$, $y=3$, $z=3$: \[ -8z
+                  + 16 = 0 \implies -8 = 0, \] contradiction! So there are no
+                  points equidistant from $A, B, C, D, E$.
                 </p>
               </div>
             </div>
           </section>
           <!-- HINT 4 END -->
-
-          <!-- HINT 5 -->
-          <section>
-            <!-- Container for elements to show/hide -->
-            <div class="unsee_hint">
-              <!-- Hint title -->
-              <!-- <header class="major">
-                <h2>Solution</h2>
-              </header> -->
-              <!-- Hint button (CHANGE NUMBERS HERE) -->
-              <button id="but_5_1" onclick="hint_show(5)">Solution</button>
-            </div>
-            <!-- Container for hint (CHANGE NUMBERS HERE) -->
-            <div class="plain_container" id="5">
-              <div id="hint_5" class="unsee_hint_child">
-                <p>
-                  <!-- WRITE HINT HERE -->
-                  This is now a linear algebra problem. \begin{align*} & \left(
-                  \begin{array}{c c c|c} 2 & -1 & -3 & -10 \\ -2 & 2 & -4 & -12
-                  \\ \end{array} \right) \quad | \quad R_2 \leftarrow R_2 + R_1
-                  \\ \rightarrow & \left( \begin{array}{c c c|c} 2 & -1 & -3 &
-                  -10 \\ 0 & 1 & -7 & -22 \\ \end{array} \right) \quad | \quad
-                  R_1 \leftarrow R_1 + R_2 \\ \rightarrow & \left(
-                  \begin{array}{c c c|c} 2 & 0 & -10 & -32 \\ 0 & 1 & -7 & -22
-                  \\ \end{array} \right) \quad | \quad R_1 \leftarrow
-                  \frac{1}{2} R_1 \\ \rightarrow & \left( \begin{array}{c c c|c}
-                  1 & 0 & -5 & -16 \\ 0 & 1 & -7 & -22 \\ \end{array} \right)
-                  \end{align*} So \[ \begin{cases} x - 5z = -16 \\ y - 7z = -22
-                  \end{cases} \iff \begin{cases} x = 5z - 16 \\ y = 7z - 22
-                  \end{cases}, \] where $z$ is free. So there is a line of
-                  points equidistant from $A, B, C$ given by the equation: \[
-                  (x, y, z) = (5\lambda - 16, 7\lambda - 22, \lambda) \] for
-                  $\lambda\in\mathbb{R}$.
-                </p>
-              </div>
-            </div>
-          </section>
-          <!-- HINT 5 END -->
         </div>
       </div>
 

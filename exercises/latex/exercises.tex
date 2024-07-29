@@ -24,7 +24,7 @@
 
 \clearpage
 
-\section{Exercise 1}
+\section{Exercise}
 
 Calculate the length of curve $C$, where $C$ is the curve:
 \[
@@ -72,7 +72,7 @@ Since $t \geq 0$, we have $|t| = t$, so:
 
 \clearpage
 
-\section{Exercise 2}
+\section{Exercise}
 
 Consider the curve $C$ given by $f(x,y) = 0$, where
 \[
@@ -127,7 +127,7 @@ and the maximum is
 
 \clearpage
 
-\section{Exercise 3}
+\section{Exercise}
 
 Consider the function
 \[
@@ -243,7 +243,7 @@ and a minimum value of $-373/216$ at
 
 \clearpage
 
-\section{Exercise 4}
+\section{Exercise}
 
 Consider the function
 \[
@@ -301,7 +301,7 @@ So $f$ achieves its minimum value 2 on the entire line segment $x=y$, $0 < x \le
 
 \clearpage
 
-\section{Exercise 5}
+\section{Exercise}
 Consider the surface $S$ defined by $f(x,y,z)=0$, where
 \[
     f(x,y,z) = x^2 + y^2 + z^2 + 3xy - z - 11
@@ -354,7 +354,7 @@ The tangent plane is perpendicular to the vector $\nabla f(1, 1, 3) = (5, 5, 5)$
 
 \clearpage
 
-\section{Exercise 6}
+\section{Exercise}
 
 Consider the plane $P$ which contains the points $A = (1, 1, 1)$, $B = (2, 3, 9)$, $C = (3, 5, 4)$. Try to think of as many was as possible to determine the equation $\alpha x + \beta y + \gamma z = \delta$ of this plane.
 
@@ -469,7 +469,7 @@ So the equation for $P$ is:
 
 \clearpage
 
-\section{Exercise 7}
+\section{Exercise}
 
 Find all points that are equidistant to the 3 points $A = (2, 2, 0)$, $B = (0, 3, 3)$, $C = (4, 0, 4)$.
 
@@ -495,11 +495,11 @@ etc.
     =    & \ x^2 + y^2 + z^2 - 6y - 6z + 18 \\
     =    & \ x^2 + y^2 + z^2 - 8x - 8z + 32 \\
     \iff &                                  \\
-    =    & \ - 4x - 4y                      \\
+         & \ - 4x - 4y                      \\
     =    & \ - 6y - 6z + 10                 \\
     =    & \ - 8x - 8z + 24                 \\
     \iff &                                  \\
-    =    & \ 2x + 2y                        \\
+         & \ 2x + 2y                        \\
     =    & \ 3y + 3z - 10                   \\
     =    & \ 4x + 4z - 12                   \\
 \end{align*}
@@ -560,5 +560,68 @@ where $z$ is free. So there is a line of points equidistant from $A, B, C$ given
     (x, y, z) = (5\lambda - 16, 7\lambda - 22, \lambda)
 \]
 for $\lambda\in\mathbb{R}$.
+
+\clearpage
+
+\section{Exercise}
+
+Consider the following 5 points:
+\[
+    A = (0, 0, 0), \quad B = (2, 0, 0), \quad C = (4, 4, 0), \quad D = (4, 0, 4), \quad E = (0, 0, 4)
+\]
+Find all the points that are equidistant from $A,B,C,D,E$.
+
+\subsection{Hint}
+Let $P=(x,y,z)$ be such a point. Write down equations for the distances of $P$ from $A,B,C$ to be equal, i.e.:
+\[
+    \left|\overrightarrow{PA}\right|^2 = \left|\overrightarrow{PB}\right|^2 = \left|\overrightarrow{PC}\right|^2 = \left|\overrightarrow{PD}\right|^2 = \left|\overrightarrow{PE}\right|^2
+\]
+
+\subsection{Hint}
+\[
+    \left|\overrightarrow{PB}\right|^2 = (x-2)^2 + (y-0)^2 +(z-0)^2,
+\]
+etc.
+
+\subsection{Hint}
+\begin{align*}
+         & \ (x-0)^2 + (y-0)^2 + (z-0)^2    \\
+    =    & \ (x-2)^2 + (y-0)^2 + (z-0)^2    \\
+    =    & \ (x-4)^2 + (y-4)^2 + (z-0)^2    \\
+    =    & \ (x-4)^2 + (y-0)^2 + (z-4)^2    \\
+    =    & \ (x-0)^2 + (y-0)^2 + (z-4)^2    \\
+    \iff &                                  \\
+         & \ x^2 + y^2 + z^2                \\
+    =    & \ x^2 + y^2 + z^2 - 4x + 4       \\
+    =    & \ x^2 + y^2 + z^2 - 8x - 8y + 32 \\
+    =    & \ x^2 + y^2 + z^2 - 8x - 8z + 32 \\
+    =    & \ x^2 + y^2 + z^2 - 8z + 16      \\
+    \iff &                                  \\
+         & \ 0                              \\
+    =    & \ - 4x + 4                       \\
+    =    & \ - 8x - 8y + 32                 \\
+    =    & \ - 8x - 8z + 32                 \\
+    =    & \ - 8z + 16                      \\
+\end{align*}
+
+\subsection{Solution}
+We have:
+\[
+    0 = -4x + 4 \iff x=1
+\]
+For $x=1$:
+\[
+    0 = - 8x - 8y + 32 = -8y + 24 \iff y = 3
+\]
+For $x=1, y=3$:
+\[
+   0 =  - 8x - 8z + 32 \iff z = 3
+\]
+But now for $x=1$, $y=3$, $z=3$:
+\[
+    -8z + 16 = 0 \implies -8 = 0,
+\]
+contradiction! So there are no points equidistant from $A, B, C, D, E$.
+
 
 \end{document}
