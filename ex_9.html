@@ -3,7 +3,7 @@
   <!-- Head -->
   <head>
     <!-- WRITE EXERCISE NUMBER HERE -->
-    <title>Exercise 5</title>
+    <title>Exercise 9</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -36,18 +36,13 @@
             <div class="content">
               <!-- EXERCISE TITLE -->
               <header>
-                <h1>Exercise 5</h1>
+                <h1>Exercise 9</h1>
               </header>
               <h4>
-                Consider the surface $S$ defined by $f(x,y,z)=0$, where \[
-                f(x,y,z) = x^2 + y^2 + z^2 + 3xy - z - 11 \]
-                <ol>
-                  <li>Check that $A = (1,1,3)$ lies on $S$.</li>
-                  <li>
-                    Give an equation of the form $\alpha x+\beta y+\gamma
-                    z=\delta$ describing the tangent plane to $S$ at point $A$.
-                  </li>
-                </ol>
+                A rocket is flying through space. At time $t$, for $t \geq 0$,
+                it is at location \[ f(t) = \left(t\cos(t),\: t\sin(t),\:
+                \frac{2\sqrt{2}}{3}\,t\sqrt{t}\right). \] At which point
+                $(x,y,z)$ is the rocket's speed equal to 37?
               </h4>
             </div>
             <!-- ADD PICTURE HERE -->
@@ -81,11 +76,9 @@
             <!-- Container for hint (CHANGE NUMBERS HERE) -->
             <div class="plain_container" id="1">
               <div id="hint_1" class="unsee_hint_child">
-                <h4>1.</h4>
                 <p>
                   <!-- WRITE HINT HERE -->
-                  Substitute $x=1$, $y=1$, $z=3$ in $f$ to get: \[ 1^2 + 1^2 +
-                  3^2 + 3\cdot 1\cdot 1 - 3 - 11 = 0. \]
+                  Compute a formula for the speed of the rocket at time $t$.
                 </p>
               </div>
             </div>
@@ -106,11 +99,12 @@
             <!-- Container for hint (CHANGE NUMBERS HERE) -->
             <div class="plain_container" id="2">
               <div id="hint_2" class="unsee_hint_child">
-                <h4>2.</h4>
                 <p>
                   <!-- WRITE HINT HERE -->
-                  There are several ways to go about this, but in most (if not
-                  all) you need to compute $\nabla f$ at the point $A$.
+                  The velocity of the rocket at time $t$ is given by: \[ f'(t) =
+                  \left(\cos(t)- t\sin(t),\: \sin(t) + t\cos(t),\: \sqrt{2t}
+                  \right) \] The speed is given by $|f'(t)|$. Calculate (and
+                  simplify) this!
                 </p>
               </div>
             </div>
@@ -133,13 +127,15 @@
               <div id="hint_3" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  \[ \nabla f(x,y,z) = \begin{pmatrix} \dfrac{\partial
-                  f}{\partial x} \\ \\ \dfrac{\partial f}{\partial y} \\ \\
-                  \dfrac{\partial f}{\partial z} \end{pmatrix} = \begin{pmatrix}
-                  2x+3y \\ 3x+2y \\ 2z-1 \end{pmatrix} \] So \[ \nabla f(1,1,3)
-                  = \begin{pmatrix} 2\cdot 1+3\cdot 1 \\ 3\cdot 1+2\cdot 1 \\
-                  2\cdot 3-1 \end{pmatrix} = \begin{pmatrix} 5 \\ 5 \\ 5
-                  \end{pmatrix} \]
+                  \begin{align*} |f'(t)| & = \sqrt{\left(\cos(t)-
+                  t\sin(t)\right)^2 + \left(\sin(t) + t\cos(t)\right)^2 +
+                  \big(\sqrt{2t}\big)^2} \\ & = \sqrt{\cos(t)^2 -
+                  2\cos(t)\,t\sin(t) + t^2\sin(t)^2 + \sin(t)^2 +
+                  2\sin(t)\,t\cos(t) + t^2\cos(t)^2 + 2t} \\ & =
+                  \sqrt{t^2\left(\sin(t)^2 + \cos(t)^2\right) + 2t +
+                  \left(\sin(t)^2 + \cos(t)^2\right)} \\ & = \sqrt{t^2 + 2t + 1}
+                  \\ & = \sqrt{(t+1)^2} \\ & = |t+1| \\ & = t+1, \end{align*}
+                  since $t\geq 0$.
                 </p>
               </div>
             </div>
@@ -155,59 +151,23 @@
                 <h2>Solution</h2>
               </header> -->
               <!-- Hint button (CHANGE NUMBERS HERE) -->
-              <button id="but_4_1" onclick="hint_show(4)">Hint</button>
+              <button id="but_4_1" onclick="hint_show(4)">Solution</button>
             </div>
             <!-- Container for hint (CHANGE NUMBERS HERE) -->
             <div class="plain_container" id="4">
               <div id="hint_4" class="unsee_hint_child">
                 <p>
                   <!-- WRITE HINT HERE -->
-                  The gradient of $f$ at $A$ is a vector orthogonal to the
-                  tangent plane to $S$ at point $A$. How do you find an equation
-                  of a plane if you know a vector orthogonal to it and a point
-                  on it?
+                  \[ 1 + t = 37 \iff t = 36 \] At $t=36$ the rocket is at point:
+                  \begin{align*} f(36) & = \left(36\cos(36),\: 36\sin(36),\:
+                  \frac{2\sqrt{2}}{3}\cdot 36\sqrt{36}\right) \\ & =
+                  \left(36\cos(36),\: 36\sin(36),\: 144\sqrt{2}\right)
+                  \end{align*}
                 </p>
               </div>
             </div>
           </section>
           <!-- HINT 4 END -->
-
-          <!-- HINT 5 -->
-          <section>
-            <!-- Container for elements to show/hide -->
-            <div class="unsee_hint">
-              <!-- Hint title -->
-              <!-- <header class="major">
-                <h2>Solution</h2>
-              </header> -->
-              <!-- Hint button (CHANGE NUMBERS HERE) -->
-              <button id="but_5_1" onclick="hint_show(5)">Solution</button>
-            </div>
-            <!-- Container for hint (CHANGE NUMBERS HERE) -->
-            <div class="plain_container" id="5">
-              <div id="hint_5" class="unsee_hint_child">
-                <p>
-                  <!-- WRITE HINT HERE -->
-                  The tangent plane is perpendicular to the vector $\nabla f(1,
-                  1, 3) = (5, 5, 5)$ and passes through the point $(1, 1, 3)$,
-                  so its equation is: \[ 5\cdot(x-1) + 5\cdot (y-1) + 5 \cdot
-                  (z-3) = 0 \iff 5x+5y+5z = 25 \]
-                  <br />
-                  <b>Remark:</b>
-                  <em>
-                    There is also a formula given in the book as the
-                    linearization of $f$ at $A = (x_0, y_0, z_0)$: \[ L(x,y,z) =
-                    f(A) + f_x(A)\cdot (x - x_0) + f_y(A)\cdot (y - y_0) +
-                    f_z(A)\cdot (z - z_0) \] (this is essentially a first order
-                    Taylor expansion). The formula will yield the exact same
-                    answer. However, applying formulas without understanding is
-                    like eating your food without chewing!
-                  </em>
-                </p>
-              </div>
-            </div>
-          </section>
-          <!-- HINT 5 END -->
         </div>
       </div>
 

@@ -346,11 +346,11 @@ The tangent plane is perpendicular to the vector $\nabla f(1, 1, 3) = (5, 5, 5)$
     5\cdot(x-1) + 5\cdot (y-1) + 5 \cdot (z-3) = 0 \iff 5x+5y+5z = 25
 \]
 
-\emph{\textbf{Remark:} There is also a formula given in the book as the linearization of $f$ at $A = (x_0, y_0, z_0)$:}
+\textbf{Remark:} \emph{There is also a formula given in the book as the linearization of $f$ at $A = (x_0, y_0, z_0)$:
 \[
     L(x,y,z) = f(A) + f_x(A)\cdot (x - x_0) + f_y(A)\cdot (y - y_0) + f_z(A)\cdot (z - z_0)
 \]
-\emph{(this is essentially a first order Taylor expansion). The formula will yield the exact same answer. However, applying formulas without understanding is like eating your food without chewing!}
+(this is essentially a first order Taylor expansion). The formula will yield the exact same answer. However, applying formulas without understanding is like eating your food without chewing!}
 
 \clearpage
 
@@ -623,5 +623,46 @@ But now for $x=1$, $y=3$, $z=3$:
 \]
 contradiction! So there are no points equidistant from $A, B, C, D, E$.
 
+\clearpage
+
+\section{Exercise}
+
+A rocket is flying through space. At time $t$, for $t \geq 0$, it is at location
+\[
+    f(t) = \left(t\cos(t),\: t\sin(t),\: \frac{2\sqrt{2}}{3}\,t\sqrt{t}\right).
+\]
+At which point $(x,y,z)$ is the rocket's speed equal to 37?
+
+\subsection{Hint}
+Compute a formula for the speed of the rocket at time $t$.
+
+\subsection{Hint}
+The velocity of the rocket at time $t$ is given by:
+\[
+    f'(t) = \left(\cos(t)- t\sin(t),\: \sin(t) + t\cos(t),\: \sqrt{2t} \right)
+\]
+The speed is given by $|f'(t)|$. Calculate (and simplify) this!
+
+\subsection{Hint}
+\begin{align*}
+    |f'(t)| & = \sqrt{\left(\cos(t)- t\sin(t)\right)^2 + \left(\sin(t) + t\cos(t)\right)^2 + \big(\sqrt{2t}\big)^2} \\
+    & = \sqrt{\cos(t)^2 - 2\cos(t)\,t\sin(t) + t^2\sin(t)^2 + \sin(t)^2 + 2\sin(t)\,t\cos(t) + t^2\cos(t)^2 + 2t} \\
+    & = \sqrt{t^2\left(\sin(t)^2 + \cos(t)^2\right) + 2t + \left(\sin(t)^2 + \cos(t)^2\right)} \\
+    & = \sqrt{t^2 + 2t + 1} \\
+    & = \sqrt{(t+1)^2} \\
+    & = |t+1| \\
+    & = t+1,
+\end{align*}
+since $t\geq 0$.
+
+\subsection{Solution}
+\[
+    1 + t = 37 \iff t = 36
+\]
+At $t=36$ the rocket is at point:
+\begin{align*}
+    f(36) & = \left(36\cos(36),\: 36\sin(36),\: \frac{2\sqrt{2}}{3}\cdot 36\sqrt{36}\right) \\ 
+          & = \left(36\cos(36),\: 36\sin(36),\: 144\sqrt{2}\right)
+\end{align*}
 
 \end{document}
