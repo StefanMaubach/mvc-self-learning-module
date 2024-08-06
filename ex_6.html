@@ -106,14 +106,14 @@
                   \begin{align*} & \begin{cases} \alpha + \beta + \gamma =
                   \delta \\ 2\alpha + 3\beta + 9\gamma = \delta & |\quad R_2
                   \leftarrow R_2 - 2 R_1 \\ 3\alpha + 5\beta + 4\gamma = \delta
-                  & |\quad R_3 \leftarrow R_3 - 3 R_1 \end{cases} \\ \iff &
+                  & |\quad R_3 \leftarrow R_3 - 3 R_1 \end{cases} \\ \implies &
                   \begin{cases} \alpha + \beta + \gamma = \delta \\ \beta +
                   7\gamma = -\delta \\ 2\beta + \gamma = -2\delta & |\quad R_3
-                  \leftarrow R_2 - \frac{1}{2}R_3 \end{cases} \\ \iff &
+                  \leftarrow R_2 - \frac{1}{2}R_3 \end{cases} \\ \implies &
                   \begin{cases} \alpha + \beta + \gamma = \delta \\ \beta +
                   7\gamma = -\delta \\ \frac{13}{2}\gamma = 0 \end{cases} \\
-                  \iff & \begin{cases} \alpha = 2\delta \\ \beta = -\delta \\
-                  \gamma = 0 \end{cases} \end{align*} Note that $\delta$ is a
+                  \implies & \begin{cases} \alpha = 2\delta \\ \beta = -\delta
+                  \\ \gamma = 0 \end{cases} \end{align*} Note that $\delta$ is a
                   free variable here, and \[ 2\delta \cdot x -\delta \cdot y +
                   0\cdot z = \delta \] defines the same plane for any $\delta
                   \neq 0$ (for $\delta=0$ we just get $0=0$ which is satisfied
@@ -185,8 +185,8 @@
                   0\cdot e_z \\ & = (-26, 13, 0) \end{align*} Now
                   $\overrightarrow{AB} \times \overrightarrow{AC}$ is normal to
                   $P$ and $A$ lies on $P$, so we get the following equation for
-                  $P$: \[ -26\cdot(x -1) + 13\cdot (y-1) + 0\cdot (z-1) = 0 \iff
-                  -26x + 13y = -13 \]
+                  $P$: \[ -26\cdot(x -1) + 13\cdot (y-1) + 0\cdot (z-1) = 0
+                  \implies -26x + 13y = -13 \]
                 </p>
               </div>
             </div>
@@ -238,16 +238,17 @@
                   <!-- WRITE HINT HERE -->
                   \begin{align*} & \begin{cases} (1, 2, 8) \cdot (\alpha, \beta,
                   \gamma) = 0 \\ (2, 4, 3) \cdot (\alpha, \beta, \gamma) = 0
-                  \end{cases} \\ \iff & \begin{cases} \alpha + 2\beta +8\gamma =
-                  0 \\ 2\alpha + 4\beta + 3\gamma = 0 & | \quad R_2 \leftarrow
-                  R_2 - 2 R_1 \end{cases} \\ \iff & \begin{cases} \alpha +
-                  2\beta +8\gamma = 0 \\ -13\gamma = 0 \end{cases} \\ \iff &
-                  \begin{cases} \alpha = -2\beta \\ \gamma = 0 \end{cases}
-                  \end{align*} Choose $\beta = 1$, so $(\alpha, \beta, \gamma) =
-                  (-2, 1, 0)$, and the equation for $P$ becomes: \[ -2\cdot x +
-                  1\cdot y + 0\cdot z = \delta \] Substitute $(1, 1, 1)$ in the
-                  equation to find $\delta$: \[ \delta = -2 + 1 = -1 \] So the
-                  equation for $P$ is: \[ -2x+y=-1 \]
+                  \end{cases} \\ \implies & \begin{cases} \alpha + 2\beta
+                  +8\gamma = 0 \\ 2\alpha + 4\beta + 3\gamma = 0 & | \quad R_2
+                  \leftarrow R_2 - 2 R_1 \end{cases} \\ \implies & \begin{cases}
+                  \alpha + 2\beta +8\gamma = 0 \\ -13\gamma = 0 \end{cases} \\
+                  \implies & \begin{cases} \alpha = -2\beta \\ \gamma = 0
+                  \end{cases} \end{align*} Choose $\beta = 1$, so $(\alpha,
+                  \beta, \gamma) = (-2, 1, 0)$, and the equation for $P$
+                  becomes: \[ -2\cdot x + 1\cdot y + 0\cdot z = \delta \]
+                  Substitute $(1, 1, 1)$ in the equation to find $\delta$: \[
+                  \delta = -2 + 1 = -1 \] So the equation for $P$ is: \[
+                  -2x+y=-1 \]
                 </p>
               </div>
             </div>
