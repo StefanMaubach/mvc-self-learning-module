@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head -->
+  <head>
+    <title>Exercise 11</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+
+    <!-- Main style -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Hints style -->
+    <link rel="stylesheet" href="assets/css/hints.css" />
+  </head>
+
+  <!-- Body -->
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+        <div class="inner">
+          <!-- Header (for the entire page) -->
+          <header id="header">
+            <a href="index.html" class="logo"
+              ><strong>Self-Learning Module: </strong> Multivariable Calculus</a
+            >
+          </header>
+
+          <!-- Container for the exercise -->
+          <section id="banner">
+            <div class="content">
+              <header>
+                <h1>Exercise 11</h1>
+              </header>
+              <h4>
+                Consider the function \[ f(x,y) = (x+1)\sin(xy) \] defined on
+                the square \[ K = \{(x,y): 0 \leq x \leq 2\pi, 0 \leq y \leq
+                2\pi\}. \] Determine any maxima/minima of $f$ on $K$.
+              </h4>
+            </div>
+            <!-- UNCOMMENT TO ADD PICTURE HERE -->
+            <!-- <span class="image object">
+              <img src="images/ex.png" alt="" />
+            </span> -->
+          </section>
+
+          <!-- Button to show/hide all hints -->
+          <section>
+            <button
+              id="but_0_1"
+              class="shbt_top"
+              onclick="HideShow('but_0_1', 'unsee_hint')"
+            >
+              Show Hints
+            </button>
+          </section>
+
+          <!-- ADD HINTS HERE -->
+
+          <!-- HINT 1 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE $ TO HINT NUMBER) -->
+              <button id="but_1_1" onclick="hint_show(1)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 1 TO HINT NUMBER) -->
+            <div class="plain_container" id="1">
+              <div id="hint_1" class="unsee_hint_child">
+                <p>
+                  While you can use some ad-hoc methods, try to do this question
+                  structurally in a way that always works. First, calculate
+                  $\nabla f$. What can you do with this? Is determining the
+                  critical points of $f$ enough?
+                </p>
+                <!-- UNCOMMENT TO ADD PICTURE HERE -->
+                <!-- <div class="image center">
+        <span class="image object">
+          <img src="images/ex.png" width="480" alt="" />
+        </span>
+      </div> -->
+              </div>
+            </div>
+          </section>
+          <!-- HINT 1 END -->
+
+          <!-- HINT 2 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 2 TO HINT NUMBER) -->
+              <button id="but_2_1" onclick="hint_show(2)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 2 TO HINT NUMBER) -->
+            <div class="plain_container" id="2">
+              <div id="hint_2" class="unsee_hint_child">
+                <p>
+                  \[ \nabla f(x,y) = \begin{pmatrix} \sin(xy) +
+                  y\cdot(x+1)\cos(xy) \\ x(x+1)\cos(xy) \end{pmatrix} \] Setting
+                  $\nabla f(x,y) = 0$ will yield the critical points. \[
+                  x(x+1)\cos(xy) = 0 \implies \begin{cases} x = 0, \quad
+                  \mathrm{or} \\ x + 1 = 0, \quad \mathrm{or} \\ \cos(xy) = 0
+                  \end{cases} \implies \begin{cases} x = 0, \quad \mathrm{or} \\
+                  x = -1, \quad \mathrm{or} \\ xy = \frac{k\pi}{2}, \quad k =
+                  1,3,5,\ldots \end{cases} \] Since $(x,y)$ must be in $K$ we
+                  only have the cases:
+                </p>
+                <ul>
+                  <li>$x=0$</li>
+                  <li>$xy = \frac{\pi}{2}$</li>
+                  <li>$xy = \frac{3\pi}{2}$</li>
+                </ul>
+                <p>
+                  Now substitute these values in $\sin(xy) + y\cdot(x+1)\cos(xy)
+                  = 0$.
+                </p>
+                <ul>
+                  <li>
+                    $x=0$: $\sin(0) + y\cdot 1\cdot \cos(0) = 0 \implies 0 + y =
+                    0 \implies y = 0$
+                  </li>
+                  <li>
+                    $xy = \frac{\pi}{2}$: $\sin(\frac{\pi}{2}) +
+                    y\cdot(x+1)\cos(\frac{\pi}{2}) = 0 \implies 1 + 0 = 0$,
+                    contradiction!
+                  </li>
+                  <li>
+                    $xy = \frac{3\pi}{2}$: $\sin(\frac{3\pi}{2}) +
+                    y\cdot(x+1)\cos(\frac{3\pi}{2}) = 0 \implies -1 + 0 = 0$,
+                    contradiction!
+                  </li>
+                </ul>
+                <p>
+                  So we get a critical point at $(0, 0)$, at which $f(0,0) = 0$.
+                  Are we done?
+                </p>
+                <!-- UNCOMMENT TO ADD PICTURE HERE -->
+                <!-- <div class="image center">
+        <span class="image object">
+          <img src="images/ex.png" width="480" alt="" />
+        </span>
+      </div> -->
+              </div>
+            </div>
+          </section>
+          <!-- HINT $ END -->
+          <!-- HINT 3 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE $ TO HINT NUMBER) -->
+              <button id="but_3_1" onclick="hint_show(3)">Solution</button>
+            </div>
+            <!-- Container for hint (CHANGE 3 TO HINT NUMBER) -->
+            <div class="plain_container" id="3">
+              <div id="hint_3" class="unsee_hint_child">
+                <p>
+                  On $y=2\pi$: $f(x, 2\pi) = (x+1)\sin(2\pi x)$. While we could
+                  try and find the maxima/minima of this function, we can save a
+                  lot of time by noticing that for $0 \leq x \leq 2\pi$ we have
+                  \[ |(x+1)\sin(2\pi x)| \leq |(2\pi+1)\sin(2\pi x)|, \] so this
+                  case cannot produce any new extreme values compared to the
+                  case $x=2\pi$.
+                </p>
+                <!-- UNCOMMENT TO ADD PICTURE HERE -->
+                <div class="image center">
+                  <span class="image object">
+                    <img src="images/ex_11.png" width="480" alt="" />
+                  </span>
+                </div>
+                <p>bla</p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT $ END -->
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div id="sidebar"><div class="inner" id="sidebar_inner"></div></div>
+    </div>
+
+    <!-- Main scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Relevant scripts -->
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/math.js"></script>
+    <script src="assets/js/hints.js"></script>
+
+    <!-- Math equations -->
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </body>
+</html>
