@@ -15,7 +15,7 @@
 \begingroup
 \centering
 \LARGE Multivariable Calculus Self-Learning Module\\[1em]
-\large User Manual\par
+\large Setup \& Usage Manual\par
 \vspace{32pt}
 \endgroup
 
@@ -42,7 +42,7 @@ The website is currently hosted for free by \emph{GitHub Pages}. In order to dep
 \end{enumerate}
 The good part is that once setup this process is totally free, standardised, and should be familiar to anyone who has ever collaborated on a coding project. 
 
-\section{Installation / setup}
+\section{Setup}
 
 \subsection{Git}
 
@@ -54,19 +54,19 @@ In the vast majority of cases the 64-bit version (first link) is required. The d
 
 \texttt{git -v}
 
-The response should be the latest version of Git (e.g.\ \Cref{git-v}). 
+The response should be the latest version of Git (e.g.\ \Cref{fig:git-v}). 
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{git-v.png}
-    \caption{git -v response example.}
-    \label{git-v}   
+    \caption{\texttt{git -v}}
+    \label{fig:git-v}   
 \end{figure}
 
 If not, try restarting the computer so that Git is added to the Windows PATH variable, which lets Windows know what the \emph{git} command means. If this also doesn't work, Git must be added to the PATH manually. This is annoying and should (and most likely will) not happen, and at that point it is probably best to trouble shoot by Google.
 
 \subsubsection{Initiating a local Git repository}
-\label{git_init}
+\label{sec:git_init}
 
 Assuming that Git is already installed, there are two ways to initiate a local Git repository.
 
@@ -74,7 +74,17 @@ Assuming that Git is already installed, there are two ways to initiate a local G
 
 \texttt{git init}
 
-You can visually inspect the Git repository if you enable the option of seeing the hidden files on your computer (can be switched on within the File Explorer itself from \emph{View} $>$ \emph{Show} $>$ \emph{Hidden items} (\Cref{hidden_items})). In that case, a folder named \emph{.git} should appear in the current directory, which shows that the directory is now a Git repository (first folder in \Cref{hidden_items}). 
+The output should be something like \Cref{fig:git_init}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{git_init.png}
+    \caption{\texttt{git init}}
+    \label{fig:git_init}   
+\end{figure}
+
+
+You can visually inspect the Git repository if you enable the option of seeing the hidden files on your computer (can be switched on within the File Explorer itself from \emph{View} $>$ \emph{Show} $>$ \emph{Hidden items} (\Cref{fig:hidden_items})). In that case, a folder named \emph{.git} should appear in the current directory, which shows that the directory is now a Git repository (first folder in \Cref{fig:hidden_items}). 
 
 You can now interact with this Git repository anytime by opening the directory in a terminal as before.
 
@@ -82,7 +92,7 @@ You can now interact with this Git repository anytime by opening the directory i
     \centering
     \includegraphics[width=\textwidth]{hidden_items.png}
     \caption{Enable hidden items. .git folder is shown.}
-    \label{hidden_items}   
+    \label{fig:hidden_items}   
 \end{figure}
 
 \paragraph{Option 2: Clone an already existing Git repository from GitHub.} This can be done as follows:
@@ -106,11 +116,11 @@ In order to further interact with the Git repository you need to access this new
 (cd is the command used by Windows as well as Unix based systems to \textbf{c}hange \textbf{d}irectory).
 
 \subsubsection{Making the first commit}
-\label{first_commit}
+\label{sec:first_commit}
 
 I now assume that you have a local Git repository. You now probably want Git to make a checkpoint out of the current state of your files by making a \emph{commit}. This involves the following two steps:
 \begin{itemize}
-    \item You tell Git what you want it to keep track of by using the command \emph{git add}, followed by whatever filenames you want to add. In the vast majority of cases you probably want to add all of the files (except those from \emph{.gitignore}, see \Cref{gitignore}) by using the dot (.) sign. So the full command is:
+    \item You tell Git what you want it to keep track of by using the command \emph{git add}, followed by whatever filenames you want to add. In the vast majority of cases you probably want to add all of the files (except those from \emph{.gitignore}, see \Cref{sec:gitignore}) by using the dot (.) character. So the full command is:
 
     \texttt{git add .}
 
@@ -119,24 +129,31 @@ I now assume that you have a local Git repository. You now probably want Git to 
     \item Now it is time to finalise the commit by using the command \emph{git commit}. Git by default asks you to label your commit by a message which briefly describes what the commit is about, e.g.\ ``ex\_1001 added'' or ``new sidebar layout'' etc. For the first commit it is not uncommon to choose a less inspiring message, such as ``first commit'' or something. The messages are added using the \emph{-m} flag. So the full command would look something like:
 
     \texttt{git commit -m "first commit"}    
-    
 \end{itemize}
+The terminal output should look something like \Cref{fig:first_commit}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{first_commit.png}
+    \caption{First commit.}
+    \label{fig:first_commit}   
+\end{figure}
 
 
 \subsubsection{Adding .gitignore and README.md files (optional)}
-\label{gitignore}
+\label{sec:gitignore}
 
-Since this Git repository is to be shared with others, it is a good idea to add a .gitignore file and possibly a README.md file. It is easiest to create and edit these files using VSCode (see \Cref{vscode} for setup). Alternatively, you can create these files as follows:
+Since this Git repository is to be shared with others, it is a good idea to add a .gitignore file and possibly a README.md file. It is easiest to create and edit these files using VSCode (see \Cref{sec:vscode} for setup). Alternatively, you can create these files as follows:
 \begin{enumerate}
-    \item Enable file name extensions being shown in the File Explorer by \emph{View} $>$ \emph{Show} $>$ \emph{File name extensions} (right above \emph{Hidden items} in \Cref{hidden_items}).
+    \item Enable file name extensions being shown in the File Explorer by \emph{View} $>$ \emph{Show} $>$ \emph{File name extensions} (right above \emph{Hidden items} in \Cref{fig:hidden_items}).
     \item Create a blank text file in the directory by \emph{Right click} $>$ \emph{New} $>$ \emph{Text Document}.
     \item A new text document with a name along the lines of \emph{New Text Document.txt} should appear in the directory. Now you can simply replace the document's entire filename (including the extension .txt) by \emph{.gitignore} or \emph{README.md}.
 \end{enumerate}
-You can edit these files in VSCode, or in Notepad by \emph{Right click} on the file $>$ \emph{Open with} and then either choosing Notepad if it appears as a suggestion, or searching for Notepad through \emph{Choose another app}. Don't forget to commit your changes!
+You can edit these files in VSCode, or in Notepad by \emph{Right click} (on the file) $>$ \emph{Open with}, and then either choosing Notepad if it appears as a suggestion, or searching for Notepad through \emph{Choose another app}.
 
-\paragraph{The .gitignore file.} The .gitignore file tells Git what to not keep track of, and therefore also not to share with others. You simply open the file and write row after row the names of any files/folders that you want Git to ignore. For example I have already included such a file which ignores the local \LaTeX artefacts produced in my computer. Perhaps you would also like to add the entire \emph{exercises} folder in the future so that nobody has access to the entire pdf (although someone who is motivated enough can still copy the entire exercise through the HTML files).
+\paragraph{The .gitignore file.} The .gitignore file tells Git what to not keep track of, and therefore also not to share with others. You simply open the file and write row after row the names of any files/folders that you want Git to ignore. For example I have already included such a file which ignores the local \LaTeX\ artefacts produced in my computer. Perhaps you would also like to add the entire \emph{exercises} folder in the future so that nobody has access to the entire pdf (although someone who is motivated enough can still copy the entire exercise through the HTML files).
 
-\paragraph{The README.md file.} The README file is what everyone expects to see as a first introduction to your repository when you share it with them. GitHub by default displays the contents of the README.md file (if it exists) when someone accesses your repository through their browser. I have already included a README file in the repository, which only includes a title currently. The \emph{.md} extension means that the file is written in \emph{Markdown}, which is a markup language that essentially makes fancy text files. Pretty much all the Markdown formatting you will ever need to write a typical README.md file can be found here:
+\paragraph{The README.md file.} The README file is what everyone expects to see as a first introduction to your repository when you share it with them. GitHub by default displays the contents of the README.md file (if it exists) to anyone who accesses your repository through their browser. I have already included a README file in the repository, which only includes a title currently. The \emph{.md} extension means that the file is written in \emph{Markdown}, which is an easy markup language that essentially makes fancy text files. Pretty much all the Markdown formatting you will ever need to write a typical README file can be found here:
 
 \url{https://www.markdownguide.org/cheat-sheet/}
 
@@ -150,28 +167,28 @@ Opening a GitHub account should be as straightforward as opening any account in 
 
 \subsubsection{Associating the local Git repository with a GitHub repository}
 
-I assume that Git is already installed and that you have a GitHub account. This step needs to be done only if you initiated a new local Git repository for your local directory (Option 1 in \Cref{git_init}). If you cloned an already existing Git repository from GitHub, you can skip this section.
+I assume that Git is already installed and that you have a GitHub account. This step needs to be done only if you initiated a new local Git repository for your local directory (Option 1 in \Cref{sec:git_init}). If you cloned an already existing Git repository from GitHub, you can skip this section.
 
-\paragraph{Creating a new GitHub repository.} If you want to create a new GitHub repository for your project, you can do that by accessing your GitHub profile through your browser, e.g.\ at:
+\paragraph{Creating a new GitHub repository.} If you want to create a new GitHub repository for your project, you can do that by accessing your GitHub profile through your browser, at:
 
 \url{https://github.com/StefanMaubach}
 
-and then navigating to the \emph{Repositories} tab and selecting \emph{New} on the right (e.g.\ on my profile it looks like \Cref{new_repository}).
+and then navigating to the \emph{Repositories} tab and selecting \emph{New} on the right (e.g.\ on my profile it looks like \Cref{fig:new_repository}).
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{new_repository.png}
     \caption{Start a new repository.}
-    \label{new_repository}   
+    \label{fig:new_repository}   
 \end{figure}
 
-A menu as shown in \Cref{new_repository_options} should appear. The following are important:
+A menu as shown in \Cref{fig:new_repository_options} should appear. The following are important:
 \begin{enumerate}
     \item Choose yourself as the repository owner.
     \item Write down the local Git repository name as the GitHub repository name.
-    \item Make the repository public so that others will not need special permissions to view it, and more importantly so that you can deploy it on GitHub Pages for free. Even if the repository is public, nobody else will be able to edit it without permission.
+    \item Make the repository public so that others will not need special permissions to view it, and more importantly so that you can deploy it on GitHub Pages for free. Note that even if the repository is public, nobody else will be able to edit it without permission.
 \end{enumerate}
-You can also add a short description if you want. No other default options need to be changed. You can click \emph{Create repository} after you are done. You should now be redirected to your new repository, e.g. at:
+You can also add a short description if you want. No other default options need to be changed. You can click \emph{Create repository} after you are done. You should now be redirected to your new repository, at:
 
 \url{https://github.com/StefanMaubach/mvc-self-learning-module}
 
@@ -179,7 +196,7 @@ You can also add a short description if you want. No other default options need 
     \centering
     \includegraphics[width=0.75\textwidth]{new_repository_options.png}
     \caption{New repository options.}
-    \label{new_repository_options}   
+    \label{fig:new_repository_options}   
 \end{figure}
 
 \paragraph{Associating your local Git repository with an empty GitHub repository.} I assume now that:
@@ -187,13 +204,13 @@ You can also add a short description if you want. No other default options need 
     \item You have a local Git repository for your project, preferably (but not necessarily) one at which at least one commit has been made.
     \item You have an empty GitHub repository in which you want to push your local Git repository.
 \end{itemize}
-If the GitHub repository is indeed still empty, a helpful guide such as in \Cref{new_repository_setup} should appear. Make sure to select the \emph{HTTPS} option of the guide as the SSH option requires further setup (although nowadays the SSH option is often preferred because of security reasons). Assuming that you already have a local Git repository, simply open the local directory in a terminal as before and follow the second block of instructions shown in the guide. A few words about each line:
+If the GitHub repository is indeed still empty, a helpful guide such as in \Cref{fig:new_repository_setup} should appear when you access the repository through a browser. Make sure to select the \emph{HTTPS} option of the guide as the SSH option requires further setup (although nowadays the SSH option is often preferred because of security reasons). Assuming that you already have a local Git repository, simply open its directory in a terminal as before and follow the second block of instructions shown in the guide. A few words about each line:
 \begin{enumerate}
     \item The first line:
 
     \texttt{git remote add origin https://github.com/StefanMaubach/mvc-self-learning-module.git}
     
-    is the one that actually associates the local Git repository with the \emph{remote} GitHub repository.
+    is the one that actually associates the local Git repository with the remote GitHub repository.
     
     \item Technically the second line:
     
@@ -201,18 +218,26 @@ If the GitHub repository is indeed still empty, a helpful guide such as in \Cref
     
     is not needed. It is there because the main Git branch used to be called \emph{master} instead of \emph{main}, so this line is there to simply ensure compatibility with older repositories. If you installed Git using the default options, you do not need this.
 
-    \item Add the 3rd line:
+    \item The third line:
 
     \texttt{git push -u origin main}
 
-    only if you have made at least one commit in your local Git repository. Otherwise this line will throw an error in the terminal (which you can ignore), as there is no commit to push. Whenever you want your files to appear on GitHub however, go back to \Cref{first_commit} and make your first commit, and then use this line to push it to the \emph{main} branch on the remote GitHub repository (\emph{origin}).
+    is needed only if you have made at least one commit in your local Git repository. Otherwise this line will throw an error in the terminal (which you can ignore), as there is no commit to push. Whenever you want your files to appear on GitHub however, go back to \Cref{sec:first_commit} and make your first commit, and then use this line to push it to the main branch on the remote GitHub repository.
 \end{enumerate}
+The terminal output should look something like \Cref{fig:git_remote_add_origin}.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{new_repository_setup.png}
     \caption{New repository setup.}
-    \label{new_repository_setup}   
+    \label{fig:new_repository_setup}   
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{git_remote_add_origin.png}
+    \caption{Associate local Git repository to remote GitHub repository.}
+    \label{fig:git_remote_add_origin}   
 \end{figure}
 
 \subsection{Deploying the website on GitHub pages}
@@ -223,58 +248,64 @@ I now assume that:
     \item You have a GitHub repository associated with your local Git repository.
     \item You have pushed your local commits to the remote GitHub repository.
 \end{itemize}
-If you access the GitHub repository through your browser, it should look something like \Cref{mvc_repository}.
+If you access the GitHub repository through your browser, it should look something like \Cref{fig:mvc_repository}.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{mvc_repository.png}
     \caption{GitHub repository after setup and first push.}
-    \label{mvc_repository}   
+    \label{fig:mvc_repository}   
 \end{figure}
 
-In order to deploy the repository as a website on GitHub pages, go to \emph{Settings} (on the top) $>$ \emph{Pages} (on the left). Then at \emph{Build and deployment} on the \emph{Branch} section choose the \emph{main} branch and click \emph{Save} (\Cref{mvc_deploy}).
+In order to deploy the repository as a website on GitHub pages, go to \emph{Settings} (on the top) $>$ \emph{Pages} (on the left). Then at section \emph{Build and deployment} and subsection \emph{Branch} choose the \emph{main} branch and click \emph{Save} (\Cref{fig:mvc_deploy}).
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{mvc_deploy.png}
     \caption{Deploy the repository on GitHub Pages.}
-    \label{mvc_deploy}   
+    \label{fig:mvc_deploy}   
 \end{figure}
 
-If you go back to your main GitHub repository page now you should see a new section named \emph{Deployments} on the right sidebar (\Cref{mvc_deployment_added}).
+If you go back to your main GitHub repository page now you should see a new section named \emph{Deployments} on the right sidebar (\Cref{fig:mvc_deployment_added}).
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{mvc_deployment_added.png}
     \caption{Deployment section added to the sidebar of the repository.}
-    \label{mvc_deployment_added}   
+    \label{fig:mvc_deployment_added}   
 \end{figure}
 
-Clicking on \emph{github-pages} should lead to a page similar to \Cref{deployment}.
+Clicking on \emph{github-pages} should lead to a page similar to \Cref{fig:deployment}.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{deployment.png}
     \caption{Deployment page for the repository.}
-    \label{deployment}   
+    \label{fig:deployment}   
 \end{figure}
 
-Finally, following the first link should lead to the website (\Cref{website}). The website will remain in this link (unless you decide to change the domain, which can be done but is more complicated), and will update itself whenever you make a new commit and push it to the GitHub repository.
+Finally, following the first link should lead to the website (\Cref{fig:website}). The website will remain in this link (unless you decide to change the domain, which can be done but is more complicated), and will update itself whenever you make a new commit and push it to the GitHub repository.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{website.png}
     \caption{Deployed website.}
-    \label{website}   
+    \label{fig:website}   
 \end{figure}
 
 
 \subsection{Setting up Visual Studio Code (optional)}
-\label{vscode}
+\label{sec:vscode}
 
 I recommend using Visual Studio Code to edit HTML or any other files that you don't already know how to edit reliably. VSCode is a free and lightweight text editor that can be customised to work with almost every programming or markup language (including \LaTeX) using extensions. You can download VSCode from:
 
 \url{https://code.visualstudio.com/}
+
+
+In order to add extensions to VSCode, you need to click on the block-looking icon on the left sidebar. This should open a small window next to the left sidebar, which contains a search bar and shows your installed extensions and possibly some recommended extensions. You can use the search bar to search for new extensions to install. For the purposes of this project I recommend the following three extensions:
+
+
+
 
 
 \section{Usage}
