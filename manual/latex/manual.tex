@@ -15,11 +15,11 @@
 \begingroup
 \centering
 \LARGE Multivariable Calculus Self-Learning Module\\[1em]
-\large Setup \& Usage Manual\par
-\vspace{32pt}
+\large Setup \& Usage Manual\\[\baselineskip]
 \endgroup
 
 \tableofcontents
+\listoffigures
 
 \clearpage
 
@@ -27,11 +27,11 @@
 
 The website is currently hosted for free by \emph{GitHub Pages}. In order to deploy a website using GitHub Pages you need a \emph{GitHub} account. 
 
-\paragraph{What is GitHub?} GitHub is a very popular, free, cloud-based platform that allows users to store and share files (mainly but not limited to code). Think of it as a storage space just like Google Drive for anything you might want to share with others. Each project on GitHub is stored in its own directory, which is called a \emph{repository}. GitHub uses \emph{Git} to keep track of any changes that happen in a repository.
+\paragraph{What is GitHub?} GitHub is a popular, free, cloud-based platform that allows users to store and share files. It is mainly (but not exclusively) used for collaboration on coding projects. Think of it as a storage space just like Google Drive for anything you might want to share with others. Each project on GitHub is stored in its own directory, which is called a \emph{repository}. GitHub uses \emph{Git} to keep track of any changes that happen in a repository.
 
-\paragraph{What is Git?} Git is an open-source version control software, which is widely used to keep track of any changes that happen in a file. Think of it as an alternative to making multiple files such as: ``exam-v1'', ``exam-v2'', ``exam-v1-fixed'', \dots, ``exam-final''. Git keeps track of all the changes made, and you can revert back to any previous version of your file if you mess up, or you can test new stuff by branching out to a new path without ever losing your main path. Git will store the entire version tree and will let you jump on any branch at any moment. GitHub uses Git, but Git is independent of GitHub and can work with its own local repositories on your computer.
+\paragraph{What is Git?} Git is an open-source version control software which is widely used to keep track of any changes that happen in a file. Think of it as an alternative to making multiple files such as: ``exam-v1'', ``exam-v2'', ``exam-v2-fixed'', \dots, ``exam-final''. Git keeps track of all the different versions for you, and it lets you revert back to any previous version of your file, or test stuff by creating a new version branch without ever affecting your main branch. GitHub uses Git, but Git is independent of GitHub and it works with its own local repositories on your computer.
 
-\paragraph{How does GitHub Pages work?} You simply deploy your website directly from your GitHub repository on GitHub Pages. After that point, your website is always running, and whenever you make a change to the repository, it will almost immediately be shown on the website.
+\paragraph{How does GitHub Pages work?} You simply deploy your website directly from your GitHub repository on GitHub Pages. After that point, your website is always running, and whenever you make a change to the repository, it will be implemented almost immediately on the live website.
 
 \paragraph{What is the point of all this?} The idea is the following:
 \begin{enumerate}
@@ -40,9 +40,12 @@ The website is currently hosted for free by \emph{GitHub Pages}. In order to dep
     \item You then \emph{push} the local Git repository to the online GitHub repository.
     \item GitHub Pages will automatically detect the new changes from your GitHub repository and deploy a new version of your website.
 \end{enumerate}
-The good part is that once setup this process is totally free, standardised, and should be familiar to anyone who has ever collaborated on a coding project. 
+The good part is that once set up this process is totally free, standardised, relatively easy, and should be familiar to anyone who has ever collaborated on a coding project. 
 
+\clearpage
 \section{Setup}
+
+Setup is a bit long but at least you only have to do it once.
 
 \subsection{Git}
 
@@ -63,14 +66,14 @@ The response should be the latest version of Git (e.g.\ \Cref{fig:git-v}).
     \label{fig:git-v}   
 \end{figure}
 
-If not, try restarting the computer so that Git is added to the Windows PATH variable, which lets Windows know what the \emph{git} command means. If this also doesn't work, Git must be added to the PATH manually. This is annoying and should (and most likely will) not happen, and at that point it is probably best to trouble shoot by Google.
+If not, try restarting the computer and check again. Restart is sometimes needed so that folder in which Git is installed is permanently added to the Windows PATH variable, which lets Windows know what the \texttt{git} command means. If this also doesn't work, Git must be added to the PATH manually. This is annoying and should (and most likely will) not happen, and at that point it is probably best to google something like ``add git to path windows 11'' (or whatever your Windows version is) and follow the detailed instructions.
 
 \subsubsection{Initiating a local Git repository}
 \label{sec:git_init}
 
 Assuming that Git is already installed, there are two ways to initiate a local Git repository.
 
-\paragraph{Option 1: Initiate a new Git repository for an existing local directory.} Suppose you have the directory \emph{mvc-self-learning-module} somewhere on your computer and it is not already associated with a local Git repository. In order to initiate one, you can open the directory in a terminal (can be done by navigating within the directory, and then on any empty space \emph{Right click} $>$ \emph{Open in Terminal}) and typing the command: 
+\paragraph{Option 1: Initiate a new Git repository for an existing local directory.} Suppose you have the directory \emph{mvc-self-learning-module} somewhere on your computer and it is not already associated with a local Git repository. In order to initiate one, you can open the directory in a terminal (can be done by navigating within the directory using the File Explorer, and then on any empty space \emph{Right click} $>$ \emph{Open in Terminal}) and then type the command: 
 
 \texttt{git init}
 
@@ -86,7 +89,7 @@ The output should be something like \Cref{fig:git_init}.
 
 You can visually inspect the Git repository if you enable the option of seeing the hidden files on your computer (can be switched on within the File Explorer itself from \emph{View} $>$ \emph{Show} $>$ \emph{Hidden items} (\Cref{fig:hidden_items})). In that case, a folder named \emph{.git} should appear in the current directory, which shows that the directory is now a Git repository (first folder in \Cref{fig:hidden_items}). 
 
-You can now interact with this Git repository anytime by opening the directory in a terminal as before.
+You can now interact with this Git repository anytime by opening the directory (\emph{mvc-self-learning-module}, not \emph{.git}) in a terminal as before.
 
 \begin{figure}[htbp]
     \centering
@@ -109,7 +112,7 @@ You can now interact with this Git repository anytime by opening the directory i
 \end{enumerate}
 The repository should then appear in a new directory named \emph{mvc-self-learning-module} in the desired location. 
 
-In order to further interact with the Git repository you need to access this new directory with the terminal. You can enter the directory through the File Explorer and then open a new terminal in this directory in the same way as before, or if you still have the terminal open, you can access the new directory with the following command:
+In order to further interact with the Git repository you need to access this new directory with the terminal. You can enter the directory through the File Explorer and then open a new terminal in this directory in the same way as before, or if you still have the previous terminal open, you can access the new directory with the following command:
 
 \texttt{cd mvc-self-learning-module}
 
@@ -132,17 +135,17 @@ Throughout the above process, the terminal output should look something like \Cr
 
 I now assume that you have a local Git repository. You now probably want Git to make a checkpoint out of the current state of your files by making a \emph{commit}. This involves the following two steps:
 \begin{itemize}
-    \item You tell Git what you want it to keep track of by using the command \emph{git add}, followed by whatever filenames you want to add. In the vast majority of cases you probably want to add all of the files (except those from \emph{.gitignore}, see \Cref{sec:gitignore}) by using the dot (.) character. So the full command is:
+    \item You tell Git what you want it to keep track of by using the command \texttt{git add}, followed by whatever filenames you want to add. In the vast majority of cases you probably want to add all of the files (except those from \emph{.gitignore}, see \Cref{sec:gitignore}) by using the dot (.) character. So the full command is:
 
     \texttt{git add .}
 
-    You can ignore any warnings ending with ``LF will be replaced by CRLF the next time Git touches it'' or anything along those lines if they appear.
+    You can ignore any warnings of the form ``$X$ will be replaced by $Y$ the next time Git touches it'' if they appear.
 
-    \item Now it is time to finalise the commit by using the command \emph{git commit}. Git by default asks you to label your commit by a message which briefly describes what the commit is about, e.g.\ ``ex\_1001 added'' or ``new sidebar layout'' etc. For the first commit it is not uncommon to choose a less inspiring message, such as ``first commit'' or something. The messages are added using the \emph{-m} flag. So the full command would look something like:
+    \item Now it is time to finalise the commit by using the command \texttt{git commit}. Git by default asks you to label your commit by a message which briefly describes what the commit is about, e.g.\ ``ex\_1001 added'' or ``new sidebar layout'' etc. For the first commit though it is not uncommon to choose a less descriptive message, such as ``first commit'' or something. The messages are added using the \texttt{-m} flag. So the full command would look something like:
 
     \texttt{git commit -m "first commit"}    
 \end{itemize}
-The terminal output should look something like \Cref{fig:first_commit}.
+The terminal output should look similar to \Cref{fig:first_commit}.
 
 \begin{figure}[htbp]
     \centering
@@ -155,15 +158,15 @@ The terminal output should look something like \Cref{fig:first_commit}.
 \subsubsection{Adding .gitignore and README.md files (optional)}
 \label{sec:gitignore}
 
-Since this Git repository is to be shared with others, it is a good idea to add a .gitignore file and possibly a README.md file. It is easiest to create and edit these files using VSCode (see \Cref{sec:vscode} for setup). Alternatively, you can create these files as follows:
+If a Git repository is to be shared with others, it is a good idea for it to contain a \emph{.gitignore} file and a \emph{README.md} file (maybe also a \emph{LICENSE} file if you want to clarify that it is open-source, but that is probably a future concern). It is easiest to create and edit these files locally using VSCode (see \Cref{sec:vscode} for setup). Alternatively, you can create these files as follows:
 \begin{enumerate}
     \item Enable file name extensions being shown in the File Explorer by \emph{View} $>$ \emph{Show} $>$ \emph{File name extensions} (right above \emph{Hidden items} in \Cref{fig:hidden_items}).
-    \item Create a blank text file in the directory by \emph{Right click} $>$ \emph{New} $>$ \emph{Text Document}.
-    \item A new text document with a name along the lines of \emph{New Text Document.txt} should appear in the directory. Now you can simply replace the document's entire filename INCLUDING THE EXTENSION .txt by \emph{.gitignore} or \emph{README.md}.
+    \item Create a blank text file in the directory by \emph{Right click} $>$ \emph{New} $>$ \emph{Text Document}. A new text document with a name along the lines of \emph{New Text Document.txt} should appear in the directory.
+    \item Now you can simply replace the document's entire filename INCLUDING THE EXTENSION \emph{.txt} by \emph{.gitignore} or \emph{README.md}.
 \end{enumerate}
 You can edit these files in VSCode, or in Notepad by \emph{Right click} (on the file) $>$ \emph{Open with}, and then either choosing Notepad if it appears as a suggestion, or searching for Notepad through \emph{Choose another app}.
 
-\paragraph{The .gitignore file.} The .gitignore file tells Git what to not keep track of, and therefore also not to share with others. You simply open the file and write row after row the names of any files/folders that you want Git to ignore. For example I have already included such a file which ignores the local \LaTeX\ artefacts produced in my computer. Perhaps you would also like to add the entire \emph{exercises} folder in the future so that nobody has access to the entire pdf (although someone who is motivated enough can still copy the entire exercise through the HTML files).
+\paragraph{The .gitignore file.} The .gitignore file tells Git what to not keep track of, and therefore also not to share with others. Whatever you add on .gitignore will stay in your local computer, forever invisible to Git. To add a file or even a folder to .gitignore, you simply open the file and write its name in a new row. For example, I have already included a .gitignore in the repository, which currently ignores the local \LaTeX\ artefacts produced in my computer. Perhaps you would also like to add the entire \emph{exercises} folder in the future so that nobody but you has access to the exercises scan/latex/pdf (although someone who is motivated enough can still view the entire exercise through the HTML files themselves).
 
 \paragraph{The README.md file.} The README file is what everyone expects to see as a first introduction to your repository when you share it with them. GitHub by default displays the contents of the README.md file (if it exists) to anyone who accesses your repository through their browser. I have already included a README file in the repository, which only includes a title currently. The \emph{.md} extension means that the file is written in \emph{Markdown}, which is an easy markup language that essentially makes fancy text files. Pretty much all the Markdown formatting you will ever need to write a typical README file can be found here:
 
@@ -234,7 +237,7 @@ If the GitHub repository is indeed still empty, a helpful guide such as in \Cref
 
     \texttt{git push -u origin main}
 
-    is needed only if you have made at least one commit in your local Git repository. Otherwise this line will throw an error in the terminal (which you can ignore), as there is no commit to push. Whenever you want your files to appear on GitHub however, go back to \Cref{sec:first_commit} and make your first commit, and then use this line to push it to the main branch on the remote GitHub repository.
+    is needed ONLY IF YOU HAVE MADE AT LEAST ONE COMMIT TO YOUR LOCAL GIT REPOSITORY. Otherwise this line will throw an error in the terminal (which you can ignore), as there is no commit to push. You may skip this line until you are happy with a version of your website that you want to be up and running. Whenever you want your files to be pushed to GitHub however, so that the website can be deployed, go back to \Cref{sec:first_commit} and make your first commit, and then use this line to push it to the main branch on the remote GitHub repository.
 \end{enumerate}
 The terminal output should look something like \Cref{fig:git_remote_add_origin}.
 
@@ -248,7 +251,7 @@ The terminal output should look something like \Cref{fig:git_remote_add_origin}.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{git_remote_add_origin.png}
-    \caption{Associate local Git repository to remote GitHub repository.}
+    \caption{Associate local Git repository with remote GitHub repository and push the local commits.}
     \label{fig:git_remote_add_origin}   
 \end{figure}
 
@@ -301,17 +304,19 @@ Finally, following the first link should lead to the website (\Cref{fig:website}
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{website.png}
-    \caption{Deployed website.}
+    \caption{Deployed live website.}
     \label{fig:website}   
 \end{figure}
 
 
-\subsection{Setting up Visual Studio Code (optional)}
+\subsection{Setting up VSCode (optional)}
 \label{sec:vscode}
 
-I recommend using Visual Studio Code to edit HTML or any other files that you don't already know how to edit reliably. VSCode is a free and lightweight text editor that can be customised to work with almost every programming or markup language (including \LaTeX) using extensions. You can download VSCode from:
+I recommend using Visual Studio Code (VSCode) to edit HTML or any other files that you don't already know how to edit easily. VSCode is a free and lightweight text editor that can be customised to work with almost every programming or markup language (including \LaTeX) using extensions. You can download VSCode from:
 
 \url{https://code.visualstudio.com/}
+
+The default installation options are fine.
 
 In order to add extensions to VSCode, you need to click on the block-looking icon on the left sidebar. This should open a small window next to the left sidebar, which is titled \emph{Extensions} and contains (e.g.\ \Cref{fig:extensions}):
 \begin{itemize}
@@ -329,7 +334,7 @@ In order to add extensions to VSCode, you need to click on the block-looking ico
 
 You can use the search bar to search for new extensions to install. For the purposes of this project I recommend the following two extensions:
 
-\paragraph{Live Server.} This extension is used to produce a local live server so that you can run and directly see the changes you make while editing the website. It is also useful because some JavaScript components will not run when you view the website through the Windows file-system, i.e.\ when the path on your browser looks like \emph{C://\dots}, but they require \emph{http://\dots} or \emph{https://\dots} protocols instead. You can install \emph{Live Server} as shown in \Cref{fig:live_server}. If you have not already installed the extension, there should be an \emph{Install} option around where \emph{Uninstall} is in the picture.
+\paragraph{Live Server.} This extension is used to produce a local live server so that you can run and directly see the changes you make while editing the website. It is also useful because some JavaScript components will not run when you view the website through the Windows file system, i.e.\ when the path on your browser looks like \emph{C://\dots} instead of \emph{http://\dots} or \emph{https://\dots}. You can install \emph{Live Server} as shown in \Cref{fig:live_server}. If you have not already installed the extension, there should be an \emph{Install} option around where \emph{Uninstall} is in the picture.
 
 \begin{figure}[htbp]
     \centering
@@ -346,6 +351,60 @@ You can use the search bar to search for new extensions to install. For the purp
     \caption{\emph{Prettier} extension.}
     \label{fig:prettier}   
 \end{figure}
+
+\clearpage
+\section{Usage}
+
+Finally, everything is set up! From now on, things should be much easier! 
+
+\subsection{Website deployment pipeline}
+
+In order to work with the deployment pipeline (Git $\to$ GitHub $\to$ GitHub Pages), you only need the following steps: 
+\begin{enumerate}
+    \item Pull any changes made to the repository from someone else. This should be done IF AND ONLY IF THERE ARE MULTIPLE PEOPLE WORKING ON THE SAME BRANCH. Otherwise, Git may find conflicts between the changes made in your local commits and those in the global repository, and you may need to enter the super annoying process of merging conflicts, i.e.\ telling Git what to keep from each commit. If you are only working on the branch yourself, feel free to skip this step. If you need to perform it however (e.g.\ if you get another TA to work on this and he doesn't use a separate branch), use the command:
+
+    \texttt{git pull origin main}
+
+    IMPORTANT NOTE: After setup is complete, always use \texttt{git pull} and never \texttt{git clone}. Otherwise you will clone the repository as it is on GitHub again, and you will lose any local changes!  
+
+    \item From now on, you simply make your changes, and commit in the exact same way as the first commit. For example, I made some changes in this manual. I will commit them as follows:
+
+    \texttt{get add .}
+
+    \texttt{git commit -m "manual ctd"}
+
+    \item Finally, push the changes to the GitHub repository. Just like in the first push, you can do this as follows:
+
+    \texttt{git push origin main}
+\end{enumerate}
+A couple of notes:
+\begin{itemize}
+    \item During the first or third steps above, Git may require from you to verify your identity by opening a popup window and asking for your GitHub credentials. Simply login as it says, and ignore or close any extra browser windows that may appear.
+    \item If you included the \texttt{-u} flag in the first \texttt{git push}, technically you can use \texttt{git pull} and \texttt{git push} without any arguments. However, I think consistency and clarity makes things easier.
+\end{itemize}
+
+That's it! GitHub Pages will now see the new changes from your GitHub repository and it will automatically deploy the new version of the website along with the latest edits. 
+
+If you are using VSCode to edit your files, you can even open the working directory in a terminal within VSCode as shown in \Cref{fig:vscode_open_terminal} and type the above commands there. The output should look something like \Cref{fig:usage}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{vscode_open_terminal.png}
+    \caption{Open a terminal in VSCode.}
+    \label{fig:vscode_open_terminal}   
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{usage.png}
+    \caption{Working with Git from a terminal in VSCode.}
+    \label{fig:usage}   
+\end{figure}
+
+
+\subsection{Working with VSCode (optional)}
+
+Here are some general instructions about working with VSCode.
 
 \subsubsection{Open a folder in VSCode}
 
@@ -388,11 +447,11 @@ I now assume that you have opened a folder in VSCode. In order to see the conten
 
 \subsubsection{Edit a file from an open folder in VSCode}
 
-In order to open a file for editing in VSCode, click on the file-looking icon on the left sidebar to open the \emph[Explorer] window, find your file, and DOUBLE CLICK on it to open it for editing. If you click only once, the file will be open for viewing, so if you immediately after open a different file, the previous file will be gone from the main window. The purpose of this is to avoid clutter when you're quickly shuffling through files while looking for something. Having said that, even if you open a file by clicking only once and then you start editing it before opening another file, that also works.
+In order to open a file for editing in VSCode, click on the file-looking icon on the left sidebar to open the \emph{Explorer} window, find your file, and DOUBLE CLICK on it to open it for editing. If you click only once, the file will be open for viewing, so if you open a different file immediately afterwards, the previous file will be gone from the main window. The purpose of this is to avoid clutter when you're quickly shuffling through files while looking for something. Having said that, even if you open a file by clicking only once and then you start editing it before opening another file, that also works.
 
 \subsubsection{Format a file in VSCode}
 
-In order to set up formatting options for a file in VSCode, open the file for editing, and then \emph{Right click} $>$ \emph{Format Document With\dots} (e.g.\ \Cref{fig:format_doc}). A popup menu should appear on the top of the main window. If you haven't chosen a formatter before, you can click \emph{Configure Default Formatter\dots} at the bottom of this window, and then choose \emph{Prettier} from the list that will appear (e.g.\ \Cref{fig:configure_formatter}). 
+In order to set up formatting options for a file in VSCode, open the file for editing, and then \emph{Right click} $>$ \emph{Format Document With\dots} (e.g.\ \Cref{fig:format_doc}). A popup menu should appear on the top of the main window. If you haven't chosen a formatter before, you can click \emph{Configure Default Formatter\dots} at the bottom of this window, and then choose \emph{Prettier} from the list that will appear (e.g.\ \Cref{fig:configure_formatter}). From that point on, you can format your document anytime by \emph{Right click} $>$ \emph{Format Document} (or by using the shortcut \emph{Shift + Alt + F} if you are willing to remember it).
 
 \begin{figure}[htbp]
     \centering
@@ -430,10 +489,24 @@ You don't need to do anything else to save the settings, the changes should be e
 \end{figure}
 
 
-\section{Usage}
+\subsubsection{Using Live Server}
 
-Finally, everything is setup! Now things should be much easier! 
+If you are using VSCode to edit your HTML files, you can run the website on a local live server using the \emph{Live Server} extension (see \Cref{sec:vscode}). All you need to do is click on the \emph{Go Live} option on the bottom menu of VSCode (e.g.\ \Cref{fig:run_live_server}). The local version of the website should open in your default browser in the url (e.g.\ \Cref{fig:website_live_server}):
 
+\url{http://127.0.0.1:5500/}
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{run_live_server.png}
+    \caption{Opening \emph{Live Server} in VSCode.}
+    \label{fig:run_live_server}   
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{website_live_server.png}
+    \caption{Website running on local live server.}
+    \label{fig:website_live_server}   
+\end{figure}
 
 \end{document}
