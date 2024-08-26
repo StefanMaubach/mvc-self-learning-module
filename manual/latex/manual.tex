@@ -113,7 +113,19 @@ In order to further interact with the Git repository you need to access this new
 
 \texttt{cd mvc-self-learning-module}
 
-(cd is the command used by Windows as well as Unix based systems to \textbf{c}hange \textbf{d}irectory).
+(cd is the command used by Windows as well as Unix based systems to \textbf{c}hange \textbf{d}irectory). To verify that you cloned the repository correctly, you can check its status with the following command:
+
+\texttt{git status}
+
+Throughout the above process, the terminal output should look something like \Cref{fig:git_clone}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{git_clone.png}
+    \caption{Clone a GitHub repository.}
+    \label{fig:git_clone}   
+\end{figure}
+
 
 \subsubsection{Making the first commit}
 \label{sec:first_commit}
@@ -147,7 +159,7 @@ Since this Git repository is to be shared with others, it is a good idea to add 
 \begin{enumerate}
     \item Enable file name extensions being shown in the File Explorer by \emph{View} $>$ \emph{Show} $>$ \emph{File name extensions} (right above \emph{Hidden items} in \Cref{fig:hidden_items}).
     \item Create a blank text file in the directory by \emph{Right click} $>$ \emph{New} $>$ \emph{Text Document}.
-    \item A new text document with a name along the lines of \emph{New Text Document.txt} should appear in the directory. Now you can simply replace the document's entire filename (including the extension .txt) by \emph{.gitignore} or \emph{README.md}.
+    \item A new text document with a name along the lines of \emph{New Text Document.txt} should appear in the directory. Now you can simply replace the document's entire filename INCLUDING THE EXTENSION .txt by \emph{.gitignore} or \emph{README.md}.
 \end{enumerate}
 You can edit these files in VSCode, or in Notepad by \emph{Right click} (on the file) $>$ \emph{Open with}, and then either choosing Notepad if it appears as a suggestion, or searching for Notepad through \emph{Choose another app}.
 
@@ -301,16 +313,126 @@ I recommend using Visual Studio Code to edit HTML or any other files that you do
 
 \url{https://code.visualstudio.com/}
 
+In order to add extensions to VSCode, you need to click on the block-looking icon on the left sidebar. This should open a small window next to the left sidebar, which is titled \emph{Extensions} and contains (e.g.\ \Cref{fig:extensions}):
+\begin{itemize}
+    \item a search bar;
+    \item a list with your installed extensions;
+    \item possibly, some recommended extensions.
+\end{itemize}
 
-In order to add extensions to VSCode, you need to click on the block-looking icon on the left sidebar. This should open a small window next to the left sidebar, which contains a search bar and shows your installed extensions and possibly some recommended extensions. You can use the search bar to search for new extensions to install. For the purposes of this project I recommend the following three extensions:
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{extensions.png}
+    \caption{VSCode extensions.}
+    \label{fig:extensions}   
+\end{figure}
 
+You can use the search bar to search for new extensions to install. For the purposes of this project I recommend the following two extensions:
 
+\paragraph{Live Server.} This extension is used to produce a local live server so that you can run and directly see the changes you make while editing the website. It is also useful because some JavaScript components will not run when you view the website through the Windows file-system, i.e.\ when the path on your browser looks like \emph{C://\dots}, but they require \emph{http://\dots} or \emph{https://\dots} protocols instead. You can install \emph{Live Server} as shown in \Cref{fig:live_server}. If you have not already installed the extension, there should be an \emph{Install} option around where \emph{Uninstall} is in the picture.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{live_server.png}
+    \caption{\emph{Live Server} extension.}
+    \label{fig:live_server}   
+\end{figure}
+
+\paragraph{Prettier.} This extension is used to format code in a way that makes it easier to read, which makes bugs easier to see, which has been proven to significantly increase life expectancy over time. You can install \emph{Prettier} as shown in \Cref{fig:prettier}. If you have not already installed the extension, there should be an \emph{Install} option around where \emph{Uninstall} is in the picture.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{prettier.png}
+    \caption{\emph{Prettier} extension.}
+    \label{fig:prettier}   
+\end{figure}
+
+\subsubsection{Open a folder in VSCode}
+
+There are multiple ways to open a folder in VSCode. If you have opened a new window without any open folders in it, you can:
+\begin{itemize}
+    \item Choose the \emph{Open Folder} option from the main window, and search for your folder through the popup File Explorer.
+    \item Click on the file-looking icon on the left sidebar, choose the \emph{Open Folder} option from the \emph{Explorer} window that appears on the left, and search for your folder through the popup File Explorer.
+    \item if you have opened the desired folder before, you maybe be able to see your folder in the \emph{Recent} section of the main window and open it directly.
+\end{itemize}
+All of these options are highlighted in \cref{fig:vscode_open_folder_1}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{vscode_open_folder_1.png}
+    \caption{Open a folder in an empty window in VSCode.}
+    \label{fig:vscode_open_folder_1}   
+\end{figure}
+
+If you already have a folder open and you want to open another folder in a new window, you can click on \emph{File} on the top menu, choose \emph{New Window} from the dropdown menu, and choose any of the previous options in the new empty window that will appear (e.g.\ \Cref{fig:vscode_open_folder_2}).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{vscode_open_folder_2.png}
+    \caption{Open a new window in VSCode, or open a folder through the \emph{File} menu.}
+    \label{fig:vscode_open_folder_2}   
+\end{figure}
+
+Finally, if you want a backup option that will always work without opening any new windows, you can click on \emph{File} on the top menu, choose \emph{Open Folder} from the dropdown menu, and search for your folder through the popup File Explorer (e.g.\ \Cref{fig:vscode_open_folder_2}).
+
+\subsubsection{Create a new file within an open folder in VSCode}
+
+I now assume that you have opened a folder in VSCode. In order to see the contents of the folder, click on the file-looking icon on the left sidebar. In order to create a new file in this folder, right click on any empty space on the \emph{Explorer} window that appears on the left, choose \emph{New File\dots}, and write the full name of the file you want to create INCLUDING THE EXTENSION NAME (e.g. \emph{ex\_1001.html} in full, e.g.\ \Cref{fig:vscode_create_file}). 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{vscode_create_file.png}
+    \caption{Create a file within an open folder VSCode.}
+    \label{fig:vscode_create_file}   
+\end{figure}
+
+\subsubsection{Edit a file from an open folder in VSCode}
+
+In order to open a file for editing in VSCode, click on the file-looking icon on the left sidebar to open the \emph[Explorer] window, find your file, and DOUBLE CLICK on it to open it for editing. If you click only once, the file will be open for viewing, so if you immediately after open a different file, the previous file will be gone from the main window. The purpose of this is to avoid clutter when you're quickly shuffling through files while looking for something. Having said that, even if you open a file by clicking only once and then you start editing it before opening another file, that also works.
+
+\subsubsection{Format a file in VSCode}
+
+In order to set up formatting options for a file in VSCode, open the file for editing, and then \emph{Right click} $>$ \emph{Format Document With\dots} (e.g.\ \Cref{fig:format_doc}). A popup menu should appear on the top of the main window. If you haven't chosen a formatter before, you can click \emph{Configure Default Formatter\dots} at the bottom of this window, and then choose \emph{Prettier} from the list that will appear (e.g.\ \Cref{fig:configure_formatter}). 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{format_doc.png}
+    \caption{\emph{Format Document With\dots}.}
+    \label{fig:format_doc}   
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{configure_formatter.png}
+    \caption{\emph{Configure Default Formatter\dots}.}
+    \label{fig:configure_formatter}   
+\end{figure}
+
+\paragraph{Format on save.} I suggest that you set up formatting to happen automatically on save (\emph{Ctrl + S}). It is quicker this way, and even if you accidentally save before you're done and then formatting messes up what you were working on, you can always revert back to the previous state of the document by \emph{Ctrl + Z}, aka \emph{Undo}. To enable format on save, follow the steps:
+\begin{enumerate}
+    \item Open VSCode settings by \emph{File} (on the top menu) $>$ \emph{Preferences} $>$ \emph{Settings} (e.g.\ \Cref{fig:vscode_settings}).
+    \item Click on the \emph{Formatting} bookmark in the main window, scroll down just a bit, and click on \emph{Format On Save} (e.g.\ \Cref{fig:format_on_save}).
+\end{enumerate}
+You don't need to do anything else to save the settings, the changes should be effective immediately.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{vscode_settings.png}
+    \caption{Open VSCode settings.}
+    \label{fig:vscode_settings}   
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{format_on_save.png}
+    \caption{Enable format on save.}
+    \label{fig:format_on_save}   
+\end{figure}
 
 
 \section{Usage}
 
-Once everything is setup, things should be much easier! You can 
+Finally, everything is setup! Now things should be much easier! 
 
 
 
