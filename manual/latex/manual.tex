@@ -154,6 +154,13 @@ The terminal output should look similar to \Cref{fig:first_commit}.
     \label{fig:first_commit}   
 \end{figure}
 
+\paragraph{Identity verification.} If you have cloned a GitHub repository (Option 2 from \Cref{sec:git_init}), Git may throw an error and ask you to verify your identity before accepting the commit. The error will ask you to run the following commands:
+
+\texttt{git config --global user.email "you@example.com"}
+
+\texttt{git config --global user.name "Your Name"}
+
+Run these commands, replacing \texttt{you@example.com} by the email you used to sign up with GitHub, and \texttt{Your Name} by your GitHub username (include the \texttt{"\dots"}). Most likely you will only have to do this once. When this is done, try committing your changes again.
 
 \subsubsection{Adding .gitignore and README.md files (optional)}
 \label{sec:gitignore}
@@ -255,9 +262,9 @@ The terminal output should look something like \Cref{fig:git_remote_add_origin}.
     \label{fig:git_remote_add_origin}   
 \end{figure}
 
-\subsection{Deploying the website on GitHub pages}
+\subsection{GitHub Pages}
 
-I now assume that:
+It is time to deploy the website on GitHub Pages! I now assume that:
 \begin{itemize}
     \item You have a local Git repository for your project at which at least one commit has been made.
     \item You have a GitHub repository associated with your local Git repository.
@@ -309,7 +316,7 @@ Finally, following the first link should lead to the website (\Cref{fig:website}
 \end{figure}
 
 
-\subsection{Setting up VSCode (optional)}
+\subsection{VSCode (optional)}
 \label{sec:vscode}
 
 I recommend using Visual Studio Code (VSCode) to edit HTML or any other files that you don't already know how to edit easily. VSCode is a free and lightweight text editor that can be customised to work with almost every programming or markup language (including \LaTeX) using extensions. You can download VSCode from:
@@ -355,11 +362,17 @@ You can use the search bar to search for new extensions to install. For the purp
 \clearpage
 \section{Usage}
 
-Finally, everything is set up! From now on, things should be much easier! 
+Finally, everything is set up! You should now have:
+\begin{itemize}
+    \item a local Git repository for your project at which at least one commit has been made;
+    \item a GitHub repository which is up to date with your local Git repository;
+    \item an up and running website deployed on GitHub Pages from your GitHub repository.
+\end{itemize}
+From now on, things should be much easier! 
 
-\subsection{Website deployment pipeline}
+\subsection{Updating the website}
 
-In order to work with the deployment pipeline (Git $\to$ GitHub $\to$ GitHub Pages), you only need the following steps: 
+In order to work with the update pipeline (Git $\to$ GitHub $\to$ GitHub Pages), you only need the following steps: 
 \begin{enumerate}
     \item Pull any changes made to the repository from someone else. This should be done IF AND ONLY IF THERE ARE MULTIPLE COMPUTERS WORKING ON THE SAME BRANCH. Otherwise, Git may find conflicts between the changes made in each computer's local commits and those in the global repository, and you may need to enter the super annoying process of merging conflicts, i.e.\ telling Git what to keep from each commit. If you are only working on the branch on a single computer yourself, feel free to skip this step. If you need to perform it however (e.g.\ if you work on the repository from multiple computers, or if you get another TA to work on this and they don't use a separate branch), use the command:
 
