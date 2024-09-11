@@ -37,7 +37,7 @@
                 <h1>Exercise 12</h1>
               </header>
               <h4>
-                (UNDER CONSTRUCTION!) $S$ is the area enclosed by the four lines: $y=0$, $y=1$, $y=x$, $y=x-2$. 
+                 $S$ is the area enclosed by the four lines: $y=0$, $y=1$, $y=x$, $y=x-2$. 
                 Integrate $f(x,y)=xy$ over $S$.
               </h4>
             </div>
@@ -109,6 +109,7 @@
 </section>
 <!-- HINT 2 END -->
 
+
 <!-- HINT 3 -->
 <section>
   <!-- Container for elements to show/hide -->
@@ -120,18 +121,141 @@
   <div class="plain_container" id="3">
     <div id="hint_3" class="unsee_hint_child">
       <p>
-        <!-- WRITE HINT HERE -->
+        Figure out what the bounds are, and integrate along those bounds. You'll have (several) $\int\int \ldots d\ldots d\ldots$ .
       </p>
-      
-       <div class="image center">
-        <iframe src="https://www.geogebra.org/calculator/ahhwtxdk?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
-      </div> 
+      <!-- UNCOMMENT TO ADD PICTURE HERE -->
+      <!-- <div class="image center">
+        <span class="image object">
+          <img src="images/ex.png" width="480" alt="" />
+        </span>
+      </div> -->
     </div>
   </div>
 </section>
 <!-- HINT 3 END -->
 
+<!-- HINT 4 -->
+<section>
+  <!-- Container for elements to show/hide -->
+  <div class="unsee_hint">
+    <!-- Hint button (CHANGE $ TO HINT NUMBER) -->
+    <button id="but_4_1" onclick="hint_show(4)">Hint</button>
+  </div>
+  <!-- Container for hint (CHANGE $ TO HINT NUMBER) -->
+  <div class="plain_container" id="4">
+    <div id="hint_4" class="unsee_hint_child">
+      <p>
+      You may have an integral consisting of several pieces looking like $ \int_{x=\ldots}^{\ldots} \int_{y=\ldots}^{\ldots} f(x,y) dy dx$. 
+      You may also have $ \int_{y=\ldots}^{\ldots} \int_{x=\ldots}^{\ldots} f(x,y) dx dy$. 
+      Which one of these two do you prefer? 
+      (Its instructive to at least figure out the bounds for both).
+      </p>
+      <!-- UNCOMMENT TO ADD PICTURE HERE -->
+      <!-- <div class="image center">
+        <span class="image object">
+          <img src="images/ex.png" width="480" alt="" />
+        </span>
+      </div> -->
+    </div>
+  </div>
+</section>
+<!-- HINT 4 END -->
 
+<!-- HINT 5 -->
+<section>
+  <!-- Container for elements to show/hide -->
+  <div class="unsee_hint">
+    <!-- Hint button (CHANGE $ TO HINT NUMBER) -->
+    <button id="but_5_1" onclick="hint_show(5)">Hint</button>
+  </div>
+  <!-- Container for hint (CHANGE $ TO HINT NUMBER) -->
+  <div class="plain_container" id="5">
+    <div id="hint_5" class="unsee_hint_child">
+      <p>
+        If you put $x$ first (outside), then you need to separate into three parts: $0\leq x\leq 1$ (a triangle), $1\leq x\leq 2$ (a rectangle/square) and $2\leq x\leq 3$ (a different triangle).<br>
+        If you look at the first triangle, you see that here the top bound is the line $y=x$, and the bottom bound is $y=0$. 
+        This gives $\int_{x=0}^{x=1}\int_{y=0}^{y=x} f(x,y) dy dx$. <br>
+        In the square the bounds are $y=0$ and $y=1$ giving $\int_{x=1}^{x=2}\int_{y=0}^{y=1} f(x,y) dy dx$. <br>
+        In the last triangle the bounds are $y=x-2$ and $y=1$ giving $\int_{x=2}^{x=3}\int_y={x-2}^{y=1} f(x,y) dy dx$. <br>
+        So in total you get
+        $$ \int_{x=0}^{x=1}\int_{y=0}^{y=x} f(x,y) dy dx +\int_{x=1}^{x=2}\int_{y=0}^{y=1} f(x,y) dy dx+\int_{x=2}^{x=3}\int_{y=x-2}^{y=1} f(x,y) dy dx .$$
+
+        However, what if you swap the roles of $y$ and $x$, and get
+      
+ $ \int_{y=\ldots}^{\ldots} \int_{x=\ldots}^{\ldots} f(x,y) dx dy$ ?
+      
+      </p>
+      <!-- UNCOMMENT TO ADD PICTURE HERE -->
+      <!-- <div class="image center">
+        <span class="image object">
+          <img src="images/ex.png" width="480" alt="" />
+        </span>
+      </div> -->
+    </div>
+  </div>
+</section>
+<!-- HINT 5 END -->
+
+
+<!-- HINT 6 -->
+<section>
+  <!-- Container for elements to show/hide -->
+  <div class="unsee_hint">
+    <!-- Hint button (CHANGE $ TO HINT NUMBER) -->
+    <button id="but_6_1" onclick="hint_show(6)">Hint</button>
+  </div>
+  <!-- Container for hint (CHANGE $ TO HINT NUMBER) -->
+  <div class="plain_container" id="6">
+    <div id="hint_6" class="unsee_hint_child">
+      <p>
+        Then you integrate for $y=0$ to $y=1$ (all of the figure is within these two vertical values), but what is nice is that the horizontal bounds are the same everywhere: $y=x$ (or $x=y$) and $y=x-2$ (or $x=y+2$).
+        
+        This makes the integration easier, as you just have one part: 
+         $$ \int_{y=0}^{y=1}\int_{x=y}^{x=y+2} f(x,y) dx dy. $$
+
+         Now wrap it up.
+      
+      </p>
+      <!-- UNCOMMENT TO ADD PICTURE HERE -->
+      <!-- <div class="image center">
+        <span class="image object">
+          <img src="images/ex.png" width="480" alt="" />
+        </span>
+      </div> -->
+    </div>
+  </div>
+</section>
+<!-- HINT 6 END -->
+
+<!-- HINT 7 -->
+<section>
+  <!-- Container for elements to show/hide -->
+  <div class="unsee_hint">
+    <!-- Hint button (CHANGE $ TO HINT NUMBER) -->
+    <button id="but_7_1" onclick="hint_show(7)">Hint</button>
+  </div>
+  <!-- Container for hint (CHANGE $ TO HINT NUMBER) -->
+  <div class="plain_container" id="7">
+    <div id="hint_7" class="unsee_hint_child">
+      <p>
+        
+         $$ \int_{y=0}^{y=1}\int_{x=y}^{x=y+2} xy dx dy = \int_{y=0}^1 \left[ \frac{x^2}{2}y \right]_{x=y}^{x=y+2} dy 
+         =\int_{y=0}^1 \frac{(y+2)^2y}{2}-\frac{y^3}{2}dy=
+         \int_{y=0}^1 2y^2+2y dy = \left[ \frac{2y^3}{3} +y\right]_{y=0}^1=\frac{2}{3}+1=\frac{5}{3}.$$
+
+         
+      
+      </p>
+      <!-- UNCOMMENT TO ADD PICTURE HERE -->
+      <!-- <div class="image center">
+        <span class="image object">
+          <img src="images/ex.png" width="480" alt="" />
+        </span>
+      </div> -->
+    </div>
+  </div>
+</section>
+<!-- HINT 7 END -->
 
 
 
