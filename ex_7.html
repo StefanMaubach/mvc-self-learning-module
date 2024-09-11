@@ -133,7 +133,7 @@
                   = & \ x^2 + y^2 + z^2 - 6y - 6z + 18 \\ = & \ x^2 + y^2 + z^2
                   - 8x - 8z + 32 \\ \implies & \\ & \ - 4x - 4y \\ = & \ - 6y -
                   6z + 10 \\ = & \ - 8x - 8z + 24 \\ \implies & \\ & \ 2x + 2y
-                  \\ = & \ 3y + 3z - 10 \\ = & \ 4x + 4z - 12 \\ \end{align*}
+                  \\ = & \ 3y + 3z - 5 \\ = & \ 4x + 4z - 12 \\ \end{align*}
                 </p>
               </div>
             </div>
@@ -158,7 +158,7 @@
                   <!-- WRITE HINT HERE -->
                   Note that in fact we have 2 equations: \[ \begin{cases} 2x +
                   2y = 3y + 3z - 10 \\ 2x + 2y = 4x + 4z - 12 \end{cases}
-                  \implies \begin{cases} 2x - y - 3z = -10 \\ -2x + 2y - 4z =
+                  \implies \begin{cases} 2x - y - 3z = -5 \\ -2x + 2y - 4z =
                   -12 \end{cases} \] So the solution is the intersection of 2
                   planes, i.e. a line! How can we find the equation of the line
                   in parametric form?
@@ -185,21 +185,27 @@
                 <p>
                   <!-- WRITE HINT HERE -->
                   This is now a linear algebra problem. \begin{align*} & \left(
-                  \begin{array}{c c c|c} 2 & -1 & -3 & -10 \\ -2 & 2 & -4 & -12
+                  \begin{array}{c c c|c} 2 & -1 & -3 & -5 \\ -2 & 2 & -4 & -12
                   \\ \end{array} \right) \quad | \quad R_2 \leftarrow R_2 + R_1
                   \\ \rightarrow & \left( \begin{array}{c c c|c} 2 & -1 & -3 &
-                  -10 \\ 0 & 1 & -7 & -22 \\ \end{array} \right) \quad | \quad
+                  -5 \\ 0 & 1 & -7 & -17 \\ \end{array} \right) \quad | \quad
                   R_1 \leftarrow R_1 + R_2 \\ \rightarrow & \left(
-                  \begin{array}{c c c|c} 2 & 0 & -10 & -32 \\ 0 & 1 & -7 & -22
+                  \begin{array}{c c c|c} 2 & 0 & -10 & -22 \\ 0 & 1 & -7 & -17
                   \\ \end{array} \right) \quad | \quad R_1 \leftarrow
                   \frac{1}{2} R_1 \\ \rightarrow & \left( \begin{array}{c c c|c}
-                  1 & 0 & -5 & -16 \\ 0 & 1 & -7 & -22 \\ \end{array} \right)
-                  \end{align*} So \[ \begin{cases} x - 5z = -16 \\ y - 7z = -22
-                  \end{cases} \implies \begin{cases} x = 5z - 16 \\ y = 7z - 22
+                  1 & 0 & -5 & -11 \\ 0 & 1 & -7 & -17 \\ \end{array} \right)
+                  \end{align*} So \[ \begin{cases} x - 5z = -11 \\ y - 7z = -17
+                  \end{cases} \implies \begin{cases} x = 5z - 11 \\ y = 7z - 17
                   \end{cases}, \] where $z$ is free. So there is a line of
                   points equidistant from $A, B, C$ given by the equation: \[
-                  (x, y, z) = (5\lambda - 16, 7\lambda - 22, \lambda) \] for
-                  $\lambda\in\mathbb{R}$.
+                  (x, y, z) = (5\lambda - 11, 7\lambda - 17, \lambda) \] for
+                  $\lambda\in\mathbb{R}$.<br>
+
+                  Notice that indeed this result makes sense: three points which are not on one line (like in this case) lie in exactly one plane. If you restrict yourself to this plane, 
+                  then there's exactly one point $S$ which is equidistant to the three points. Now it is not hard to imagine that there is a line going through $S$ of points equidistant. 
+                  (This line is perpendicular to the plane containing these 3 points.)
+
+
                 </p>
               </div>
             </div>
