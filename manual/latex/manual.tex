@@ -45,6 +45,8 @@ The website is currently hosted for free by \emph{GitHub Pages}. In order to dep
 \end{enumerate}
 The good part is that once set up this process is totally free, standardised, relatively easy, and should be familiar to anyone who has ever collaborated on a coding project. 
 
+\paragraph{Python script.} A Python script that can split and convert a \LaTeX\ document into HTML exercise files is also provided.
+
 \clearpage
 \section{Setup}
 
@@ -364,13 +366,13 @@ You can use the search bar to search for new extensions to install. For the purp
     \label{fig:prettier}   
 \end{figure}
 
-\subsection{Python}
+\subsection{Python (optional)}
 
-You can download the latest version of Python from:
+In order to use the Python script, you need to have a local installation of Python. You can download the latest version of Python from:
 
 \url{https://www.python.org/downloads/}
 
-The website should recommend the latest installer for Windows. During the installation process, MAKE SURE TO CHECK THE BOX THAT ADDS PYTHON TO PATH! Otherwise, you will have to do it manually in order to run Python scripts. In order to do it manually, Google something like "add python to path" followed by your system, and follow the detailed instructions.
+The website should recommend the latest installer for Windows. During the installation process, MAKE SURE TO CHECK THE BOX THAT ADDS PYTHON TO PATH! Otherwise, you will have to do it manually in order to run Python scripts. In order to do it manually, Google something like ``add python to path'' followed by your system, and follow the detailed instructions.
 
 \clearpage
 \section{Usage}
@@ -427,7 +429,56 @@ If you are using VSCode to edit your files, you can even open the working direct
     \label{fig:usage}   
 \end{figure}
 
-\subsubsection{Using the Python script to convert \LaTeX\ to HTML}
+\subsubsection{Using the Python script to convert \LaTeX\ to HTML (optional)}
+
+If you want, you can add the exercises in a \LaTeX\ document and use the provided script to convert them into individual HTML files. The script should be able to deal with most basic \LaTeX\ environments, including:
+\begin{itemize}
+    \item figures;
+    \item enumerate or itemize environments;
+    \item emph, italics, bold or underlined text (up to 3 levels of nesting for these).
+\end{itemize}
+
+\paragraph{Writing the exercises in \LaTeX.} In order for the script to work:
+\begin{itemize}
+    \item Mark clearly each exercise by:
+    \begin{verbatim}    \section{Exercise #}\end{verbatim}
+    Replace \# by the exercise number.
+
+    \item Write the question right under the section indicator, without marking it by any subsection/paragraph indicators.
+
+    \item Mark clearly each hint by:
+    \begin{verbatim}    \subsection{Hint name}\end{verbatim}
+    ``Hint name'' is what will show up as a label on the hint button when that appears.
+\end{itemize} 
+See the \emph{exercises.tex} file (from the root folder it should be located in \emph{./exercises/latex/exercises.tex}) for examples.
+
+\paragraph{Running the Python script.} The Python script is named \emph{tex\_to\_html.py}. You can run the script from a terminal that is open in the same folder as the script (can also be on VSCode) using the command 
+
+\texttt{py tex\_to\_html.py} 
+
+followed by the numbers of the exercises you want to convert, starting from 1. These can be:
+\begin{enumerate}
+    \item a single number (e.g. 1);
+    \item a list of numbers separated by comma (with no spaces) (e.g. 1,2,3);
+    \item the word 'all' (without '') if you want to convert all the exercises in the document.
+\end{enumerate}
+
+The default path for the \LaTeX\ document is \emph{./exercises/latex/exercises.tex}. You can alter this path when running the script by using the
+
+\texttt{--tex\_path}
+
+flag, followed by the alternative path of the \LaTeX\ document. You can also view and edit all default paths used by the script from the \emph{paths.json} file. You can see all the options provided by the script by running the command
+
+\texttt{py tex\_to\_html.py -h}
+
+Examples of the usage of the Python script can be seen in \Cref{fig:tex_to_html}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{tex_to_html.png}
+    \caption{Example usage of the Python script \emph{tex\_to\_html.py}.}
+    \label{fig:tex_to_html}   
+\end{figure}
 
 
 \subsection{Working with VSCode (optional)}

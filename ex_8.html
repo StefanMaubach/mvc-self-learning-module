@@ -38,12 +38,10 @@
               </header>
               <h4>
                 <!-- WRITE EXERCISE HERE -->
-Consider the following 5 points:
-\[
-    A = (0, 0, 0), \quad B = (2, 0, 0), \quad C = (4, 4, 0), \quad D = (4, 0, 4), \quad E = (0, 0, 4)
-\]
-Find all the points that are equidistant from $A,B,C,D,E$.
-
+                Consider the following 5 points: \[ A = (0, 0, 0), \quad B = (2,
+                0, 0), \quad C = (4, 4, 0), \quad D = (4, 0, 4), \quad E = (0,
+                0, 4) \] Find all the points that are equidistant from
+                $A,B,C,D,E$.
               </h4>
             </div>
             <!-- UNCOMMENT TO ADD PICTURE HERE -->
@@ -65,134 +63,99 @@ Find all the points that are equidistant from $A,B,C,D,E$.
 
           <!-- ADD HINTS HERE -->
 
-<!-- HINT 1 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 1 TO HINT NUMBER) -->
-    <button id="but_1_1" onclick="hint_show(1)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 1 TO HINT NUMBER) -->
-  <div class="plain_container" id="1">
-    <div id="hint_1" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-Let $P=(x,y,z)$ be such a point. Write down equations for the distances of $P$ from $A,B,C$ to be equal, i.e.:
-\[
-    \left|\overrightarrow{PA}\right|^2 = \left|\overrightarrow{PB}\right|^2 = \left|\overrightarrow{PC}\right|^2 = \left|\overrightarrow{PD}\right|^2 = \left|\overrightarrow{PE}\right|^2
-\]
-</p>
+          <!-- HINT 1 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 1 TO HINT NUMBER) -->
+              <button id="but_1_1" onclick="hint_show(1)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 1 TO HINT NUMBER) -->
+            <div class="plain_container" id="1">
+              <div id="hint_1" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  Let $P=(x,y,z)$ be such a point. Write down equations for the
+                  distances of $P$ from $A,B,C$ to be equal, i.e.: \[
+                  \left|\overrightarrow{PA}\right|^2 =
+                  \left|\overrightarrow{PB}\right|^2 =
+                  \left|\overrightarrow{PC}\right|^2 =
+                  \left|\overrightarrow{PD}\right|^2 =
+                  \left|\overrightarrow{PE}\right|^2 \]
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 1 END -->
 
-    </div>
-  </div>
-</section>
-<!-- HINT 1 END -->
+          <!-- HINT 2 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 2 TO HINT NUMBER) -->
+              <button id="but_2_1" onclick="hint_show(2)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 2 TO HINT NUMBER) -->
+            <div class="plain_container" id="2">
+              <div id="hint_2" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  \[ \left|\overrightarrow{PB}\right|^2 = (x-2)^2 + (y-0)^2
+                  +(z-0)^2, \] etc.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 2 END -->
 
+          <!-- HINT 3 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 3 TO HINT NUMBER) -->
+              <button id="but_3_1" onclick="hint_show(3)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 3 TO HINT NUMBER) -->
+            <div class="plain_container" id="3">
+              <div id="hint_3" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  \begin{align*} (x-0)^2 + (y-0)^2 + (z-0)^2\ = & \ (x-2)^2 +
+                  (y-0)^2 + (z-0)^2 \\ = & \ (x-4)^2 + (y-4)^2 + (z-0)^2 \\ = &
+                  \ (x-4)^2 + (y-0)^2 + (z-4)^2 \\ = & \ (x-0)^2 + (y-0)^2 +
+                  (z-4)^2 \\ \implies & \\ x^2 + y^2 + z^2\ = & \ x^2 + y^2 +
+                  z^2 - 4x + 4 \\ = & \ x^2 + y^2 + z^2 - 8x - 8y + 32 \\ = & \
+                  x^2 + y^2 + z^2 - 8x - 8z + 32 \\ = & \ x^2 + y^2 + z^2 - 8z +
+                  16 \\ \implies & \\ 0\ = & \ - 4x + 4 \\ = & \ - 8x - 8y + 32
+                  \\ = & \ - 8x - 8z + 32 \\ = & \ - 8z + 16 \\ \end{align*}
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 3 END -->
 
-<!-- HINT 2 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 2 TO HINT NUMBER) -->
-    <button id="but_2_1" onclick="hint_show(2)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 2 TO HINT NUMBER) -->
-  <div class="plain_container" id="2">
-    <div id="hint_2" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-\[
-    \left|\overrightarrow{PB}\right|^2 = (x-2)^2 + (y-0)^2 +(z-0)^2,
-\]
-etc.
-</p>
-
-    </div>
-  </div>
-</section>
-<!-- HINT 2 END -->
-
-
-<!-- HINT 3 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 3 TO HINT NUMBER) -->
-    <button id="but_3_1" onclick="hint_show(3)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 3 TO HINT NUMBER) -->
-  <div class="plain_container" id="3">
-    <div id="hint_3" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-\begin{align*}
-    (x-0)^2 + (y-0)^2 + (z-0)^2\  = & \ (x-2)^2 + (y-0)^2 + (z-0)^2    \\
-    =                               & \ (x-4)^2 + (y-4)^2 + (z-0)^2    \\
-    =                               & \ (x-4)^2 + (y-0)^2 + (z-4)^2    \\
-    =                               & \ (x-0)^2 + (y-0)^2 + (z-4)^2    \\
-    \implies                        &                                  \\
-    x^2 + y^2 + z^2\  =             & \ x^2 + y^2 + z^2 - 4x + 4       \\
-    =                               & \ x^2 + y^2 + z^2 - 8x - 8y + 32 \\
-    =                               & \ x^2 + y^2 + z^2 - 8x - 8z + 32 \\
-    =                               & \ x^2 + y^2 + z^2 - 8z + 16      \\
-    \implies                        &                                  \\
-    0\ =                            & \ - 4x + 4                       \\
-    =                               & \ - 8x - 8y + 32                 \\
-    =                               & \ - 8x - 8z + 32                 \\
-    =                               & \ - 8z + 16                      \\
-\end{align*}
-</p>
-
-    </div>
-  </div>
-</section>
-<!-- HINT 3 END -->
-
-
-<!-- HINT 4 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 4 TO HINT NUMBER) -->
-    <button id="but_4_1" onclick="hint_show(4)">
-      Solution
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 4 TO HINT NUMBER) -->
-  <div class="plain_container" id="4">
-    <div id="hint_4" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-We have:
-\[
-    0 = -4x + 4 \implies x=1
-\]
-For $x=1$:
-\[
-    0 = - 8x - 8y + 32 = -8y + 24 \implies y = 3
-\]
-For $x=1, y=3$:
-\[
-    0 =  - 8x - 8z + 32 \implies z = 3
-\]
-But now for $x=1$, $y=3$, $z=3$:
-\[
-    -8z + 16 = 0 \implies -8 = 0,
-\]
-contradiction! So there are no points equidistant from $A, B, C, D, E$.
-</p>
-
-    </div>
-  </div>
-</section>
-<!-- HINT 4 END -->
-
+          <!-- HINT 4 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 4 TO HINT NUMBER) -->
+              <button id="but_4_1" onclick="hint_show(4)">Solution</button>
+            </div>
+            <!-- Container for hint (CHANGE 4 TO HINT NUMBER) -->
+            <div class="plain_container" id="4">
+              <div id="hint_4" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  We have: \[ 0 = -4x + 4 \implies x=1 \] For $x=1$: \[ 0 = - 8x
+                  - 8y + 32 = -8y + 24 \implies y = 3 \] For $x=1, y=3$: \[ 0 =
+                  - 8x - 8z + 32 \implies z = 3 \] But now for $x=1$, $y=3$,
+                  $z=3$: \[ -8z + 16 = 0 \implies -8 = 0, \] contradiction! So
+                  there are no points equidistant from $A, B, C, D, E$.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 4 END -->
         </div>
       </div>
 

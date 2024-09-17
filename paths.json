@@ -1,5 +1,5 @@
 {
-  "FILE_PATH": "./exercises/latex/exercises.tex",
+  "TEX_PATH": "./exercises/latex/exercises.tex",
   "TEMPLATES_PATH": "./templates",
   "TEMPLATE_NAMES": {
     "exercise": "ex_template.html",

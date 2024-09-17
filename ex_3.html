@@ -38,12 +38,11 @@
               </header>
               <h4>
                 <!-- WRITE EXERCISE HERE -->
-Consider the function
-\[
-    f(x,y,z) = \frac{1}{x} + \frac{1}{8y} + \frac{1}{27z}.
-\]
-Find the point on the unit sphere (i.e. the sphere centered at $(0, 0, 0)$ of radius $1$) at which $f$ is maximal and the point at which it is minimal. Calculate also these maximum and minimum values.
-
+                Consider the function \[ f(x,y,z) = \frac{1}{x} + \frac{1}{8y} +
+                \frac{1}{27z}. \] Find the point on the unit sphere (i.e. the
+                sphere centered at $(0, 0, 0)$ of radius $1$) at which $f$ is
+                maximal and the point at which it is minimal. Calculate also
+                these maximum and minimum values.
               </h4>
             </div>
             <!-- UNCOMMENT TO ADD PICTURE HERE -->
@@ -65,231 +64,161 @@ Find the point on the unit sphere (i.e. the sphere centered at $(0, 0, 0)$ of ra
 
           <!-- ADD HINTS HERE -->
 
-<!-- HINT 1 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 1 TO HINT NUMBER) -->
-    <button id="but_1_1" onclick="hint_show(1)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 1 TO HINT NUMBER) -->
-  <div class="plain_container" id="1">
-    <div id="hint_1" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-The surface of a sphere centered at $(x_0, y_0, z_0)$ of radius $R$ has the formula
-\[
-    (x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 = R^2
-\]
-</p>
+          <!-- HINT 1 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 1 TO HINT NUMBER) -->
+              <button id="but_1_1" onclick="hint_show(1)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 1 TO HINT NUMBER) -->
+            <div class="plain_container" id="1">
+              <div id="hint_1" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  The surface of a sphere centered at $(x_0, y_0, z_0)$ of
+                  radius $R$ has the formula \[ (x-x_0)^2 + (y-y_0)^2 +
+                  (z-z_0)^2 = R^2 \]
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 1 END -->
 
-    </div>
-  </div>
-</section>
-<!-- HINT 1 END -->
+          <!-- HINT 2 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 2 TO HINT NUMBER) -->
+              <button id="but_2_1" onclick="hint_show(2)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 2 TO HINT NUMBER) -->
+            <div class="plain_container" id="2">
+              <div id="hint_2" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  Let \[ g(x,y,z) = x^2 + y^2 + z^2 - 1. \] We want to maximize
+                  $f(x,y,z)$ given the constraint $g(x,y,z) = 0$. Use Lagrange.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 2 END -->
 
+          <!-- HINT 3 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 3 TO HINT NUMBER) -->
+              <button id="but_3_1" onclick="hint_show(3)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 3 TO HINT NUMBER) -->
+            <div class="plain_container" id="3">
+              <div id="hint_3" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>Solve the equation $\nabla f = \lambda\nabla g$.</p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 3 END -->
 
-<!-- HINT 2 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 2 TO HINT NUMBER) -->
-    <button id="but_2_1" onclick="hint_show(2)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 2 TO HINT NUMBER) -->
-  <div class="plain_container" id="2">
-    <div id="hint_2" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-Let
-\[
-    g(x,y,z) = x^2 + y^2 + z^2 - 1.
-\]
-We want to maximize $f(x,y,z)$ given the constraint $g(x,y,z) = 0$. Use Lagrange.
-</p>
+          <!-- HINT 4 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 4 TO HINT NUMBER) -->
+              <button id="but_4_1" onclick="hint_show(4)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 4 TO HINT NUMBER) -->
+            <div class="plain_container" id="4">
+              <div id="hint_4" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  \[ \nabla f(x,y,z) = \begin{pmatrix} -\dfrac{1}{x^2} \\ \\
+                  -\dfrac{1}{8y^2} \\ \\ -\dfrac{1}{27z^2} \end{pmatrix} \]
+                  <br /><br />
+                  \[ \nabla g(x,y,z) = \begin{pmatrix} 2x \\ 2y \\ 2z
+                  \end{pmatrix} \] So \[ \begin{pmatrix} -\dfrac{1}{x^2} \\ \\
+                  -\dfrac{1}{8y^2} \\ \\ -\dfrac{1}{27z^2} \end{pmatrix} =
+                  \lambda \begin{pmatrix} 2x \\ 2y\\ 2z \end{pmatrix} \] Note
+                  that the left-hand side is always non-zero, so $\lambda \neq
+                  0$. Hence: \[ \begin{cases} -\dfrac{1}{x^2} = 2\lambda x \\ \\
+                  -\dfrac{1}{8y^2} = 2\lambda y \\ \\ -\dfrac{1}{27z^2} =
+                  2\lambda z \end{cases} \implies \begin{cases} x^3 =
+                  -\dfrac{1}{2\lambda} \\ \\ y^3 = -\dfrac{1}{8\cdot2\lambda} \\
+                  \\ z^3 = -\dfrac{1}{27\cdot 2\lambda} \end{cases} \implies
+                  \begin{cases} x = -\sqrt[3]{\dfrac{1}{2\lambda}} \\ \\ y =
+                  -\dfrac{1}{2}\sqrt[3]{\dfrac{1}{2\lambda}} \\ \\ z =
+                  -\dfrac{1}{3}\sqrt[3]{\dfrac{1}{2\lambda}} \end{cases}
+                  \implies \begin{cases} x = -\sqrt[3]{\dfrac{1}{2\lambda}} \\
+                  \\ y = -\dfrac{1}{2} \cdot x \\ \\ z = -\dfrac{1}{3} \cdot x
+                  \end{cases} \]
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 4 END -->
 
-    </div>
-  </div>
-</section>
-<!-- HINT 2 END -->
+          <!-- HINT 5 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 5 TO HINT NUMBER) -->
+              <button id="but_5_1" onclick="hint_show(5)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 5 TO HINT NUMBER) -->
+            <div class="plain_container" id="5">
+              <div id="hint_5" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  The points lie on the unit sphere, so $x^2+y^2+z^2=1$ must
+                  also hold.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 5 END -->
 
-
-<!-- HINT 3 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 3 TO HINT NUMBER) -->
-    <button id="but_3_1" onclick="hint_show(3)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 3 TO HINT NUMBER) -->
-  <div class="plain_container" id="3">
-    <div id="hint_3" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-Solve the equation $\nabla f = \lambda\nabla g$.
-</p>
-
-    </div>
-  </div>
-</section>
-<!-- HINT 3 END -->
-
-
-<!-- HINT 4 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 4 TO HINT NUMBER) -->
-    <button id="but_4_1" onclick="hint_show(4)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 4 TO HINT NUMBER) -->
-  <div class="plain_container" id="4">
-    <div id="hint_4" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-\[
-    \nabla f(x,y,z) = \begin{pmatrix}
-        -\dfrac{1}{x^2} \\ \\ -\dfrac{1}{8y^2} \\ \\ -\dfrac{1}{27z^2}
-    \end{pmatrix}
-\]
-<br><br>
-\[
-    \nabla g(x,y,z) = \begin{pmatrix}
-        2x \\ 2y \\ 2z
-    \end{pmatrix}
-\]
-So
-\[
-    \begin{pmatrix}
-        -\dfrac{1}{x^2} \\ \\ -\dfrac{1}{8y^2} \\ \\ -\dfrac{1}{27z^2}
-    \end{pmatrix}
-    = \lambda
-    \begin{pmatrix}
-        2x \\ 2y\\ 2z
-    \end{pmatrix}
-\]
-Note that the left-hand side is always non-zero, so $\lambda \neq 0$. Hence:
-\[
-    \begin{cases}
-        -\dfrac{1}{x^2} = 2\lambda x  \\ \\
-        -\dfrac{1}{8y^2} = 2\lambda y \\ \\
-        -\dfrac{1}{27z^2} = 2\lambda z
-    \end{cases} \implies
-    \begin{cases}
-        x^3 = -\dfrac{1}{2\lambda}       \\ \\
-        y^3 = -\dfrac{1}{8\cdot2\lambda} \\ \\
-        z^3 = -\dfrac{1}{27\cdot 2\lambda}
-    \end{cases} \implies
-    \begin{cases}
-        x = -\sqrt[3]{\dfrac{1}{2\lambda}}             \\ \\
-        y = -\dfrac{1}{2}\sqrt[3]{\dfrac{1}{2\lambda}} \\ \\
-        z = -\dfrac{1}{3}\sqrt[3]{\dfrac{1}{2\lambda}}
-    \end{cases} \implies
-    \begin{cases}
-        x = -\sqrt[3]{\dfrac{1}{2\lambda}} \\ \\
-        y = -\dfrac{1}{2} \cdot x          \\ \\
-        z = -\dfrac{1}{3} \cdot x
-    \end{cases}
-\]
-</p>
-
-    </div>
-  </div>
-</section>
-<!-- HINT 4 END -->
-
-
-<!-- HINT 5 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 5 TO HINT NUMBER) -->
-    <button id="but_5_1" onclick="hint_show(5)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 5 TO HINT NUMBER) -->
-  <div class="plain_container" id="5">
-    <div id="hint_5" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-The points lie on the unit sphere, so $x^2+y^2+z^2=1$ must also hold.
-</p>
-
-    </div>
-  </div>
-</section>
-<!-- HINT 5 END -->
-
-
-<!-- HINT 6 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 6 TO HINT NUMBER) -->
-    <button id="but_6_1" onclick="hint_show(6)">
-      Solution
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 6 TO HINT NUMBER) -->
-  <div class="plain_container" id="6">
-    <div id="hint_6" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-\begin{align*}
-    x^2 + \left(-\dfrac{1}{2}\cdot x\right)^2 + \left(-\dfrac{1}{3}\cdot x\right)^2 & = 1                \\
-    \implies x^2\cdot\left(1 + \dfrac{1}{4} + \dfrac{1}{9}\right)                   & = 1                \\
-    \implies x^2\cdot \dfrac{49}{36}                                                & = 1                \\
-    \implies x^2                                                                    & = \dfrac{36}{49}   \\
-    \implies x                                                                      & = \pm \dfrac{6}{7}
-\end{align*}
-We get two solutions:
-\begin{align*}
-    x & = \dfrac{6}{7}                          \\
-    y & = -\dfrac{1}{2} \cdot x = -\dfrac{3}{7} \\
-    z & = -\dfrac{1}{3} \cdot x = -\dfrac{2}{7}
-\end{align*}
-and
-\begin{align*}
-    x & =  -\dfrac{6}{7}                       \\
-    y & = -\dfrac{1}{2} \cdot x = \dfrac{3}{7} \\
-    z & = -\dfrac{1}{3} \cdot x = \dfrac{2}{7}
-\end{align*}
-In order to determine which one gives the minimum and which one the maximum, we substitute in $f$:
-\begin{align*}
-    f\left(\dfrac{6}{7}, -\dfrac{3}{7}, -\dfrac{2}{7}\right) & = \frac{1}{-6/7} + \frac{1}{8\cdot(-3/7)} + \frac{1}{27\cdot (-2/7)} \\
-                                                             & = -\frac{7}{6} - \frac{7}{24} - \frac{7}{54}                         \\
-                                                             & = -\frac{373}{216}
-\end{align*}
-and
-\begin{align*}
-    f\left(-\dfrac{6}{7}, \dfrac{3}{7}, \dfrac{2}{7}\right) & = \frac{1}{6/7} + \frac{1}{8\cdot 3/7} + \frac{1}{27\cdot 2/7} \\
-                                                            & = \frac{7}{6} + \frac{7}{24} + \frac{7}{54}                    \\
-                                                            & = \frac{373}{216}
-\end{align*}
-So $f$ achieves a maximum value of $373/216$ at
-\[
-    \left(-\dfrac{6}{7}, \dfrac{3}{7}, \dfrac{2}{7}\right)
-\]
-and a minimum value of $-373/216$ at
-\[
-    \left(\dfrac{6}{7}, -\dfrac{3}{7}, -\dfrac{2}{7}\right).
-\]
-</p>
-
-    </div>
-  </div>
-</section>
-<!-- HINT 6 END -->
-
+          <!-- HINT 6 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 6 TO HINT NUMBER) -->
+              <button id="but_6_1" onclick="hint_show(6)">Solution</button>
+            </div>
+            <!-- Container for hint (CHANGE 6 TO HINT NUMBER) -->
+            <div class="plain_container" id="6">
+              <div id="hint_6" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  \begin{align*} x^2 + \left(-\dfrac{1}{2}\cdot x\right)^2 +
+                  \left(-\dfrac{1}{3}\cdot x\right)^2 & = 1 \\ \implies
+                  x^2\cdot\left(1 + \dfrac{1}{4} + \dfrac{1}{9}\right) & = 1 \\
+                  \implies x^2\cdot \dfrac{49}{36} & = 1 \\ \implies x^2 & =
+                  \dfrac{36}{49} \\ \implies x & = \pm \dfrac{6}{7} \end{align*}
+                  We get two solutions: \begin{align*} x & = \dfrac{6}{7} \\ y &
+                  = -\dfrac{1}{2} \cdot x = -\dfrac{3}{7} \\ z & = -\dfrac{1}{3}
+                  \cdot x = -\dfrac{2}{7} \end{align*} and \begin{align*} x & =
+                  -\dfrac{6}{7} \\ y & = -\dfrac{1}{2} \cdot x = \dfrac{3}{7} \\
+                  z & = -\dfrac{1}{3} \cdot x = \dfrac{2}{7} \end{align*} In
+                  order to determine which one gives the minimum and which one
+                  the maximum, we substitute in $f$: \begin{align*}
+                  f\left(\dfrac{6}{7}, -\dfrac{3}{7}, -\dfrac{2}{7}\right) & =
+                  \frac{1}{-6/7} + \frac{1}{8\cdot(-3/7)} + \frac{1}{27\cdot
+                  (-2/7)} \\ & = -\frac{7}{6} - \frac{7}{24} - \frac{7}{54} \\ &
+                  = -\frac{373}{216} \end{align*} and \begin{align*}
+                  f\left(-\dfrac{6}{7}, \dfrac{3}{7}, \dfrac{2}{7}\right) & =
+                  \frac{1}{6/7} + \frac{1}{8\cdot 3/7} + \frac{1}{27\cdot 2/7}
+                  \\ & = \frac{7}{6} + \frac{7}{24} + \frac{7}{54} \\ & =
+                  \frac{373}{216} \end{align*} So $f$ achieves a maximum value
+                  of $373/216$ at \[ \left(-\dfrac{6}{7}, \dfrac{3}{7},
+                  \dfrac{2}{7}\right) \] and a minimum value of $-373/216$ at \[
+                  \left(\dfrac{6}{7}, -\dfrac{3}{7}, -\dfrac{2}{7}\right). \]
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 6 END -->
         </div>
       </div>
 

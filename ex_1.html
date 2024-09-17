@@ -38,18 +38,15 @@
               </header>
               <h4>
                 <!-- WRITE EXERCISE HERE -->
-Calculate the length of curve $C$, where $C$ is the curve:
-\[
-    t \mapsto (\cos(t) + t\sin(t), \, \sin(t) - t\cos(t))
-\]
-for $0\leq t \leq 2\pi$.
-
+                Calculate the length of curve $C$, where $C$ is the curve: \[ t
+                \mapsto (\cos(t) + t\sin(t), \, \sin(t) - t\cos(t)) \] for
+                $0\leq t \leq 2\pi$.
               </h4>
             </div>
             <!-- UNCOMMENT TO ADD PICTURE HERE -->
-<span class="image object">
-<img src="images\ex_1.png" alt="" />
-</span>
+            <span class="image object">
+              <img src="images\ex_1.png" alt="" />
+            </span>
 
             <!-- <span class="image object">
               <img src="images/ex.png" alt="" />
@@ -69,118 +66,91 @@ for $0\leq t \leq 2\pi$.
 
           <!-- ADD HINTS HERE -->
 
-<!-- HINT 1 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 1 TO HINT NUMBER) -->
-    <button id="but_1_1" onclick="hint_show(1)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 1 TO HINT NUMBER) -->
-  <div class="plain_container" id="1">
-    <div id="hint_1" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-There is a formula for calculating the length of the curve. You must know this one! The formula is of the form:
-\[
-    \int_{\ldots}^{\ldots} |\ldots|\,dt
-\]
-</p>
+          <!-- HINT 1 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 1 TO HINT NUMBER) -->
+              <button id="but_1_1" onclick="hint_show(1)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 1 TO HINT NUMBER) -->
+            <div class="plain_container" id="1">
+              <div id="hint_1" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  There is a formula for calculating the length of the curve.
+                  You must know this one! The formula is of the form: \[
+                  \int_{\ldots}^{\ldots} |\ldots|\,dt \]
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 1 END -->
 
-    </div>
-  </div>
-</section>
-<!-- HINT 1 END -->
+          <!-- HINT 2 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 2 TO HINT NUMBER) -->
+              <button id="but_2_1" onclick="hint_show(2)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 2 TO HINT NUMBER) -->
+            <div class="plain_container" id="2">
+              <div id="hint_2" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  The formula for the length is: \[ \int_{0}^{2\pi} |f'(t)|\,dt
+                  \]
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 2 END -->
 
+          <!-- HINT 3 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 3 TO HINT NUMBER) -->
+              <button id="but_3_1" onclick="hint_show(3)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 3 TO HINT NUMBER) -->
+            <div class="plain_container" id="3">
+              <div id="hint_3" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  \begin{align*} f'(t) & = \frac{d}{dt} (\cos(t) + t\sin(t), \,
+                  \sin(t) - t\cos(t)) \\ & = (-\sin(t) + \sin(t) + t\cos(t), \,
+                  \cos(t) - \cos(t) + t\sin(t)) \\ & = (t\cos(t), \, t\sin(t))
+                  \end{align*} So \begin{align*} |f'(t)| & = \sqrt{t^2\cos^2(t)
+                  + t^2\sin^2(t)} \\ & = \sqrt{t^2} \\ & = |t| \end{align*}
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 3 END -->
 
-<!-- HINT 2 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 2 TO HINT NUMBER) -->
-    <button id="but_2_1" onclick="hint_show(2)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 2 TO HINT NUMBER) -->
-  <div class="plain_container" id="2">
-    <div id="hint_2" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-The formula for the length is:
-\[
-    \int_{0}^{2\pi} |f'(t)|\,dt
-\]
-</p>
-
-    </div>
-  </div>
-</section>
-<!-- HINT 2 END -->
-
-
-<!-- HINT 3 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 3 TO HINT NUMBER) -->
-    <button id="but_3_1" onclick="hint_show(3)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 3 TO HINT NUMBER) -->
-  <div class="plain_container" id="3">
-    <div id="hint_3" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-\begin{align*}
-    f'(t) & = \frac{d}{dt} (\cos(t) + t\sin(t), \, \sin(t) - t\cos(t))         \\
-          & = (-\sin(t) + \sin(t) + t\cos(t), \, \cos(t) - \cos(t) + t\sin(t)) \\
-          & = (t\cos(t), \, t\sin(t))
-\end{align*}
-So
-\begin{align*}
-    |f'(t)| & = \sqrt{t^2\cos^2(t) + t^2\sin^2(t)} \\
-            & = \sqrt{t^2}                         \\
-            & = |t|
-\end{align*}
-</p>
-
-    </div>
-  </div>
-</section>
-<!-- HINT 3 END -->
-
-
-<!-- HINT 4 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 4 TO HINT NUMBER) -->
-    <button id="but_4_1" onclick="hint_show(4)">
-      Solution
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 4 TO HINT NUMBER) -->
-  <div class="plain_container" id="4">
-    <div id="hint_4" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-Since $t \geq 0$, we have $|t| = t$, so:
-\begin{align*}
-    \int_{0}^{2\pi} |f'(t)|\,dt & = \int_{0}^{2\pi} t \, dt                \\
-                                & = \left[ \frac{t^2}{2}\right]_{0}^{2\pi} \\
-                                & = 2\pi^2
-\end{align*}
-</p>
-
-    </div>
-  </div>
-</section>
-<!-- HINT 4 END -->
-
+          <!-- HINT 4 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 4 TO HINT NUMBER) -->
+              <button id="but_4_1" onclick="hint_show(4)">Solution</button>
+            </div>
+            <!-- Container for hint (CHANGE 4 TO HINT NUMBER) -->
+            <div class="plain_container" id="4">
+              <div id="hint_4" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  Since $t \geq 0$, we have $|t| = t$, so: \begin{align*}
+                  \int_{0}^{2\pi} |f'(t)|\,dt & = \int_{0}^{2\pi} t \, dt \\ & =
+                  \left[ \frac{t^2}{2}\right]_{0}^{2\pi} \\ & = 2\pi^2
+                  \end{align*}
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 4 END -->
         </div>
       </div>
 

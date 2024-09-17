@@ -88,9 +88,9 @@ def parse_content(content: str) -> list[tuple[str, str]]:
     return elements
 
 
-def parse_tex_file(file_path: str) -> dict[str, list[tuple[str, str]]]:
+def parse_tex_file(tex_path: str) -> dict[str, list[tuple[str, str]]]:
     # Read raw tex
-    with open(file_path, "r") as f:
+    with open(tex_path, "r") as f:
         raw_tex = clean_tex(f.read())
 
     # Extract the document content (no preamble)
@@ -294,13 +294,13 @@ def make_args() -> tuple[list | str, str]:
         type=str,
         help=(
             "The number(s) of the exercise(s) you want to convert, starting from 1. "
-            + "Can be: an integer (e.g. 1), "
-            + "a list of integers separated by comma (with no spaces) (e.g. 1,2,3), "
+            + "Can be: a single number (e.g. 1), "
+            + "a list of numbers separated by comma (with no spaces) (e.g. 1,2,3), "
             + "or the word 'all' (without '') if you want to convert all the exercises in the document."
         ),
     )
     parser.add_argument(
-        "--tex_path", type=str, default=PATHS["FILE_PATH"], help="Path to the tex file."
+        "--tex_path", type=str, default=PATHS["TEX_PATH"], help="Path to the tex file."
     )
     args = parser.parse_args()
 
@@ -311,8 +311,8 @@ def make_args() -> tuple[list | str, str]:
             exs_num = [int(ex) for ex in args.exercises.split(",")]
         except ValueError:
             assert args.exercises == "all", (
-                "The input must be an integer (e.g. 1), "
-                + "a list of integers separated by comma (with no spaces) (e.g. 1,2,3), "
+                "The input must be a single number (e.g. 1), "
+                + "a list of numbers separated by comma (with no spaces) (e.g. 1,2,3), "
                 + "or the word 'all' (without '') if you want to convert all the exercises in the document."
             )
             exs_num = args.exercises
@@ -338,7 +338,7 @@ if __name__ == "__main__":
                 save_exercise_to_html(ex, exercise_path=f"ex_{i+1}.html")
                 update_sidebar(f"ex_{i+1}.html", ex_name)
                 print(
-                    f" - '{ex_name}' successfully converted to 'ex_{i+1}.html' and added to sidebar."
+                    f" - '{ex_name}' successfully converted to 'ex_{i+1}.html' and added to the sidebar."
                 )
                 exs_num.remove(i + 1)
             except Exception as e:

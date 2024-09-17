@@ -38,16 +38,15 @@
               </header>
               <h4>
                 <!-- WRITE EXERCISE HERE -->
-Consider the surface $S$ defined by $f(x,y,z)=0$, where
-\[
-    f(x,y,z) = x^2 + y^2 + z^2 + 3xy - z - 11
-\]
-<ol>
-<li> Check that $A = (1,1,3)$ lies on $S$.
-    </li>
-<li> Give an equation of the form $\alpha x+\beta y+\gamma z=\delta$ describing the tangent plane to $S$ at point $A$.</li>
-</ol>
-
+                Consider the surface $S$ defined by $f(x,y,z)=0$, where \[
+                f(x,y,z) = x^2 + y^2 + z^2 + 3xy - z - 11 \]
+                <ol>
+                  <li>Check that $A = (1,1,3)$ lies on $S$.</li>
+                  <li>
+                    Give an equation of the form $\alpha x+\beta y+\gamma
+                    z=\delta$ describing the tangent plane to $S$ at point $A$.
+                  </li>
+                </ol>
               </h4>
             </div>
             <!-- UNCOMMENT TO ADD PICTURE HERE -->
@@ -69,146 +68,125 @@ Consider the surface $S$ defined by $f(x,y,z)=0$, where
 
           <!-- ADD HINTS HERE -->
 
-<!-- HINT 1 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 1 TO HINT NUMBER) -->
-    <button id="but_1_1" onclick="hint_show(1)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 1 TO HINT NUMBER) -->
-  <div class="plain_container" id="1">
-    <div id="hint_1" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-1. Substitute $x=1$, $y=1$, $z=3$ in $f$ to get:
-\[
-    1^2 + 1^2 + 3^2 + 3\cdot 1\cdot 1 - 3 - 11 = 0.
-\]
-</p>
+          <!-- HINT 1 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 1 TO HINT NUMBER) -->
+              <button id="but_1_1" onclick="hint_show(1)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 1 TO HINT NUMBER) -->
+            <div class="plain_container" id="1">
+              <div id="hint_1" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  1. Substitute $x=1$, $y=1$, $z=3$ in $f$ to get: \[ 1^2 + 1^2
+                  + 3^2 + 3\cdot 1\cdot 1 - 3 - 11 = 0. \]
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 1 END -->
 
-    </div>
-  </div>
-</section>
-<!-- HINT 1 END -->
+          <!-- HINT 2 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 2 TO HINT NUMBER) -->
+              <button id="but_2_1" onclick="hint_show(2)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 2 TO HINT NUMBER) -->
+            <div class="plain_container" id="2">
+              <div id="hint_2" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  2. There are several ways to go about this, but in most (if
+                  not all) you need to compute $\nabla f$ at the point $A$.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 2 END -->
 
+          <!-- HINT 3 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 3 TO HINT NUMBER) -->
+              <button id="but_3_1" onclick="hint_show(3)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 3 TO HINT NUMBER) -->
+            <div class="plain_container" id="3">
+              <div id="hint_3" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  \[ \nabla f(x,y,z) = \begin{pmatrix} \dfrac{\partial
+                  f}{\partial x} \\ \\ \dfrac{\partial f}{\partial y} \\ \\
+                  \dfrac{\partial f}{\partial z} \end{pmatrix} = \begin{pmatrix}
+                  2x+3y \\ 3x+2y \\ 2z-1 \end{pmatrix} \] So \[ \nabla f(1,1,3)
+                  = \begin{pmatrix} 2\cdot 1+3\cdot 1 \\ 3\cdot 1+2\cdot 1 \\
+                  2\cdot 3-1 \end{pmatrix} = \begin{pmatrix} 5 \\ 5 \\ 5
+                  \end{pmatrix} \]
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 3 END -->
 
-<!-- HINT 2 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 2 TO HINT NUMBER) -->
-    <button id="but_2_1" onclick="hint_show(2)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 2 TO HINT NUMBER) -->
-  <div class="plain_container" id="2">
-    <div id="hint_2" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-2. There are several ways to go about this, but in most (if not all) you need to compute $\nabla f$ at the point $A$.
-</p>
+          <!-- HINT 4 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 4 TO HINT NUMBER) -->
+              <button id="but_4_1" onclick="hint_show(4)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE 4 TO HINT NUMBER) -->
+            <div class="plain_container" id="4">
+              <div id="hint_4" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  The gradient of $f$ at $A$ is a vector orthogonal to the
+                  tangent plane to $S$ at point $A$. How do you find an equation
+                  of a plane if you know a vector orthogonal to it and a point
+                  on it?
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 4 END -->
 
-    </div>
-  </div>
-</section>
-<!-- HINT 2 END -->
-
-
-<!-- HINT 3 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 3 TO HINT NUMBER) -->
-    <button id="but_3_1" onclick="hint_show(3)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 3 TO HINT NUMBER) -->
-  <div class="plain_container" id="3">
-    <div id="hint_3" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-\[
-    \nabla f(x,y,z) = \begin{pmatrix}
-        \dfrac{\partial f}{\partial x} \\ \\ \dfrac{\partial f}{\partial y} \\ \\ \dfrac{\partial f}{\partial z}
-    \end{pmatrix} = \begin{pmatrix}
-        2x+3y \\ 3x+2y \\ 2z-1
-    \end{pmatrix}
-\]
-So
-\[
-    \nabla f(1,1,3) = \begin{pmatrix}
-        2\cdot 1+3\cdot 1 \\ 3\cdot 1+2\cdot 1 \\ 2\cdot 3-1
-    \end{pmatrix} = \begin{pmatrix}
-        5 \\ 5 \\ 5
-    \end{pmatrix}
-\]
-</p>
-
-    </div>
-  </div>
-</section>
-<!-- HINT 3 END -->
-
-
-<!-- HINT 4 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 4 TO HINT NUMBER) -->
-    <button id="but_4_1" onclick="hint_show(4)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 4 TO HINT NUMBER) -->
-  <div class="plain_container" id="4">
-    <div id="hint_4" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-The gradient of $f$ at $A$ is a vector orthogonal to the tangent plane to $S$ at point $A$. How do you find an equation of a plane if you know a vector orthogonal to it and a point on it?
-</p>
-
-    </div>
-  </div>
-</section>
-<!-- HINT 4 END -->
-
-
-<!-- HINT 5 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 5 TO HINT NUMBER) -->
-    <button id="but_5_1" onclick="hint_show(5)">
-      Solution
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 5 TO HINT NUMBER) -->
-  <div class="plain_container" id="5">
-    <div id="hint_5" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-The tangent plane is perpendicular to the vector $\nabla f(1, 1, 3) = (5, 5, 5)$ and passes through the point $(1, 1, 3)$, so its equation is:
-\[
-    5\cdot(x-1) + 5\cdot (y-1) + 5 \cdot (z-3) = 0 \implies 5x+5y+5z = 25
-\]
-<br><br>
-<b><em>Remark:</em></b> <em>There is also a formula given in the book as the linearization of $f$ at $A = (x_0, y_0, z_0)$:
-    \[
-        L(x,y,z) = f(A) + f_x(A)\cdot (x - x_0) + f_y(A)\cdot (y - y_0) + f_z(A)\cdot (z - z_0)
-    \]
-    (this is essentially a first order Taylor expansion). The formula will yield the exact same answer. However, applying formulas without understanding is like eating your food without chewing!</em>
-</p>
-
-    </div>
-  </div>
-</section>
-<!-- HINT 5 END -->
-
+          <!-- HINT 5 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE 5 TO HINT NUMBER) -->
+              <button id="but_5_1" onclick="hint_show(5)">Solution</button>
+            </div>
+            <!-- Container for hint (CHANGE 5 TO HINT NUMBER) -->
+            <div class="plain_container" id="5">
+              <div id="hint_5" class="unsee_hint_child">
+                <!-- WRITE HINT HERE -->
+                <p>
+                  The tangent plane is perpendicular to the vector $\nabla f(1,
+                  1, 3) = (5, 5, 5)$ and passes through the point $(1, 1, 3)$,
+                  so its equation is: \[ 5\cdot(x-1) + 5\cdot (y-1) + 5 \cdot
+                  (z-3) = 0 \implies 5x+5y+5z = 25 \]
+                  <br /><br />
+                  <b><em>Remark:</em></b>
+                  <em
+                    >There is also a formula given in the book as the
+                    linearization of $f$ at $A = (x_0, y_0, z_0)$: \[ L(x,y,z) =
+                    f(A) + f_x(A)\cdot (x - x_0) + f_y(A)\cdot (y - y_0) +
+                    f_z(A)\cdot (z - z_0) \] (this is essentially a first order
+                    Taylor expansion). The formula will yield the exact same
+                    answer. However, applying formulas without understanding is
+                    like eating your food without chewing!</em
+                  >
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- HINT 5 END -->
         </div>
       </div>
 
