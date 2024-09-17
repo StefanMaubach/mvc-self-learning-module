@@ -37,17 +37,10 @@
                 <h1>Exercise 11</h1>
               </header>
               <h4>
-                <!-- WRITE EXERCISE HERE -->
-Consider the function
-\[
-    f(x,y) = (x+1)\sin(xy)
-\]
-defined on the square
-\[
-    K = \{(x,y): 0 \leq x \leq 2\pi, 0 \leq y \leq 2\pi\}.
-\]
-Determine any maxima/minima of $f$ on $K$.
-
+              
+                Consider the function \[ f(x,y) = (x+1)\sin(xy) \] defined on
+                the square \[ K = \{(x,y): 0 \leq x \leq 2\pi, 0 \leq y \leq
+                2\pi\}. \] Determine any maxima/minima of $f$ on $K$.
               </h4>
             </div>
             <!-- UNCOMMENT TO ADD PICTURE HERE -->
@@ -92,64 +85,72 @@ While you can use some ad-hoc methods, try to do this question structurally in a
 <!-- HINT 1 END -->
 
 
-<!-- HINT 2 -->
-<section>
-  <!-- Container for elements to show/hide -->
-  <div class="unsee_hint">
-    <!-- Hint button (CHANGE 2 TO HINT NUMBER) -->
-    <button id="but_2_1" onclick="hint_show(2)">
-      Hint
-    </button>
-  </div>
-  <!-- Container for hint (CHANGE 2 TO HINT NUMBER) -->
-  <div class="plain_container" id="2">
-    <div id="hint_2" class="unsee_hint_child">
-      <!-- WRITE HINT HERE -->
-<p>
-\[
-    \nabla f(x,y) = \begin{pmatrix}
-        \sin(xy) + y\cdot(x+1)\cos(xy) \\ x(x+1)\cos(xy)
-    \end{pmatrix}
-\]
-Setting $\nabla f(x,y) = 0$ will yield the critical points.
-\[
-    x(x+1)\cos(xy) = 0 \implies \begin{cases}
-        x = 0, \quad \mathrm{or}      \\
-        x + 1  = 0, \quad \mathrm{or} \\
-        \cos(xy) = 0
-    \end{cases} \implies \begin{cases}
-        x = 0, \quad \mathrm{or}  \\
-        x = -1, \quad \mathrm{or} \\
-        xy = \frac{k\pi}{2}, \quad k = 1,3,5,\ldots
-    \end{cases}
-\]
-Since $(x,y)$ must be in $K$ we only have the cases:
-</p>
-<ul>
-<li> $x=0$
-    </li>
-<li> $xy = \frac{\pi}{2}$
-    </li>
-<li> $xy = \frac{3\pi}{2}$
-\end{itemize}
-Now substitute these values in $\sin(xy) + y\cdot(x+1)\cos(xy) = 0$.
-\begin{itemize}
-    </li>
-<li> $x=0$: $\sin(0) + y\cdot 1\cdot \cos(0) = 0 \implies 0 + y = 0 \implies y = 0$
-    </li>
-<li> $xy = \frac{\pi}{2}$: $\sin(\frac{\pi}{2}) + y\cdot(x+1)\cos(\frac{\pi}{2}) = 0 \implies 1 + 0 = 0$, contradiction!
-    </li>
-<li> $xy = \frac{3\pi}{2}$: $\sin(\frac{3\pi}{2}) + y\cdot(x+1)\cos(\frac{3\pi}{2}) = 0 \implies -1 + 0 = 0$, contradiction!</li>
-</ul>
-<p>
-So we get a critical point at $(0, 0)$, at which $f(0,0) = 0$. Are we done?
-</p>
-
-    </div>
-  </div>
-</section>
-<!-- HINT 2 END -->
-
+          <!-- HINT 2 -->
+          <section>
+            <!-- Container for elements to show/hide -->
+            <div class="unsee_hint">
+              <!-- Hint button (CHANGE $ TO HINT NUMBER) -->
+              <button id="but_2_1" onclick="hint_show(2)">Hint</button>
+            </div>
+            <!-- Container for hint (CHANGE $ TO HINT NUMBER) -->
+            <div class="plain_container" id="2">
+              <div id="hint_2" class="unsee_hint_child">
+                <p>
+                  \[ \nabla f(x,y) = \begin{pmatrix} \sin(xy) +
+                  y\cdot(x+1)\cos(xy) \\ x(x+1)\cos(xy) \end{pmatrix} \] Setting
+                  $\nabla f(x,y) = 0$ will yield the critical points. \[
+                  x(x+1)\cos(xy) = 0 \implies \begin{cases} x = 0, \quad
+                  \mathrm{or} \\ x + 1 = 0, \quad \mathrm{or} \\ \cos(xy) = 0
+                  \end{cases} \implies \begin{cases} x = 0, \quad \mathrm{or} \\
+                  x = -1, \quad \mathrm{or} \\ xy = \frac{k\pi}{2}, \quad k =
+                  1,3,5,\ldots \end{cases} \] Since $(x,y)$ must be in $K$ we get that $xy\leq 4\pi^2$, $x,y\geq 0$ etc. so we
+                  only have the cases:
+                </p>
+                <ul>
+                  <li>$x=0$</li>
+                  <li>$xy = \frac{\pi}{2}$</li>
+                  <li>$xy = \frac{3\pi}{2}$</li>
+                  <li> $xy =\frac{k\pi}{2}$ as long as $xy\leq 4\pi$</li> 
+                </ul>
+                <p>
+                  Now substitute these values in $\sin(xy) + y\cdot(x+1)\cos(xy)
+                  = 0$.
+                </p>
+                <ul>
+                  <li>
+                    $x=0$: $\sin(0) + y\cdot 1\cdot \cos(0) = 0 \implies 0 + y =
+                    0 \implies y = 0$
+                  </li>
+                  <li>
+                    $xy = \frac{\pi}{2}$: $\sin(\frac{\pi}{2}) +
+                    y\cdot(x+1)\cos(\frac{\pi}{2}) = 0 \implies 1 + 0 = 0$,
+                    contradiction!
+                  </li>
+                  <li>
+                    $xy = \frac{3\pi}{2}$: $\sin(\frac{3\pi}{2}) +
+                    y\cdot(x+1)\cos(\frac{3\pi}{2}) = 0 \implies -1 + 0 = 0$,
+                    contradiction!
+                  </li>
+                  <li></li>
+                    $xy = \frac{k\pi}{2}$: $\sin(\frac{k\pi}{2}) +
+                    y\cdot(x+1)\cos(\frac{k\pi}{2}) = 0 \implies +-1 + 0 = 0$,
+                    contradiction! (no matter what integer $k$ is).
+                  </li>
+                </ul>
+                <p>
+                  So we get a critical point at $(0, 0)$, at which $f(0,0) = 0$.
+                  Are we done?
+                </p>
+                <!-- UNCOMMENT TO ADD PICTURE HERE -->
+                <!-- <div class="image center">
+                  <span class="image object">
+                    <img src="images/ex.png" width="480" alt="" />
+                  </span>
+                </div> -->
+              </div>
+            </div>
+          </section>
+          <!-- HINT 2 END -->
 
 <!-- HINT 3 -->
 <section>
