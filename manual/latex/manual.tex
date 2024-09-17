@@ -15,10 +15,13 @@
 \begingroup
 \centering
 \LARGE Multivariable Calculus Self-Learning Module\\[1em]
-\large Setup \& Usage Manual\\[\baselineskip]
+\large Setup \& Usage Manual\\[4\baselineskip]
 \endgroup
 
 \tableofcontents
+
+\clearpage
+
 \listoffigures
 
 \clearpage
@@ -66,7 +69,7 @@ The response should be the latest version of Git (e.g.\ \Cref{fig:git-v}).
     \label{fig:git-v}   
 \end{figure}
 
-If not, try restarting the computer and check again. Restart is sometimes needed so that folder in which Git is installed is permanently added to the Windows PATH variable, which lets Windows know what the \texttt{git} command means. If this also doesn't work, Git must be added to the PATH manually. This is annoying and should (and most likely will) not happen, and at that point it is probably best to google something like ``add git to path windows 11'' (or whatever your Windows version is) and follow the detailed instructions.
+If not, try restarting the computer and check again. Restart is sometimes needed so that folder in which Git is installed is permanently added to the Windows PATH variable, which lets Windows know what the \texttt{git} command means. If this also doesn't work, Git must be added to the PATH manually. This is annoying and should (and most likely will) not happen, and at that point it is probably best to Google something like ``add git to path windows 11'' (or whatever your Windows version is) and follow the detailed instructions.
 
 \subsubsection{Initiating a local Git repository}
 \label{sec:git_init}
@@ -288,7 +291,9 @@ In order to deploy the repository as a website on GitHub pages, go to \emph{Sett
     \label{fig:mvc_deploy}   
 \end{figure}
 
-If you go back to your main GitHub repository page now you should see a new section named \emph{Deployments} on the right sidebar (\Cref{fig:mvc_deployment_added}).
+\subsubsection{Link to the website}
+
+If you go back to your main GitHub repository page after deployment, you should see a new section named \emph{Deployments} on the right sidebar (\Cref{fig:mvc_deployment_added}).
 
 \begin{figure}[htbp]
     \centering
@@ -359,6 +364,14 @@ You can use the search bar to search for new extensions to install. For the purp
     \label{fig:prettier}   
 \end{figure}
 
+\subsection{Python}
+
+You can download the latest version of Python from:
+
+\url{https://www.python.org/downloads/}
+
+The website should recommend the latest installer for Windows. During the installation process, MAKE SURE TO CHECK THE BOX THAT ADDS PYTHON TO PATH! Otherwise, you will have to do it manually in order to run Python scripts. In order to do it manually, Google something like "add python to path" followed by your system, and follow the detailed instructions.
+
 \clearpage
 \section{Usage}
 
@@ -413,6 +426,8 @@ If you are using VSCode to edit your files, you can even open the working direct
     \caption{Working with Git from a terminal in VSCode.}
     \label{fig:usage}   
 \end{figure}
+
+\subsubsection{Using the Python script to convert \LaTeX\ to HTML}
 
 
 \subsection{Working with VSCode (optional)}

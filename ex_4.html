@@ -2,7 +2,6 @@
 <html>
   <!-- Head -->
   <head>
-    <!-- WRITE EXERCISE NUMBER HERE -->
     <title>Exercise 4</title>
     <meta charset="utf-8" />
     <meta
@@ -34,20 +33,26 @@
           <!-- Container for the exercise -->
           <section id="banner">
             <div class="content">
-              <!-- EXERCISE TITLE -->
               <header>
                 <h1>Exercise 4</h1>
               </header>
               <h4>
-                Consider the function \[ f(x,y) = \frac{x^2 + y^2}{xy} \]
-                defined on the set \[ K = \{(x,y): 0 &lt x \leq 1, 0 &lt y \leq
-                1\}. \] Determine where $f$ assumes its minimum, and what that
-                minimum value is.
+                <!-- WRITE EXERCISE HERE -->
+Consider the function
+\[
+    f(x,y) = \frac{x^2 + y^2}{xy}
+\]
+defined on the set
+\[
+    K = \{(x,y): 0 < x \leq 1, 0 < y \leq 1\}.
+\]
+Determine where $f$ assumes its minimum, and what that minimum value is.
+
               </h4>
             </div>
-            <!-- ADD PICTURE HERE -->
+            <!-- UNCOMMENT TO ADD PICTURE HERE -->
             <!-- <span class="image object">
-              <img src="images/ex_1.png" alt="" />
+              <img src="images/ex.png" alt="" />
             </span> -->
           </section>
 
@@ -62,138 +67,151 @@
             </button>
           </section>
 
-          <!-- HINT 1 -->
-          <section>
-            <!-- Container for elements to show/hide -->
-            <div class="unsee_hint">
-              <!-- Hint title -->
-              <!-- <header class="major">
-                <h2>Solution</h2>
-              </header> -->
-              <!-- Hint button (CHANGE NUMBERS HERE) -->
-              <button id="but_1_1" onclick="hint_show(1)">Hint</button>
-            </div>
-            <!-- Container for hint (CHANGE NUMBERS HERE) -->
-            <div class="plain_container" id="1">
-              <div id="hint_1" class="unsee_hint_child">
-                <p>
-                  <!-- WRITE HINT HERE -->
-                  Calculate $\nabla f$.
-                </p>
-              </div>
-            </div>
-          </section>
-          <!-- HINT 1 END -->
+          <!-- ADD HINTS HERE -->
 
-          <!-- HINT 2 -->
-          <section>
-            <!-- Container for elements to show/hide -->
-            <div class="unsee_hint">
-              <!-- Hint title -->
-              <!-- <header class="major">
-                <h2>Solution</h2>
-              </header> -->
-              <!-- Hint button (CHANGE NUMBERS HERE) -->
-              <button id="but_2_1" onclick="hint_show(2)">Hint</button>
-            </div>
-            <!-- Container for hint (CHANGE NUMBERS HERE) -->
-            <div class="plain_container" id="2">
-              <div id="hint_2" class="unsee_hint_child">
-                <p>
-                  <!-- WRITE HINT HERE -->
-                  \begin{align*} \frac{\partial f}{\partial x} & =
-                  \left(\frac{xy\cdot 2x - (x^2+y^2)\cdot y}{x^2y^2}\right) \\ &
-                  = \frac{x^2y - y^3}{x^2y^2} \\ & = \frac{x^2 - y^2}{x^2y}
-                  \end{align*} By symmetry, we have: \[ \frac{\partial
-                  f}{\partial y} = \frac{y^2 - x^2}{xy^2} \] So \[ \nabla f(x,y)
-                  = \begin{pmatrix} \dfrac{\partial f}{\partial x} \\ \\
-                  \dfrac{\partial f}{\partial y} \end{pmatrix} = \begin{pmatrix}
-                  \dfrac{x^2 - y^2}{x^2y} \\ \\ \dfrac{y^2 - x^2}{xy^2}
-                  \end{pmatrix} \]
-                </p>
-              </div>
-            </div>
-          </section>
-          <!-- HINT 2 END -->
+<!-- HINT 1 -->
+<section>
+  <!-- Container for elements to show/hide -->
+  <div class="unsee_hint">
+    <!-- Hint button (CHANGE 1 TO HINT NUMBER) -->
+    <button id="but_1_1" onclick="hint_show(1)">
+      Hint
+    </button>
+  </div>
+  <!-- Container for hint (CHANGE 1 TO HINT NUMBER) -->
+  <div class="plain_container" id="1">
+    <div id="hint_1" class="unsee_hint_child">
+      <!-- WRITE HINT HERE -->
+<p>
+Calculate $\nabla f$.
+</p>
 
-          <!-- HINT 3 -->
-          <section>
-            <!-- Container for elements to show/hide -->
-            <div class="unsee_hint">
-              <!-- Hint title -->
-              <!-- <header class="major">
-                <h2>Solution</h2>
-              </header> -->
-              <!-- Hint button (CHANGE NUMBERS HERE) -->
-              <button id="but_3_1" onclick="hint_show(3)">Hint</button>
-            </div>
-            <!-- Container for hint (CHANGE NUMBERS HERE) -->
-            <div class="plain_container" id="3">
-              <div id="hint_3" class="unsee_hint_child">
-                <p>
-                  <!-- WRITE HINT HERE -->
-                  Solve $\nabla f = 0$.
-                </p>
-              </div>
-            </div>
-          </section>
-          <!-- HINT 3 END -->
+    </div>
+  </div>
+</section>
+<!-- HINT 1 END -->
 
-          <!-- HINT 4 -->
-          <section>
-            <!-- Container for elements to show/hide -->
-            <div class="unsee_hint">
-              <!-- Hint title -->
-              <!-- <header class="major">
-                <h2>Solution</h2>
-              </header> -->
-              <!-- Hint button (CHANGE NUMBERS HERE) -->
-              <button id="but_4_1" onclick="hint_show(4)">Hint</button>
-            </div>
-            <!-- Container for hint (CHANGE NUMBERS HERE) -->
-            <div class="plain_container" id="4">
-              <div id="hint_4" class="unsee_hint_child">
-                <p>
-                  <!-- WRITE HINT HERE -->
-                  \[ \begin{pmatrix} \dfrac{x^2 - y^2}{x^2y} \\ \\ \dfrac{y^2 -
-                  x^2}{xy^2} \end{pmatrix} = 0 \implies x^2 - y^2 = 0 \implies x
-                  = \pm y \]
-                </p>
-              </div>
-            </div>
-          </section>
-          <!-- HINT 4 END -->
 
-          <!-- HINT 5 -->
-          <section>
-            <!-- Container for elements to show/hide -->
-            <div class="unsee_hint">
-              <!-- Hint title -->
-              <!-- <header class="major">
-                <h2>Solution</h2>
-              </header> -->
-              <!-- Hint button (CHANGE NUMBERS HERE) -->
-              <button id="but_5_1" onclick="hint_show(5)">Solution</button>
-            </div>
-            <!-- Container for hint (CHANGE NUMBERS HERE) -->
-            <div class="plain_container" id="5">
-              <div id="hint_5" class="unsee_hint_child">
-                <p>
-                  <!-- WRITE HINT HERE -->
-                  Note that since $x, y > 0$ on $K$, we cannot have $x = -y$.
-                  Substituting $y=x$ in $f$ we get: \[ f(x,x) = \frac{x^2 +
-                  x^2}{x^2} = 2 \] So $f$ achieves its minimum value 2 on the
-                  entire line segment $x=y$, $0 < x \leq 1, 0 < y \leq 1$.
-                </p>
-                <div class="image center">
-                  <span class="image object">
-                    <img src="images/ex_4.png" width="400" alt="" />
-                  </span>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- HINT 5 END -->
+<!-- HINT 2 -->
+<section>
+  <!-- Container for elements to show/hide -->
+  <div class="unsee_hint">
+    <!-- Hint button (CHANGE 2 TO HINT NUMBER) -->
+    <button id="but_2_1" onclick="hint_show(2)">
+      Hint
+    </button>
+  </div>
+  <!-- Container for hint (CHANGE 2 TO HINT NUMBER) -->
+  <div class="plain_container" id="2">
+    <div id="hint_2" class="unsee_hint_child">
+      <!-- WRITE HINT HERE -->
+<p>
+\begin{align*}
+    \frac{\partial f}{\partial x} & = \left(\frac{xy\cdot 2x - (x^2+y^2)\cdot y}{x^2y^2}\right) \\
+                                  & = \frac{x^2y - y^3}{x^2y^2}                                 \\
+                                  & = \frac{x^2 - y^2}{x^2y}
+\end{align*}
+By symmetry, we have:
+\[
+    \frac{\partial f}{\partial y} = \frac{y^2 - x^2}{xy^2}
+\]
+So
+\[
+    \nabla f(x,y) = \begin{pmatrix}
+        \dfrac{\partial f}{\partial x} \\ \\ \dfrac{\partial f}{\partial y}
+    \end{pmatrix} = \begin{pmatrix}
+        \dfrac{x^2 - y^2}{x^2y} \\ \\ \dfrac{y^2 - x^2}{xy^2}
+    \end{pmatrix}
+\]
+</p>
+
+    </div>
+  </div>
+</section>
+<!-- HINT 2 END -->
+
+
+<!-- HINT 3 -->
+<section>
+  <!-- Container for elements to show/hide -->
+  <div class="unsee_hint">
+    <!-- Hint button (CHANGE 3 TO HINT NUMBER) -->
+    <button id="but_3_1" onclick="hint_show(3)">
+      Hint
+    </button>
+  </div>
+  <!-- Container for hint (CHANGE 3 TO HINT NUMBER) -->
+  <div class="plain_container" id="3">
+    <div id="hint_3" class="unsee_hint_child">
+      <!-- WRITE HINT HERE -->
+<p>
+Solve $\nabla f = 0$.
+</p>
+
+    </div>
+  </div>
+</section>
+<!-- HINT 3 END -->
+
+
+<!-- HINT 4 -->
+<section>
+  <!-- Container for elements to show/hide -->
+  <div class="unsee_hint">
+    <!-- Hint button (CHANGE 4 TO HINT NUMBER) -->
+    <button id="but_4_1" onclick="hint_show(4)">
+      Hint
+    </button>
+  </div>
+  <!-- Container for hint (CHANGE 4 TO HINT NUMBER) -->
+  <div class="plain_container" id="4">
+    <div id="hint_4" class="unsee_hint_child">
+      <!-- WRITE HINT HERE -->
+<p>
+\[
+    \begin{pmatrix}
+        \dfrac{x^2 - y^2}{x^2y} \\ \\ \dfrac{y^2 - x^2}{xy^2}
+    \end{pmatrix} = 0 \implies x^2 - y^2 = 0 \implies x = \pm y
+\]
+</p>
+
+    </div>
+  </div>
+</section>
+<!-- HINT 4 END -->
+
+
+<!-- HINT 5 -->
+<section>
+  <!-- Container for elements to show/hide -->
+  <div class="unsee_hint">
+    <!-- Hint button (CHANGE 5 TO HINT NUMBER) -->
+    <button id="but_5_1" onclick="hint_show(5)">
+      Solution
+    </button>
+  </div>
+  <!-- Container for hint (CHANGE 5 TO HINT NUMBER) -->
+  <div class="plain_container" id="5">
+    <div id="hint_5" class="unsee_hint_child">
+      <!-- WRITE HINT HERE -->
+<p>
+Note that since $x, y > 0$ on $K$, we cannot have $x = -y$. Substituting $y=x$ in $f$ we get:
+\[
+    f(x,x) = \frac{x^2 + x^2}{x^2} = 2
+\]
+So $f$ achieves its minimum value 2 on the entire line segment $x=y$, $0 < x \leq 1, 0 < y \leq 1$.
+</p>
+<div class="image center">
+<span class="image object">
+<img src="images\ex_4.png" width="600" alt="" />
+</span>
+</div>
+
+    </div>
+  </div>
+</section>
+<!-- HINT 5 END -->
+
         </div>
       </div>
 

@@ -1,0 +1,10 @@
+{
+  "FILE_PATH": "./exercises/latex/exercises.tex",
+  "TEMPLATES_PATH": "./templates",
+  "TEMPLATE_NAMES": {
+    "exercise": "ex_template.html",
+    "hint": "hint_template.html"
+  },
+  "IMAGES_PATH": "./images",
+  "SIDEBAR_PATH": "./sidebar.html"
+}
