@@ -251,15 +251,17 @@ def make_html_exercise(
     return exercise_html
 
 
-def load_templates(templates_path: str) -> tuple[str, str]:
+def load_templates() -> tuple[str, str]:
     # Template for entire exercise
     with open(
-        os.path.join(templates_path, PATHS["TEMPLATE_NAMES"]["exercise"]), "r"
+        os.path.join(PATHS["TEMPLATES_PATH"], PATHS["TEMPLATE_NAMES"]["exercise"]), "r"
     ) as f:
         ex_template = f.read()
 
     # Template for hint
-    with open(os.path.join(templates_path, PATHS["TEMPLATE_NAMES"]["hint"]), "r") as f:
+    with open(
+        os.path.join(PATHS["TEMPLATES_PATH"], PATHS["TEMPLATE_NAMES"]["hint"]), "r"
+    ) as f:
         hint_template = f.read()
 
     return ex_template, hint_template
@@ -324,7 +326,7 @@ def make_args() -> tuple[list | str, str]:
 
 if __name__ == "__main__":
     exs_num, tex_path = make_args()
-    ex_template, hint_template = load_templates(PATHS["TEMPLATES_PATH"])
+    ex_template, hint_template = load_templates()
     Exercises = parse_tex_file(tex_path)
 
     if exs_num == "all":
